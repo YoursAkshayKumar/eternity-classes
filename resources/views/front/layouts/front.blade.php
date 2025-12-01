@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    @include('front.partials.head')
+</head>
+
+<body class="index2-outer-wrapper">
+    @include('front.partials.preloader')
+    @include('front.partials.header')
+    @yield('content')
+    @include('front.partials.footer')
+    @include('front.partials.scripts')
+</body>
+
+</html>
