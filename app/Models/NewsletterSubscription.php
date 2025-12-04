@@ -76,17 +76,21 @@ class NewsletterSubscription extends Model
         }
 
         $sql = "SELECT " . $selectClause;
+        $bindings = [];
         
         if (isset($whereData['status']) == true && empty($whereData['status']) == false && $whereData['status'] !== '') {
-            $where .= " AND ns.status = " . $whereData['status'];
+            $where .= " AND ns.status = ?";
+            $bindings[] = $whereData['status'];
         }
 
         if (isset($whereData['search']) == true && empty($whereData['search']) == false) {
-            $where .= " AND (ns.email LIKE '%" . $whereData['search'] . "%')";
+            $searchTerm = '%' . $whereData['search'] . '%';
+            $where .= " AND (ns.email LIKE ?)";
+            $bindings[] = $searchTerm;
         }
 
         $sql = $sql . $where . $groupByClause . $orderClause . $limitClause;
-        $rtVal = DB::select($sql);
+        $rtVal = DB::select($sql, $bindings);
         return $rtVal;
     }
 

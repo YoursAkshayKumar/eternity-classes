@@ -176,23 +176,29 @@ class Blogs extends Model
     }
 
     $sql = "SELECT " . $selectClause;
+    $bindings = [];
+    
     if (isset($whereData['is_delete']) == true) {
-      $where .= " AND b.is_delete = " . $whereData['is_delete'];
+      $where .= " AND b.is_delete = ?";
+      $bindings[] = $whereData['is_delete'];
     }
 
     if (isset($whereData['status']) == true && empty($whereData['status']) == false) {
-      $where .= " AND b.status = '" . $whereData['status'] . "'";
+      $where .= " AND b.status = ?";
+      $bindings[] = $whereData['status'];
     }
 
     if (isset($whereData['search']) == true && empty($whereData['search']) == false) {
-      $where .= " AND (b.title LIKE '%" . $whereData['search'] . "%'";
-      $where .= " OR b.content LIKE '%" . $whereData['search'] . "%'";
-      $where .= " OR b.excerpt LIKE '%" . $whereData['search'] . "%'";
-      $where .= " OR b.slug LIKE '%" . $whereData['search'] . "%')";
+      $searchTerm = '%' . $whereData['search'] . '%';
+      $where .= " AND (b.title LIKE ?";
+      $where .= " OR b.content LIKE ?";
+      $where .= " OR b.excerpt LIKE ?";
+      $where .= " OR b.slug LIKE ?)";
+      $bindings = array_merge($bindings, [$searchTerm, $searchTerm, $searchTerm, $searchTerm]);
     }
 
     $sql = $sql . $where . $groupByClause . $orderClause . $limitClause;
-    $rtVal = DB::select($sql);
+    $rtVal = DB::select($sql, $bindings);
     return $rtVal;
   }
 }
