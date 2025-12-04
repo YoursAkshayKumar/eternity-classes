@@ -25,7 +25,7 @@
 
     <!-- MAIN LANDING PAGE HERO SECTION -->
     <section class="float-left w-100 banner-con postion-relative main-box">
-        <img class="img-fluid position-absolute objct1" alt="object" src="{{ asset('assets/front/images/home2/vector1.png') }}" style="top: 10%; left: 5%; opacity: 0.3; z-index: 0;">
+        <img class="img-fluid position-absolute objct1" alt="object" src="{{ asset('assets/front/images/home2/vector1.png') }}" style="top: 40%; left: 2%; opacity: 0.3; z-index: 0;">
         <img class="img-fluid position-absolute objct2" alt="object" src="{{ asset('assets/front/images/home2/vector2.png') }}" style="bottom: 10%; right: 5%; opacity: 0.3; z-index: 0;">
         <img class="img-fluid position-absolute dot1" alt="icon" src="{{ asset('assets/front/images/home2/dots.png') }}" style="top: 20%; right: 10%; opacity: 0.2; z-index: 0;">
         <div class="container" style="position: relative; z-index: 1;">

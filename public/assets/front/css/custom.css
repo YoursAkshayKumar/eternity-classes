@@ -2728,6 +2728,11 @@ body.index2-outer-wrapper {
     background-size: cover;
 }
 
+/* Ensure logo visibility - subtle enhancement only */
+.index2-outer-wrapper .footer-con .footer-inner-content img {
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
+}
+
 .index2-outer-wrapper .footer-con .footer-inner-content p {
     color: var(--sky2-color);
 }
@@ -2807,6 +2812,24 @@ body.index2-outer-wrapper {
     border-color: var(--pink2-color);
     outline: none;
     border: none;
+}
+
+.index2-outer-wrapper .footer-inner-content #newsletter_message {
+    color: var(--light-blue-color);
+    line-height: 1.4;
+}
+
+.index2-outer-wrapper .footer-inner-content #newsletter_message.text-success {
+    color: var(--pink2-color);
+}
+
+.index2-outer-wrapper .footer-inner-content #newsletter_message.text-danger {
+    color: #ff6b6b;
+}
+
+.index2-outer-wrapper .footer-inner-content form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
 /* contact us con */

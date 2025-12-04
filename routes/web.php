@@ -47,3 +47,6 @@ Route::get('/contact', [App\Http\Controllers\FrontControllers\HomeController::cl
 Route::get('/blogs', [App\Http\Controllers\FrontControllers\BlogsController::class, 'blogs']);
 Route::get('/blog/{slug}', [App\Http\Controllers\FrontControllers\BlogsController::class, 'blogDetails']);
 
+// Newsletter subscription
+Route::post('/newsletter/subscribe', [App\Http\Controllers\FrontControllers\HomeController::class, 'subscribeNewsletter'])->name('newsletter.subscribe');
+

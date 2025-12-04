@@ -51,11 +51,13 @@
             <h6 class="text-white span-heading d-block">Newsletter</h6>
             <p>Sign Up to Our Newsletter to Get Latest <br>
               Updates & Services</p>
-            <form action="javascript:;">
+            <form id="newsletterForm" method="POST">
+              @csrf
               <div class="form-group mb-0 position-relative">
-                <input type="text" class="form_style" placeholder="Email address" name="email">
-                <button><i class="fa-sharp fa-solid fa-paper-plane"></i></button>
+                <input type="email" class="form_style" placeholder="Email address" name="email" id="newsletter_email" required>
+                <button type="submit" id="newsletter_submit_btn"><i class="fa-sharp fa-solid fa-paper-plane"></i></button>
               </div>
+              <div id="newsletter_message" class="mt-2" style="display: none; font-size: 14px;"></div>
             </form>
             <ul class="list-unstyled p-0 m-0 d-flex align-items-center social-icon mb-0">
               <li><a href="https://www.facebook.com/login/"><i class="fa-brands fa-facebook-f ml-0"></i></a></li>

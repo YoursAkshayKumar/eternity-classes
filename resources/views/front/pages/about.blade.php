@@ -52,40 +52,20 @@
                 </div>
                 <div class="col-lg-5 col-md-5">
                     <div class="get-content">
-                        <span class="d-block special-text">suscipit</span>
+                        <span class="d-block special-text">Eternity Classes</span>
                         <h2 class="font-weight-600">Get to Know About
-                            Eginary Education</h2>
-                        <p class="">Neque porro quisquam est, qui dolorem ipsum
-                            dolor sit amet, consectetursed quia non numua
-                            eius modi incidunt dolor. </p>
-                        <p class="mb-0">Omnis dolor repellendus. Temporibus autem qui
-                            aut officiis debitis aut rerum necessitatibus saee
-                            eveniet ut et voluptates repudiandae aroin ac lo
-                            is arcu, a vestibulum augue rivamus ipsum neu
-                            facilisis vel mollis vitae, mollis nec ante. </p>
+                            Eternity Classes</h2>
+                        <p class="">Eternity brings you a personalised learning experience that makes education enjoyable, engaging and effective. Our holistic approach creates a happy, motivating environment where students thrive academically and personally.</p>
+                        <p class="mb-0">Each learner moves at their own accelerated pace through methods designed around their strengths and unique style of learning. With innovative methods, at Eternity learning isn't just a process - It's a journey of discovery, confidence and Growth.</p>
                         <!-- get content -->
                     </div>
                     <!-- col -->
                 </div>
                 <div class="col-lg-12">
                     <div class="get-to-know-text">
-                        <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
-                            maxime
-                            placeat facere ssi
-                            omnis voluptas assumenda est, omnis dolor repellendus temporibus autem quibusdam et aut officiis
-                            debitis
-                            aut rerum nece
-                            tatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque
-                            earum rerum
-                            hic tenetur.</p>
-                        <p class="mb-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                            doloremque
-                            laudantium, totam
-                            rem aperiam,
-                            ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                            Nemo enim
-                            ipsam voluptatem
-                            voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni.</p>
+                        <p>Experience reformed learning with Eternity - a platform where you unleash your fear of studies and grow a genuine love for learning. Choose smarter, learn and trust in our quality with a transparent, hassle free refund policy that gives along with a full week of real classes for every student.</p>
+                        <p>From powerful 'MIND MAPS' to professionally designed notes, Worksheets and chapter summaries just for you. Backed by expert tutors, personalised progress plans, and diagnostic assessments, Eternity ensures deeper clarity, stronger confidence & a learning journey that truly transforms you.</p>
+                        <p class="mb-0">Our approach combines Indian-style learning with global readiness, providing timeless educational methods and conceptual clarity through innovative mind maps and personalized teaching strategies.</p>
 
                         <!-- get to know -->
                     </div>

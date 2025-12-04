@@ -5,6 +5,9 @@ namespace App\Http\Controllers\FrontControllers;
 use App\Models\Admin;
 use App\Models\Applicant;
 use App\Models\ApplicationStatus;
+use App\Models\NewsletterSubscription;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class HomeController extends WebAppBaseController
 {
@@ -51,6 +54,47 @@ class HomeController extends WebAppBaseController
             return view('front.pages.contact', []);
         } catch (\Exception $ex) {
             return $this->sendError($ex->getMessage(), $ex->getTrace(), 500);
+        }
+    }
+
+    public function subscribeNewsletter(Request $request)
+    {
+        try {
+            $validator = Validator::make($request->all(), [
+                'email' => 'required|email|max:255',
+            ]);
+
+            if ($validator->fails()) {
+                return $this->sendError('Validation Error', $validator->errors(), 422);
+            }
+
+            $email = $request->input('email');
+
+            // Check if email already exists
+            $existing = NewsletterSubscription::where('email', $email)->first();
+            
+            if ($existing) {
+                if ($existing->status == 0) {
+                    // Reactivate subscription
+                    $existing->update([
+                        'status' => 1,
+                        'subscribed_at' => now(),
+                    ]);
+                    return $this->sendResponse([], 'Thank you for resubscribing to our newsletter!');
+                }
+                return $this->sendError('This email is already subscribed to our newsletter.', [], 400);
+            }
+
+            // Create new subscription
+            NewsletterSubscription::create([
+                'email' => $email,
+                'status' => 1,
+                'subscribed_at' => now(),
+            ]);
+
+            return $this->sendResponse([], 'Thank you for subscribing to our newsletter!');
+        } catch (\Exception $ex) {
+            return $this->sendError('Something went wrong. Please try again later.', $ex->getTrace(), 500);
         }
     }
 
