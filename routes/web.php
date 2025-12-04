@@ -43,6 +43,7 @@ Route::get('/', [App\Http\Controllers\FrontControllers\HomeController::class, 'h
 Route::get('/home2', [App\Http\Controllers\FrontControllers\HomeController::class, 'home2']);
 Route::get('/about', [App\Http\Controllers\FrontControllers\HomeController::class, 'about']);
 Route::get('/courses', [App\Http\Controllers\FrontControllers\HomeController::class, 'courses']);
+Route::get('/contact', [App\Http\Controllers\FrontControllers\HomeController::class, 'contact']);
 Route::get('/blogs', [App\Http\Controllers\FrontControllers\BlogsController::class, 'blogs']);
 Route::get('/blog/{slug}', [App\Http\Controllers\FrontControllers\BlogsController::class, 'blogDetails']);
 

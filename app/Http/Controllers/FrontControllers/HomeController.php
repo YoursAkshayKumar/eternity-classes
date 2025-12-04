@@ -36,6 +36,24 @@ class HomeController extends WebAppBaseController
         }
     }
 
+    public function courses()
+    {
+        try {
+            return view('front.pages.courses', []);
+        } catch (\Exception $ex) {
+            return $this->sendError($ex->getMessage(), $ex->getTrace(), 500);
+        }
+    }
+
+    public function contact()
+    {
+        try {
+            return view('front.pages.contact', []);
+        } catch (\Exception $ex) {
+            return $this->sendError($ex->getMessage(), $ex->getTrace(), 500);
+        }
+    }
+
 
 
 

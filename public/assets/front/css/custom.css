@@ -276,8 +276,8 @@ span {
 }
 
 .header-contact .contact-btn {
-    background: linear-gradient(to right, #00d090 0%, #00dab3 100%);
-    box-shadow: 0px 2px 27px rgb(0 210 149 / 30%);
+    background: linear-gradient(135deg, #14b8a6 0%, #0ea5e9 50%, #3b82f6 100%);
+    box-shadow: 0px 2px 27px rgba(20, 184, 166, 0.35);
     min-width: 158px;
     color: var(--secondary--color);
     height: 51px;
@@ -289,13 +289,15 @@ span {
     width: 100%;
     text-decoration: none;
     z-index: 1;
+    transition: all 0.3s ease;
 }
 
 .header-contact .contact-btn:hover {
-    background: var(--dark-blue-family-color);
+    background: linear-gradient(135deg, #14b8a6 0%, #0ea5e9 50%, #3b82f6 100%);
     color: var(--secondary--color);
     transition: ease-in-out 0.6s;
-    box-shadow: 0px 2px 22px rgb(0 0 0 / 5%);
+    box-shadow: 0px 10px 35px rgba(20, 184, 166, 0.45);
+    transform: translateY(-2px);
 }
 
 
@@ -825,7 +827,7 @@ span {
 }
 
 .carousel-focus-controls button.carousel-focus-control:hover {
-    background: linear-gradient(to right, #00d090 0%, #00dab3 100%);
+    background: linear-gradient(135deg, #14b8a6 0%, #0ea5e9 50%, #3b82f6 100%);
 }
 
 .carousel-focus-controls button.carousel-focus-control span {
@@ -1404,7 +1406,7 @@ span {
 }
 
 .team-box ul.social-icon li i:hover {
-    background: linear-gradient(to right, #00d090 0%, #00dab3 100%);
+    background: linear-gradient(135deg, #14b8a6 0%, #0ea5e9 50%, #3b82f6 100%);
 }
 
 /* HELPING STUDENTS SECTION STYLING */
@@ -1512,7 +1514,7 @@ span {
     height: 21px;
     line-height: 21px;
     text-align: center;
-    background: linear-gradient(to right, #00d090 0%, #00dab3 100%);
+    background: linear-gradient(135deg, #14b8a6 0%, #0ea5e9 50%, #3b82f6 100%);
     color: var(--secondary--color);
     border-radius: 100%;
     position: absolute;
@@ -1698,7 +1700,7 @@ span {
 }
 
 .courses-tabs-con .tabs-box .nav-tabs li a.active {
-    background: linear-gradient(to right, #00d090 0%, #00dab3 100%);
+    background: linear-gradient(135deg, #14b8a6 0%, #0ea5e9 50%, #3b82f6 100%);
     color: var(--secondary--color);
 }
 
@@ -2115,7 +2117,7 @@ span {
     height: 21px;
     line-height: 21px;
     text-align: center;
-    background: linear-gradient(to right, #00d090 0%, #00dab3 100%);
+    background: linear-gradient(135deg, #14b8a6 0%, #0ea5e9 50%, #3b82f6 100%);
     color: var(--secondary--color);
     border-radius: 100%;
     position: absolute;
@@ -2156,7 +2158,7 @@ span {
 }
 
 .blog-detail-wrapper .share-now-con ul.social-icon li i:hover {
-    background: linear-gradient(to right, #00d090 0%, #00dab3 100%);
+    background: linear-gradient(135deg, #14b8a6 0%, #0ea5e9 50%, #3b82f6 100%);
 }
 
 .recent-posts-content p a {
@@ -2391,15 +2393,18 @@ span {
     margin: auto;
     width: 55px;
     height: 53px;
-    background: linear-gradient(to right, #00d090 0%, #00dab3 100%);
+    background: linear-gradient(135deg, #14b8a6 0%, #0ea5e9 50%, #3b82f6 100%);
     cursor: pointer;
     border: none;
     border-radius: 3px;
-    transition: ease-in-out 0.6s;
+    transition: all 0.3s ease;
+    box-shadow: 0px 2px 27px rgba(20, 184, 166, 0.35);
 }
 
 .coming-soon-banner .form-group button:hover {
-    background: var(--dark-blue-family-color);
+    background: linear-gradient(135deg, #14b8a6 0%, #0ea5e9 50%, #3b82f6 100%);
+    box-shadow: 0px 10px 35px rgba(20, 184, 166, 0.45);
+    transform: translateY(-2px);
 }
 
 .coming-soon-banner .form-group button i {
@@ -2508,30 +2513,34 @@ span {
 }
 
 .index2-outer-wrapper .header-contact .contact-btn {
-    background: none;
-    background-color: var(--pink2-color);
-    box-shadow: none;
+    background: linear-gradient(135deg, #14b8a6 0%, #0ea5e9 50%, #3b82f6 100%);
+    box-shadow: 0px 2px 27px rgba(20, 184, 166, 0.35);
+    transition: all 0.3s ease;
 }
 
 .index2-outer-wrapper .header-contact .contact-btn:hover {
-    background-color: var(--blue2-color-family1);
+    background: linear-gradient(135deg, #14b8a6 0%, #0ea5e9 50%, #3b82f6 100%);
     color: var(--secondary--color);
     transition: ease-in-out 0.6s;
+    box-shadow: 0px 10px 35px rgba(20, 184, 166, 0.45);
+    transform: translateY(-2px);
 }
 
 .index2-outer-wrapper .light-green-btn a,
 .index2-outer-wrapper .light-green-btn button {
-    background: none;
-    background-color: var(--pink2-color);
+    background: linear-gradient(135deg, #14b8a6 0%, #0ea5e9 50%, #3b82f6 100%);
     min-width: 158px;
-    box-shadow: none;
+    box-shadow: 0px 2px 27px rgba(20, 184, 166, 0.35);
+    transition: all 0.3s ease;
 }
 
 .index2-outer-wrapper .light-green-btn a:hover,
 .index2-outer-wrapper .light-green-btn button:hover {
-    background-color: var(--blue2-color-family1);
+    background: linear-gradient(135deg, #14b8a6 0%, #0ea5e9 50%, #3b82f6 100%);
     color: var(--secondary--color);
     transition: ease-in-out 0.6s;
+    box-shadow: 0px 10px 35px rgba(20, 184, 166, 0.45);
+    transform: translateY(-2px);
 }
 
 .index2-outer-wrapper .dark-btn a,
@@ -2559,7 +2568,8 @@ span {
 }
 
 .index2-outer-wrapper .special-text {
-    color: var(--pink2-color);
+    /* color: var(--pink2-color); */
+    color: #12b3b8;
 }
 
 .index2-outer-wrapper p {
@@ -2766,12 +2776,14 @@ body.index2-outer-wrapper {
     position: absolute;
     width: 57px;
     height: 50px;
-    background: var(--pink2-color);
+    background: linear-gradient(135deg, #14b8a6 0%, #0ea5e9 50%, #3b82f6 100%);
     outline: none;
     border: none;
     top: 0;
     right: -10px;
     cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 2px 27px rgba(20, 184, 166, 0.35);
 }
 
 .index2-outer-wrapper .footer-inner-content form button:hover i {
@@ -3225,17 +3237,19 @@ body.index2-outer-wrapper {
 }
 
 .index3-outer-wrapper .header-contact .contact-btn {
-    background: none;
-    background-color: var(--redish-family-color1);
+    background: linear-gradient(135deg, #14b8a6 0%, #0ea5e9 50%, #3b82f6 100%);
     border: 1px solid transparent;
-    box-shadow: none;
+    box-shadow: 0px 2px 27px rgba(20, 184, 166, 0.35);
     border-radius: 100px;
+    transition: all 0.3s ease;
 }
 
 .index3-outer-wrapper .header-contact .contact-btn:hover {
-    background-color: transparent;
-    border: 1px solid var(--redish-family-color1);
-    color: var(--redish-family-color1);
+    background: linear-gradient(135deg, #14b8a6 0%, #0ea5e9 50%, #3b82f6 100%);
+    border: 1px solid transparent;
+    color: var(--secondary--color);
+    box-shadow: 0px 10px 35px rgba(20, 184, 166, 0.45);
+    transform: translateY(-2px);
 }
 
 .index3-outer-wrapper .header-con .navbar-light .navbar-nav .dropdown-menu {
@@ -3245,8 +3259,7 @@ body.index2-outer-wrapper {
 
 .index3-outer-wrapper .light-green-btn a,
 .index3-outer-wrapper .light-green-btn button {
-    background: none;
-    background-color: var(--redish-family-color1);
+    background: linear-gradient(135deg, #14b8a6 0%, #0ea5e9 50%, #3b82f6 100%);
     padding: 0;
     min-width: 182px;
     height: 56px;
@@ -3257,16 +3270,19 @@ body.index2-outer-wrapper {
     /* width: 100%; */
     text-decoration: none;
     color: var(--secondary--color);
-    box-shadow: none;
+    box-shadow: 0px 2px 27px rgba(20, 184, 166, 0.35);
     border-radius: 100px;
     border: 1px solid transparent;
+    transition: all 0.3s ease;
 }
 
 .index3-outer-wrapper .light-green-btn a:hover,
 .index3-outer-wrapper .light-green-btn button:hover {
-    background-color: transparent;
-    border: 1px solid var(--redish-family-color1);
-    color: var(--redish-family-color1);
+    background: linear-gradient(135deg, #14b8a6 0%, #0ea5e9 50%, #3b82f6 100%);
+    border: 1px solid transparent;
+    color: var(--secondary--color);
+    box-shadow: 0px 10px 35px rgba(20, 184, 166, 0.45);
+    transform: translateY(-2px);
 }
 
 .index3-outer-wrapper .primary-button a,
@@ -3740,21 +3756,24 @@ body.index2-outer-wrapper {
 }
 
 .index3-outer-wrapper .footer-con .blue-box form button {
-    background-color: var(--redish-family-color1);
+    background: linear-gradient(135deg, #14b8a6 0%, #0ea5e9 50%, #3b82f6 100%);
     border-radius: 22px;
     height: 44px;
     color: var(--secondary--color);
-    box-shadow: none;
+    box-shadow: 0px 2px 27px rgba(20, 184, 166, 0.35);
     border: none;
     outline: none;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .index3-outer-wrapper .footer-con .blue-box form button:hover {
-    background-color: transparent;
-    border: 1px solid var(--redish-family-color1);
-    color: var(--redish-family-color1);
+    background: linear-gradient(135deg, #14b8a6 0%, #0ea5e9 50%, #3b82f6 100%);
+    border: none;
+    color: var(--secondary--color);
     transition: ease-in-out 0.6s;
+    box-shadow: 0px 10px 35px rgba(20, 184, 166, 0.45);
+    transform: translateY(-2px);
 }
 
 .index3-outer-wrapper .footer-con .blue-box h5 {

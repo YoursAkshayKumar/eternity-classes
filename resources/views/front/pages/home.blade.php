@@ -2,377 +2,136 @@
 
 @section('content')
 
-<style>
-    /* Modern Contact Form Styles */
-    .contact-form-modern {
-        background: #fff;
-        border-radius: 20px;
-        padding: 50px 40px;
-        box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-        margin-top: 40px;
-    }
-
-    .contact-form-modern .form-group {
-        margin-bottom: 0;
-    }
-
-    .contact-form-modern .form-label {
-        font-weight: 600;
-        color: #2d3748;
-        margin-bottom: 10px;
-        display: block;
-        font-size: 14px;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-
-    .contact-form-modern .form-label i {
-        color: #667eea;
-        margin-right: 8px;
-        font-size: 12px;
-    }
-
-    .contact-form-modern .form-control-modern {
-        border: 2px solid #e2e8f0;
-        border-radius: 12px;
-        padding: 15px 20px 15px 50px;
-        font-size: 15px;
-        transition: all 0.3s ease;
-        background: #f8f9fa;
-        color: #2d3748;
-        height: auto;
-    }
-
-    .contact-form-modern .form-control-modern:focus {
-        border-color: #667eea;
-        background: #fff;
-        box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
-        outline: none;
-    }
-
-    .contact-form-modern .form-control-modern::placeholder {
-        color: #a0aec0;
-        font-size: 14px;
-    }
-
-    .contact-form-modern textarea.form-control-modern {
-        padding: 15px 20px 15px 50px;
-        resize: vertical;
-        min-height: 150px;
-    }
-
-    .contact-form-modern .form-icon-wrapper {
-        position: absolute;
-        left: 18px;
-        top: 42px;
-        color: #667eea;
-        font-size: 16px;
-        pointer-events: none;
-        transition: all 0.3s ease;
-    }
-
-    .contact-form-modern .form-icon-wrapper.textarea-icon {
-        top: 48px;
-    }
-
-    .contact-form-modern .form-group:focus-within .form-icon-wrapper {
-        color: #764ba2;
-        transform: scale(1.1);
-    }
-
-    .contact-form-modern .btn-submit-modern {
-        background: transparent;
-        border: none;
-        color: inherit;
-        font-size: 16px;
-        font-weight: 600;
-        padding: 15px 40px;
-        display: inline-flex;
-        align-items: center;
-        transition: all 0.3s ease;
-        cursor: pointer;
-    }
-
-    .contact-form-modern .btn-submit-modern:hover {
-        transform: translateY(-2px);
-    }
-
-    .contact-form-modern .btn-submit-modern i {
-        transition: transform 0.3s ease;
-    }
-
-    .contact-form-modern .btn-submit-modern:hover i {
-        transform: translateX(5px);
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        .contact-form-modern {
-            padding: 30px 20px;
-        }
-
-        .contact-form-modern .form-control-modern {
-            padding: 12px 15px 12px 45px;
-        }
-
-        .contact-form-modern .form-icon-wrapper {
-            left: 15px;
-            top: 38px;
-            font-size: 14px;
-        }
-
-        .contact-form-modern .form-icon-wrapper.textarea-icon {
-            top: 44px;
-        }
-    }
-
-    /* Animation for form fields */
-    @keyframes slideInUp {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .contact-form-modern .form-group {
-        animation: slideInUp 0.5s ease forwards;
-    }
-
-    .contact-form-modern .form-group:nth-child(1) { animation-delay: 0.1s; }
-    .contact-form-modern .form-group:nth-child(2) { animation-delay: 0.2s; }
-    .contact-form-modern .form-group:nth-child(3) { animation-delay: 0.3s; }
-    .contact-form-modern .form-group:nth-child(4) { animation-delay: 0.4s; }
-    .contact-form-modern .form-group:nth-child(5) { animation-delay: 0.5s; }
-</style>
-
-    <!-- OUTER BG WRAPPER -->
-    <div class="bg-outer-wrapper position-relative float-left w-100">
-
-        <section class="float-left w-100 banner-con postion-relative main-box">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-5 col-md-6">
-                        <div class="banner-content-con">
-                            <h1 class="">The Smarter <br>
-                                Way To Learn <br>
-                                Anything</h1>
-                            <p class="font-weight-light">Omnis dolor repellendus temporibus aue <br>
-                                quibus dam et aut officiis debitis.</p>
-                            <div class="light-green-btn d-inline-block">
-                                <a href="{{ url('contact') }}" class="d-inline-block">Contact Us</a>
-                            </div>
-                            <div class="dark-btn d-inline-block">
-                                <a href="{{ url('about') }}" class="d-inline-block">Read More</a>
-                            </div>
-
-                            <!-- banner content con -->
-                        </div>
-                        <!-- col -->
-                    </div>
-                    <div class="col-lg-7 col-md-6">
-                        <div class="banner-img-con position-relative text-center">
-                            <img class="img-fluid position-absolute obj1" alt="object"
-                                src="{{ asset('assets/front/images/home2/vector1.png') }}">
-                            <img class="img-fluid position-absolute obj2" alt="object"
-                                src="{{ asset('assets/front/images/home2/vector2.png') }}">
-                            <img class="img-fluid position-absolute obj3" alt="object"
-                                src="{{ asset('assets/front/images/home2/vector3.png') }}">
-                            <img class="img-fluid position-absolute obj4" alt="object"
-                                src="{{ asset('assets/front/images/home2/vector4.png') }}">
-                            <img class="img-fluid position-absolute obj5" alt="object"
-                                src="{{ asset('assets/front/images/home2/vector2.png') }}">
-                            <img class="home-img img1" src="{{ asset('assets/front/images/home2/banner-inner-img.png') }}"
-                                alt="image">
-                            <img class="home-img img2"
-                                src="{{ asset('assets/front/images/home2/banner-inner-img-responsive.png') }}"
-                                alt="image">
-                            <!-- banner image con -->
-                        </div>
-                        <!-- col -->
-                    </div>
-                    <!-- row -->
+    <!-- MOVING OFFERS BANNER -->
+    <section class="float-left w-100 moving-offers-banner position-relative main-box">
+        <img class="img-fluid position-absolute dot1" alt="icon" src="{{ asset('assets/front/images/home2/dots.png') }}" style="top: 50%; left: 2%; opacity: 0.1; z-index: 0; transform: translateY(-50%);">
+        <img class="img-fluid position-absolute dot2" alt="icon" src="{{ asset('assets/front/images/home2/dots.png') }}" style="top: 50%; right: 2%; opacity: 0.1; z-index: 0; transform: translateY(-50%);">
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="offers-marquee">
+                <div class="offers-content">
+                    <span class="offer-text">🎓 Special Offer: Get 50% Off on All Courses - Limited Time Only!</span>
+                    <span class="offer-separator">•</span>
+                    <span class="offer-text">✨ New Batch Starting Soon - Enroll Now & Get Free Study Materials!</span>
+                    <span class="offer-separator">•</span>
+                    <span class="offer-text">🏆 Join 10,000+ Successful Students - Start Your Journey Today!</span>
+                    <span class="offer-separator">•</span>
+                    <span class="offer-text">💼 Career Guidance Included - Transform Your Future Now!</span>
+                    <span class="offer-separator">•</span>
+                    <span class="offer-text">🎁 Early Bird Discount: Save Up to 60% - Don't Miss Out!</span>
                 </div>
-                <!-- container -->
             </div>
-            <!-- banner con -->
-        </section>
-        <!-- bg outer wrapper -->
-    </div>
-
-    {{-- <!-- ABOUT US SECTION -->
-    <section class="aboutus_con position-relative float-left w-100 postion-relative main-box padding-top80 padding-bottom116">
-        <div class="container wow fadeIn" data-wow-duration="2s" data-wow-delay="0.3s">
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-md-12 col-sm-12 col-12 text-md-left text-center">
-                    <div class="aboutus_images_wrapper position-relative">
-                        <img class="img-fluid" src="{{ asset('assets/front/images/home2/advance-your-career-img.jpg') }}"
-                            alt="image">
-                        <img class="img-fluid position-absolute book-icon"
-                            src="{{ asset('assets/front/images/home2/book-icon.png') }}" alt="image">
-                        <!-- aboutus image wrapper -->
-                    </div>
-                    <!-- col -->
-                </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                    <div class="aboutus_content">
-                        <span class="d-block special-text">consequatur</span>
-                        <h2 class="font-weight-600 large-font">Advance Your Carrier
-                            Lear Something New</h2>
-                        <p class="">Harum quidem rerum facilis est et expedita distinctio
-                            nam libero tempore, cum soluta nobis est eligendi
-                            optio cumque nihil impedit quo minus. </p>
-                        <ul class="list-unstyled p-0">
-                            <li>
-                                <div class="span_wrapper">
-                                    <span class="counter">25</span>
-                                    <sup class="plus">+</sup>
-                                </div>
-                                <p class="text-size-14 m-0">Students</p>
-                            </li>
-                            <li>
-                                <div class="span_wrapper">
-                                    <span class="counter">75</span><span class="d-inline-block k-text">K</span>
-                                    <sup class="plus">+</sup>
-                                </div>
-                                <p class="text-size-14 m-0">Active Courses</p>
-                            </li>
-                            <li>
-                                <div class="span_wrapper">
-                                    <span class="counter">250</span>
-                                    <sup class="plus">+</sup>
-                                </div>
-                                <p class="text-size-14 m-0">Free Courses</p>
-                            </li>
-                        </ul>
-                        <div class="light-green-btn d-inline-block">
-                            <a href="{{ url('about') }}" class="d-inline-block">Learn More</a>
-                        </div>
-                        <!-- aboutus content -->
-                    </div>
-                    <!-- col -->
-                </div>
-                <!-- row -->
-            </div>
-            <!-- container -->
         </div>
-        <!-- aboutus con -->
-    </section> --}}
+    </section>
 
-    <!-- US VS OTHERS COMPARISON SECTION -->
-    <section class="float-left w-100 us-vs-others-con position-relative main-box padding-top116 padding-bottom116">
-        <div class="container wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
-            <div class="heading-title-con text-center mb-5">
-                <span class="d-block special-text">Why Choose Us</span>
-                <h2 class="font-weight-600 large-font">Us vs Others</h2>
-                <p>See why thousands of students choose Eternity Classes over other institutions</p>
+    <!-- MAIN LANDING PAGE HERO SECTION -->
+    <section class="float-left w-100 banner-con postion-relative main-box">
+        <img class="img-fluid position-absolute objct1" alt="object" src="{{ asset('assets/front/images/home2/vector1.png') }}" style="top: 10%; left: 5%; opacity: 0.3; z-index: 0;">
+        <img class="img-fluid position-absolute objct2" alt="object" src="{{ asset('assets/front/images/home2/vector2.png') }}" style="bottom: 10%; right: 5%; opacity: 0.3; z-index: 0;">
+        <img class="img-fluid position-absolute dot1" alt="icon" src="{{ asset('assets/front/images/home2/dots.png') }}" style="top: 20%; right: 10%; opacity: 0.2; z-index: 0;">
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="row align-items-center">
+                <div class="col-lg-7 col-md-6">
+                    <div class="banner-content-con">
+                        <span class="d-block special-text">Welcome to Eternity Classes</span>
+                        <h1 class="mb-3">Transform Your Future <br>Through Quality Education</h1>
+                        <p class="mb-3" style="font-size: 16px; color: #718096; font-style: italic; font-weight: 500;">Indian-style learning with global readiness</p>
+                        <p class="font-weight-light mb-3">Eternity brings you a personalised learning experience that makes education enjoyable, engaging and effective. Our holistic approach creates a happy, motivating environment where students thrive academically and personally.</p>
+                        <p class="font-weight-light mb-3">Each learner moves at their own accelerated pace through methods designed around their strengths and unique style of learning. With innovative timeless mindmap & conceptual clarity throughout.</p>
+                        {{-- <div class="hero-features mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fa-solid fa-check-circle text-success mr-2"></i>
+                                <span>Personalised Learning Experience</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fa-solid fa-check-circle text-success mr-2"></i>
+                                <span>Holistic Approach for Academic & Personal Growth</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fa-solid fa-check-circle text-success mr-2"></i>
+                                <span>Learn at Your Own Accelerated Pace</span>
+                            </div>
+                        </div> --}}
+                        <p class="mb-4" style="font-size: 17px; font-style: italic; color: #2d3748; font-weight: 500;">"At Eternity learning isn't just a process - It's a journey of discovery, confidence and Growth."</p>
+                        <div class="light-green-btn d-inline-block mr-3">
+                            <a href="{{ url('courses') }}" class="d-inline-block">Explore Courses</a>
+                        </div>
+                        <div class="dark-btn d-inline-block">
+                            <a href="#enrollment-form" class="d-inline-block">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6">
+                    {{-- <div class="banner-img-con position-relative text-center">
+                        <div class="education-animated-banner-wrapper">
+                            <img class="img-fluid education-animated-banner" 
+                                 src="{{ asset('assets/front/images/tutor-1.png') }}" 
+                                 alt="Education Animation">
+                        </div>
+                    </div> --}}
+                    <img src="{{ asset('assets/front/images/tutor-1.png') }}" alt="banner-img" class="img-fluid">
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- TRANSITION CARDS SECTION -->
+    <section class="float-left w-100 transition-cards-section position-relative main-box padding-top80 padding-bottom116">
+        <img class="img-fluid position-absolute objct1" alt="object" src="{{ asset('assets/front/images/home2/vector3.png') }}" style="top: 15%; left: 0; opacity: 0.25; z-index: 0;">
+        <img class="img-fluid position-absolute objct2" alt="object" src="{{ asset('assets/front/images/home2/vector4.png') }}" style="bottom: 15%; right: 0; opacity: 0.25; z-index: 0;">
+        <img class="img-fluid position-absolute dot1" alt="icon" src="{{ asset('assets/front/images/home2/dots.png') }}" style="top: 50%; left: 5%; opacity: 0.15; z-index: 0;">
+        <div class="container" style="position: relative; z-index: 1;">
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="comparison-wrapper">
-                        <div class="table-responsive">
-                            <table class="table comparison-table">
-                                <thead>
-                                    <tr>
-                                        <th class="feature-col">Features</th>
-                                        <th class="us-col text-center">Eternity Classes</th>
-                                        <th class="others-col text-center">Others</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="feature-cell font-weight-600">Expert Instructors</td>
-                                        <td class="us-cell text-center">
-                                            <i class="fa-solid fa-check-circle text-success"></i>
-                                            <span class="ml-2">Industry Experts</span>
-                                        </td>
-                                        <td class="others-cell text-center">
-                                            <i class="fa-solid fa-times-circle text-danger"></i>
-                                            <span class="ml-2">Limited Experience</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="feature-cell font-weight-600">Placement Support</td>
-                                        <td class="us-cell text-center">
-                                            <i class="fa-solid fa-check-circle text-success"></i>
-                                            <span class="ml-2">100% Guaranteed</span>
-                                        </td>
-                                        <td class="others-cell text-center">
-                                            <i class="fa-solid fa-times-circle text-danger"></i>
-                                            <span class="ml-2">Not Guaranteed</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="feature-cell font-weight-600">Course Material</td>
-                                        <td class="us-cell text-center">
-                                            <i class="fa-solid fa-check-circle text-success"></i>
-                                            <span class="ml-2">Free & Updated</span>
-                                        </td>
-                                        <td class="others-cell text-center">
-                                            <i class="fa-solid fa-times-circle text-danger"></i>
-                                            <span class="ml-2">Paid & Outdated</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="feature-cell font-weight-600">Live Sessions</td>
-                                        <td class="us-cell text-center">
-                                            <i class="fa-solid fa-check-circle text-success"></i>
-                                            <span class="ml-2">Daily Live Classes</span>
-                                        </td>
-                                        <td class="others-cell text-center">
-                                            <i class="fa-solid fa-times-circle text-danger"></i>
-                                            <span class="ml-2">Recorded Only</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="feature-cell font-weight-600">Doubt Resolution</td>
-                                        <td class="us-cell text-center">
-                                            <i class="fa-solid fa-check-circle text-success"></i>
-                                            <span class="ml-2">24/7 Support</span>
-                                        </td>
-                                        <td class="others-cell text-center">
-                                            <i class="fa-solid fa-times-circle text-danger"></i>
-                                            <span class="ml-2">Limited Hours</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="feature-cell font-weight-600">Career Guidance</td>
-                                        <td class="us-cell text-center">
-                                            <i class="fa-solid fa-check-circle text-success"></i>
-                                            <span class="ml-2">Personalized Counseling</span>
-                                        </td>
-                                        <td class="others-cell text-center">
-                                            <i class="fa-solid fa-times-circle text-danger"></i>
-                                            <span class="ml-2">No Guidance</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="feature-cell font-weight-600">Flexible Schedule</td>
-                                        <td class="us-cell text-center">
-                                            <i class="fa-solid fa-check-circle text-success"></i>
-                                            <span class="ml-2">Learn at Your Pace</span>
-                                        </td>
-                                        <td class="others-cell text-center">
-                                            <i class="fa-solid fa-times-circle text-danger"></i>
-                                            <span class="ml-2">Fixed Schedule</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="feature-cell font-weight-600">Affordable Pricing</td>
-                                        <td class="us-cell text-center">
-                                            <i class="fa-solid fa-check-circle text-success"></i>
-                                            <span class="ml-2">Best Value for Money</span>
-                                        </td>
-                                        <td class="others-cell text-center">
-                                            <i class="fa-solid fa-times-circle text-danger"></i>
-                                            <span class="ml-2">Expensive</span>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+                    <div class="transition-card-box card-by-you wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.1s">
+                        <div class="transition-icon-wrapper">
+                            <img class="img-fluid" alt="icon" src="{{ asset('assets/front/images/single-blog-tab-img4.jpg') }}">
+                        </div>
+                        <div class="transition-content">
+                            <h5 class="font-weight-600">By You</h5>
+                            <div class="transition-content-wrapper">
+                                <div class="transition-content-default">
+                                    <p class="mb-0">Your Course,<br>Your Schedule,<br>Your Learning style.</p>
+                                </div>
+                                <div class="transition-content-hover">
+                                    <p class="mb-0">Design your course your way, learn on a schedule that fits your lifestyle, and progress through a Syllabus tailored to your unique learning style.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+                    <div class="transition-card-box card-for-you wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.3s">
+                        <div class="transition-icon-wrapper">
+                            <img class="img-fluid" alt="icon" src="{{ asset('assets/front/images/single-blog-tab-img5.jpg') }}">
+                        </div>
+                        <div class="transition-content">
+                            <h5 class="font-weight-600">For You</h5>
+                            <div class="transition-content-wrapper">
+                                <div class="transition-content-default">
+                                    <p class="mb-0">Personalised learning. and holistic growth beyond academics</p>
+                                </div>
+                                <div class="transition-content-hover">
+                                    <p class="mb-0">Eternity is designed to deliver a personalised learning experience that fosters well-rounded development and goes far beyond academic growth.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+                    <div class="transition-card-box card-to-you wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.5s">
+                        <div class="transition-icon-wrapper">
+                            <img class="img-fluid" alt="icon" src="{{ asset('assets/front/images/single-blog-tab-img6.jpg') }}">
+                        </div>
+                        <div class="transition-content">
+                            <h5 class="font-weight-600">To You</h5>
+                            <div class="transition-content-wrapper">
+                                <div class="transition-content-default">
+                                    <p class="mb-0">Seamless Learning,<br>expert Guidance.<br>Endless possibilities.</p>
+                                </div>
+                                <div class="transition-content-hover">
+                                    <p class="mb-0">Experience Seamless classes guided by experienced tutors, explore new horizons in education And unlock a new empowered version of yourself.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -380,666 +139,1037 @@
         </div>
     </section>
 
-    <!-- ENROLLMENT FORM SECTION -->
-    <section id="enrollment-form"
-        class="float-left w-100 enrollment-form-con position-relative main-box padding-top116 padding-bottom116">
-        <img class="img-fluid position-absolute dot1" alt="icon"
-            src="{{ asset('assets/front/images/home2/dots.png') }}">
-        <img class="img-fluid position-absolute dot2" alt="icon"
-            src="{{ asset('assets/front/images/home2/dots.png') }}">
-        <div class="container wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
+    <!-- FEATURES SECTION 1 -->
+    <section class="float-left w-100 features-section-1 position-relative main-box padding-top116 padding-bottom116">
+        <img class="img-fluid position-absolute objct1" alt="object" src="{{ asset('assets/front/images/home2/vector2.png') }}" style="top: 10%; right: 5%; opacity: 0.2; z-index: 0;">
+        <img class="img-fluid position-absolute objct2" alt="object" src="{{ asset('assets/front/images/home2/vector1.png') }}" style="bottom: 10%; left: 5%; opacity: 0.2; z-index: 0;">
+        <img class="img-fluid position-absolute dot1" alt="icon" src="{{ asset('assets/front/images/home2/dots.png') }}" style="top: 50%; right: 10%; opacity: 0.15; z-index: 0;">
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="heading-title-con text-center mb-5">
+                <span class="d-block special-text">Our Approach</span>
+                <h2 class="font-weight-600 large-font">What We Offer</h2>
+                <p>Discover how we transform learning into an empowering journey</p>
+            </div>
             <div class="row">
-                <div class="col-lg-10 col-xl-8 mx-auto">
-                    <div class="enrollment-form-wrapper">
-                        <div class="heading-title-con text-center mb-4">
-                            <span class="d-block special-text">Get Started</span>
-                            <h2 class="font-weight-600 large-font">Enrollment Form</h2>
-                            <p>Fill out the form below to start your learning journey with us</p>
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                    <div class="feature-card-box feature-card-1 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.1s">
+                        <div class="feature-icon-wrapper">
+                            <i class="fa-solid fa-user-graduate"></i>
                         </div>
-                        <form class="main-form enrollment-form" method="post" id="enrollmentForm">
-                            <ul class="list-unstyled p-0 float-left w-100 mb-0">
-                                <li class="row">
-                                    <div class="col-md-6">
-                                        <input type="text" placeholder="Full Name *" name="fname" id="enroll_fname"
-                                            required>
+                        <div class="feature-content">
+                            {{-- <h5 class="font-weight-600">Complete Personality Development</h5> --}}
+                            <div class="feature-content-wrapper">
+                                <div class="feature-content-default">
+                                    <h5 class="font-weight-600">Complete Personality Development</h5>
+                                </div>
+                                <div class="feature-content-hover">
+                                    <p class="mb-0">Confidence and Esteem building, Critical thinking & Problem Solving and Self-growth.</p>
+                                    {{-- <p class="mb-0">We focus on building confidence and self-esteem, developing critical thinking skills, problem-solving abilities, and fostering overall self-growth to create well-rounded individuals.</p> --}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                    <div class="feature-card-box feature-card-2 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                        <div class="feature-icon-wrapper">
+                            <i class="fa-solid fa-rocket"></i>
+                        </div>
+                        <div class="feature-content">
+                            {{-- <h5 class="font-weight-600">Accelerated growth of your child</h5> --}}
+                            <div class="feature-content-wrapper">
+                                <div class="feature-content-default">
+                                    <h5 class="font-weight-600">Accelerated growth of your child</h5>
+                                </div>
+                                <div class="feature-content-hover">
+                                    <p class="mb-0">we aim to enhance the student's learning process & elevate their overall learning curve.</p>
+                                    {{-- <p class="mb-0">Our innovative teaching methods are designed to accelerate learning, helping students achieve faster progress and reach their full potential through personalized attention and effective strategies.</p> --}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                    <div class="feature-card-box feature-card-3 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.3s">
+                        <div class="feature-icon-wrapper">
+                            <i class="fa-solid fa-user-check"></i>
+                        </div>
+                        <div class="feature-content">
+                            {{-- <h5 class="font-weight-600">Personalised Learning</h5> --}}
+                            <div class="feature-content-wrapper">
+                                <div class="feature-content-default">
+                                    <h5 class="font-weight-600">Personalised Learning</h5>
+                                </div>
+                                <div class="feature-content-hover">
+                                    <p class="mb-0">We customize learning journey based on their performance, interests & learning needs.</p>
+                                    {{-- <p class="mb-0">Every student is unique. We tailor the learning experience to match individual performance levels, personal interests, and specific learning needs for optimal results.</p> --}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                    <div class="feature-card-box feature-card-4 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.4s">
+                        <div class="feature-icon-wrapper">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <div class="feature-content">
+                            {{-- <h5 class="font-weight-600">Seamless Rescheduling</h5> --}}
+                            <div class="feature-content-wrapper">
+                                <div class="feature-content-default">
+                                    <h5 class="font-weight-600">Seamless Rescheduling</h5>
+                                    
+                                </div>
+                                <div class="feature-content-hover">
+                                    {{-- <p class="mb-0">We understand that life can get busy. Our flexible rescheduling system makes it easy to adjust your learning schedule without any hassle, ensuring you never miss out on your education.</p> --}}
+                                    <p class="mb-0">Effortless and Hassle free Rescheduling. So that you don't miss out. Because life gets busy & we understand that.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION 2 -->
+    <section class="float-left w-100 features-section-2 position-relative main-box padding-top116 padding-bottom116">
+        <img class="img-fluid position-absolute objct1" alt="object" src="{{ asset('assets/front/images/home2/vector4.png') }}" style="top: 15%; left: 0; opacity: 0.25; z-index: 0;">
+        <img class="img-fluid position-absolute objct2" alt="object" src="{{ asset('assets/front/images/home2/vector3.png') }}" style="bottom: 15%; right: 0; opacity: 0.25; z-index: 0;">
+        <img class="img-fluid position-absolute dot1" alt="icon" src="{{ asset('assets/front/images/home2/dots.png') }}" style="top: 30%; left: 8%; opacity: 0.15; z-index: 0;">
+        <img class="img-fluid position-absolute dot2" alt="icon" src="{{ asset('assets/front/images/home2/dots.png') }}" style="bottom: 30%; right: 8%; opacity: 0.15; z-index: 0;">
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="heading-title-con text-center mb-5">
+                <span class="d-block special-text">Our Support</span>
+                <h2 class="font-weight-600 large-font">Additional Benefits</h2>
+                <p>Everything you need to succeed in your learning journey</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                    <div class="feature-card-box feature-card-5 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.1s">
+                        <div class="feature-icon-wrapper">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+                        <div class="feature-content">
+                            <div class="feature-content-wrapper">
+                                <div class="feature-content-default">
+                                    <h5 class="font-weight-600">Doubt & Clearing Sessions</h5>
+                                </div>
+                                <div class="feature-content-hover">
+                                    <p class="mb-0">We believe no doubt should go unanswered. Instant, personalised doubt-clearing sessions.</p>
+                                    {{-- <p class="mb-0">Get instant, personalized doubt-clearing sessions whenever you need them. We believe no question should go unanswered, ensuring continuous learning without obstacles.</p> --}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                    <div class="feature-card-box feature-card-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                        <div class="feature-icon-wrapper">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <div class="feature-content">
+                            <div class="feature-content-wrapper">
+                                <div class="feature-content-default">
+                                    <h5 class="font-weight-600">Study Material</h5>
+                                </div>
+                                <div class="feature-content-hover">
+                                    <p class="mb-0">Quick, sharp and effective notes for study, designed to accelerate learning according to your comfort level curriculum.</p>
+                                    {{-- <p class="mb-0">Access comprehensive study materials including quick, sharp, and effective notes designed to accelerate your learning. All materials are tailored to your comfort level and curriculum requirements.</p> --}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                    <div class="feature-card-box feature-card-7 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.3s">
+                        <div class="feature-icon-wrapper">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <div class="feature-content">
+                            <div class="feature-content-wrapper">
+                                <div class="feature-content-default">
+                                    <h5 class="font-weight-600">Beyond Academic</h5>
+                                </div>
+                                <div class="feature-content-hover">
+                                    <p class="mb-0">We primarily focus on developing essential life skills, real world abilities that go far beyond textbooks.</p>
+                                    {{-- <p class="mb-0">Our curriculum goes beyond traditional academics. We focus on developing essential life skills and real-world abilities that prepare you for success in all aspects of life, far beyond textbooks.</p> --}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                    <div class="feature-card-box feature-card-8 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.4s">
+                        <div class="feature-icon-wrapper">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="feature-content">
+                            <div class="feature-content-wrapper">
+                                <div class="feature-content-default">
+                                    <h5 class="font-weight-600">Your own Story</h5>
+                                </div>
+                                <div class="feature-content-hover">
+                                    <p class="mb-0">We eagerly look forward to feature your success story to shine in this section.</p>
+                                    {{-- <p class="mb-0">Your success is our pride! We eagerly look forward to featuring your success story, celebrating your achievements, and inspiring others through your journey of growth and accomplishment.</p> --}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- MERGED: US VS OTHERS & ENROLLMENT FORM SECTION -->
+      <section id="enrollment-form" class="float-left w-100 merged-comparison-form-con position-relative main-box padding-top116 padding-bottom116">
+        <img class="img-fluid position-absolute dot1" alt="icon" src="{{ asset('assets/front/images/home2/dots.png') }}">
+        <img class="img-fluid position-absolute dot2" alt="icon" src="{{ asset('assets/front/images/home2/dots.png') }}">
+        <div class="container-fluid px-0">
+            <div class="merged-section-wrapper">
+                <div class="row no-gutters">
+                    <!-- Left Side: Us vs Others Comparison -->
+                    {{-- <div class="col-lg-6 comparison-side"> --}}
+                    <div class="col-lg-7">
+                        <div class="comparison-content-wrapper">
+                            <div class="comparison-wrapper-modern">
+                                <div class="heading-title-con mb-4">
+                                    <span class="d-block special-text">Why Choose Us</span>
+                                    <h2 class="font-weight-600 large-font text-white">Us vs Others</h2>
+                                    <p class="text-white">See why thousands of students choose Eternity Classes over other institutions</p>
+                                </div>
+
+                                <div class="table-responsive">
+                                    <table class="table comparison-table-modern">
+                                        <thead>
+                                            <tr>                                                
+                                                <th class="us-col-modern text-center">Eternity Classes</th>
+                                                <th class="others-col-modern text-center">Others</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="us-cell-modern text-left">
+                                                    <i class="fa-solid fa-check-circle"></i>
+                                                    <span class="ml-2">Money back Guarantee</span>
+                                                </td>
+                                                <td class="others-cell-modern text-left">
+                                                    <i class="fa-solid fa-times-circle"></i>
+                                                    <span class="ml-2">No Refund Assurance</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="image.png">
+                                                    <i class="fa-solid fa-check-circle"></i>
+                                                    <span class="ml-2">One-week free Class</span>
+                                                </td>
+                                                <td class="others-cell-modern text-left">
+                                                    <i class="fa-solid fa-times-circle"></i>
+                                                    <span class="ml-2">No full trial</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="us-cell-modern text-left">
+                                                    <i class="fa-solid fa-check-circle"></i>
+                                                    <span class="ml-2">Assessment-based Study phase</span>
+                                                </td>
+                                                <td class="others-cell-modern text-left">
+                                                    <i class="fa-solid fa-times-circle"></i>
+                                                    <span class="ml-2">Uniform teaching for All.</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="us-cell-modern text-left">
+                                                    <i class="fa-solid fa-check-circle"></i>
+                                                    <span class="ml-2">24x7 support for doubt solving</span>
+                                                </td>
+                                                <td class="others-cell-modern text-left">
+                                                    <i class="fa-solid fa-times-circle"></i>
+                                                    <span class="ml-2">No response support</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="us-cell-modern text-left">
+                                                    <i class="fa-solid fa-check-circle"></i>
+                                                    <span class="ml-2">Different Teachers for every subject.</span>
+                                                </td>
+                                                <td class="others-cell-modern text-left">
+                                                    <i class="fa-solid fa-times-circle"></i>
+                                                    <span class="ml-2">one teacher for multiple subject.</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="us-cell-modern text-left">
+                                                    <i class="fa-solid fa-check-circle"></i>
+                                                    <span class="ml-2">On Demand classes across all subjects.</span>
+                                                </td>
+                                                <td class="others-cell-modern text-left">
+                                                    <i class="fa-solid fa-times-circle"></i>
+                                                    <span class="ml-2">No on-demand classes.</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Side: Enrollment Form -->
+                    {{-- <div class="col-lg-6 form-side"> --}}
+                    <div class="col-lg-5">
+                        <div class="enrollment-form-content-wrapper">
+                            <div class="form-card-wrapper">
+                                <div class="heading-title-con mb-4">
+                                    <span class="d-block special-text">Get Started</span>
+                                    <h2 class="font-weight-600 large-font">Enroll Now</h2>
+                                    <p>Fill out the form to start your learning journey with us</p>
+                                </div>
+                                <form class="main-form enrollment-form-modern" method="post" id="enrollmentForm">
+                                <div class="form-row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="form-group-modern">
+                                            <label for="enroll_fname">Full Name <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control-modern" placeholder="Enter your full name" name="fname" id="enroll_fname" required>
+                                        </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <input type="email" placeholder="Email Address *" name="email"
-                                            id="enroll_email" required>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="form-group-modern">
+                                            <label for="enroll_email">Email Address <span class="text-danger">*</span></label>
+                                            <input type="email" class="form-control-modern" placeholder="Enter your email" name="email" id="enroll_email" required>
+                                        </div>
                                     </div>
-                                </li>
-                                <li class="row">
-                                    <div class="col-md-6">
-                                        <input type="tel" placeholder="Phone Number *" name="phone"
-                                            id="enroll_phone" required>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="form-group-modern">
+                                            <label for="enroll_phone">Phone Number <span class="text-danger">*</span></label>
+                                            <input type="tel" class="form-control-modern" placeholder="Enter your phone" name="phone" id="enroll_phone" required>
+                                        </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <select class="form-control" name="course" id="enroll_course" required
-                                            style="padding: 12px 15px; border: 2px solid #e2e8f0; border-radius: 5px; width: 100%;">
-                                            <option value="">Select Course *</option>
-                                            <option value="web-development">Web Development</option>
-                                            <option value="data-science">Data Science</option>
-                                            <option value="digital-marketing">Digital Marketing</option>
-                                            <option value="graphic-design">Graphic Design</option>
-                                            <option value="business-management">Business Management</option>
-                                            <option value="accounting">Accounting</option>
-                                            <option value="english">English Language</option>
-                                            <option value="technology">Technology</option>
-                                        </select>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="form-group-modern">
+                                            <label for="enroll_course">Select Course <span class="text-danger">*</span></label>
+                                            <select class="form-control-modern" name="course" id="enroll_course" required>
+                                                <option value="">Choose a course</option>
+                                                <option value="web-development">Web Development</option>
+                                                <option value="data-science">Data Science</option>
+                                                <option value="digital-marketing">Digital Marketing</option>
+                                                <option value="graphic-design">Graphic Design</option>
+                                                <option value="business-management">Business Management</option>
+                                                <option value="accounting">Accounting</option>
+                                                <option value="english">English Language</option>
+                                                <option value="technology">Technology</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </li>
-                                <li class="row">
-                                    <div class="col-md-6">
-                                        <select class="form-control" name="education" id="enroll_education"
-                                            style="padding: 12px 15px; border: 2px solid #e2e8f0; border-radius: 5px; width: 100%;">
-                                            <option value="">Education Level</option>
-                                            <option value="high-school">High School</option>
-                                            <option value="diploma">Diploma</option>
-                                            <option value="bachelor">Bachelor's Degree</option>
-                                            <option value="master">Master's Degree</option>
-                                            <option value="other">Other</option>
-                                        </select>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="form-group-modern">
+                                            <label for="enroll_education">Grade</label>
+                                            <select class="form-control-modern" name="Grade" id="enroll_education">
+                                                <option value="">Select Grade</option>
+                                                <option value="high-school">High School</option>
+                                                <option value="diploma">Diploma</option>
+                                                <option value="bachelor">Bachelor's Degree</option>
+                                                <option value="master">Master's Degree</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <select class="form-control" name="preferred_time" id="enroll_preferred_time"
-                                            style="padding: 12px 15px; border: 2px solid #e2e8f0; border-radius: 5px; width: 100%;">
-                                            <option value="">Preferred Time</option>
-                                            <option value="morning">Morning (9 AM - 12 PM)</option>
-                                            <option value="afternoon">Afternoon (12 PM - 4 PM)</option>
-                                            <option value="evening">Evening (4 PM - 8 PM)</option>
-                                            <option value="weekend">Weekend</option>
-                                        </select>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="form-group-modern">
+                                            <label for="enroll_source">How did you hear about us?</label>
+                                            <select class="form-control-modern" name="source" id="enroll_source">
+                                                <option value="">Select Option</option>
+                                                <option value="facebook">Facebook</option>
+                                                <option value="instagram">Instagram</option>
+                                                <option value="twitter">Twitter</option>
+                                                <option value="linkedin">LinkedIn</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </li>
-                                <li>
-                                    <textarea placeholder="Message (Optional)" rows="6" name="message" id="enroll_message"></textarea>
-                                </li>
-                                <li>
-                                    <div class="form-check mb-3">
-                                        <input class="form-check-input" type="checkbox" id="enroll_terms" name="terms"
-                                            required>
-                                        <label class="form-check-label" for="enroll_terms" style="font-size: 14px;">
-                                            I agree to the <a href="#" class="text-primary">Terms & Conditions</a>
-                                            and <a href="#" class="text-primary">Privacy Policy</a>
+                                </div>
+                                <div class="form-group-modern mb-3">
+                                    <div class="form-check-modern">
+                                        <input class="form-check-input-modern" type="checkbox" id="enroll_terms" name="terms" required>
+                                        <label class="form-check-label-modern" for="enroll_terms">
+                                            I agree to the <a href="#" class="text-primary">Terms & Conditions</a> and <a href="#" class="text-primary">Privacy Policy</a>
                                         </label>
                                     </div>
-                                </li>
-                            </ul>
-                            <div class="light-green-btn text-center">
-                                <button type="submit" id="enroll_submit" class="border-0 bg-transparent">Submit
-                                    Enrollment</button>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" id="enroll_submit" class="btn-enroll-modern">
+                                        <span>Submit Enrollment</span>
+                                        <i class="fa-solid fa-arrow-right ml-2"></i>
+                                    </button>
+                                </div>
+                            </form>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FEATURED SERVICES SECTION -->
-    <section
-        class="float-left w-100 position-relative featured-services-outer-con padding-top116 padding-bottom116 main-box">
-        <img class="img-fluid position-absolute objct1" alt="object"
-            src="{{ asset('assets/front/images/home2/vector3.png') }}">
-        <img class="img-fluid position-absolute objct2" alt="object"
-            src="{{ asset('assets/front/images/home2/vector4.png') }}">
-        <img class="img-fluid position-absolute objct3" alt="object"
-            src="{{ asset('assets/front/images/home2/vector2.png') }}">
-        <img class="img-fluid position-absolute objct4" alt="object"
-            src="{{ asset('assets/front/images/home2/vector2.png') }}">
-        <div class="container wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
-            <div class="heading-title-con text-center">
-                <span class="d-block special-text">Temporibus</span>
-                <h2 class="font-weight-600 large-font text-white">Feautred Services</h2>
-                <p class="text-white">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur <br>
-                    sed quia non numquam eius modi incidunt</p>
-                <!-- heading title con -->
-            </div>
-            <div class="row">
-                <div class="col-lg-6 col-md-6">
-                    <div class="white-box d-flex align-items-center">
-                        <img class="img-fluid" alt="icon"
-                            src="{{ asset('assets/front/images/home2/featured-service-icon1.png') }}">
-                        <div class="feature-content">
-                            <h5 class="font-weight-600">Awesome Teachers</h5>
-                            <p class="mb-0">Omnis dolor repellendus tepor bus autem sui
-                                busdam et aut officiis debitis eiusmod temor
-                                incididunt labore.</p>
-                            <!-- feature content -->
-                        </div>
-                        <!-- white box -->
-                    </div>
-                    <!-- col -->
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="white-box d-flex align-items-center">
-                        <img class="img-fluid" alt="icon"
-                            src="{{ asset('assets/front/images/home2/featured-service-icon2.png') }}">
-                        <div class="feature-content">
-                            <h5 class="font-weight-600">Global Certificate</h5>
-                            <p class="mb-0">Omnis dolor repellendus tepor bus autem sui
-                                busdam et aut officiis debitis eiusmod temor
-                                incididunt labore.</p>
-                            <!-- feature content -->
-                        </div>
-                        <!-- white box -->
-                    </div>
-                    <!-- col -->
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="white-box d-flex align-items-center">
-                        <img class="img-fluid" alt="icon"
-                            src="{{ asset('assets/front/images/home2/featured-service-icon3.png') }}">
-                        <div class="feature-content">
-                            <h5 class="font-weight-600">Best Programme</h5>
-                            <p class="mb-0">Omnis dolor repellendus tepor bus autem sui
-                                busdam et aut officiis debitis eiusmod temor
-                                incididunt labore.</p>
-                            <!-- feature content -->
-                        </div>
-                        <!-- white box -->
-                    </div>
-                    <!-- col -->
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="white-box d-flex align-items-center">
-                        <img class="img-fluid" alt="icon"
-                            src="{{ asset('assets/front/images/home2/featured-service-icon4.png') }}">
-                        <div class="feature-content">
-                            <h5 class="font-weight-600">Business Knowledge</h5>
-                            <p class="mb-0">Omnis dolor repellendus tepor bus autem sui
-                                busdam et aut officiis debitis eiusmod temor
-                                incididunt labore.</p>
-                            <!-- feature content -->
-                        </div>
-                        <!-- white box -->
-                    </div>
-                    <!-- col -->
-                </div>
-                <!-- row -->
-            </div>
-            <!-- container -->
-        </div>
-        <!-- featured services con -->
-    </section>
-
-    <!-- FIND OUR MORE SECTION  -->
-    <section class="float-left w-100 position-relative find-out-more-con padding-top116 padding-bottom116 main-box">
-        <div class="container wow fadeIn" data-wow-duration="2s" data-wow-delay="0.3s">
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-md-6 order-xl-0 order-lg-0 order-md-0 order-1">
-                    <div class="services-content-con">
-                        <span class="d-block special-text">sapiente</span>
-                        <h2 class="font-weight-600 large-font">Find Out More About
-                            Learning Experience</h2>
-                        <p class="font-weight-light">Neque porro quisquam est, qui dolorem ipsum dolor sit
-                            amet, consectetursed quia non numaeius modi incidunt
-                            dolor in reprehenderit in voluvelit esse cillum dolore eu
-                            fugiat nulla pariatur. </p>
-                        <ul class="list-unstyled p-0 listing">
-                            <li class="position-relative"><i class="fa-solid fa-check mr-3"></i>Labore et dolore magnam
-                                aliuam ruaerat
-                                como</li>
-                            <li class="position-relative"><i class="fa-solid fa-check mr-3"></i>Quam nihil molestiae
-                                consequatur vel
-                                illum eius </li>
-                            <li class="position-relative mb-0"><i class="fa-solid fa-check mr-3"></i>Earue iosa nuae ab
-                                ilvlo
-                                inventore
-                                veritatis labore </li>
-                            <!-- list unstyled -->
-                        </ul>
-                        <div class="light-green-btn d-inline-block">
-                            <a href="{{ url('services') }}" class="d-inline-block mt-0">Read More</a>
-                        </div>
-                        <!-- services content con -->
-                    </div>
-                    <!-- col -->
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <img class="" alt="image" src="{{ asset('assets/front/images/home2/ffind-out-img.png') }}">
-                    <!-- col -->
-                </div>
-                <!-- row -->
-            </div>
-            <!-- container -->
-        </div>
-        <!-- find out more con -->
-    </section>
-
-    <!-- POPULAR COURSES SECTION  -->
-    <section
-        class="float-left w-100 position-relative main-box popular-courses-con padding-top116 padding-bottom116 text-center">
-        <img class="img-fluid position-absolute objct1" alt="object"
-            src="{{ asset('assets/front/images/home2/vector3.png') }}">
-        <img class="img-fluid position-absolute objct2" alt="object"
-            src="{{ asset('assets/front/images/home2/vector4.png') }}">
-        <img class="img-fluid position-absolute objct3" alt="object"
-            src="{{ asset('assets/front/images/home2/vector2.png') }}">
-        <img class="img-fluid position-absolute objct4" alt="object"
-            src="{{ asset('assets/front/images/home2/vector2.png') }}">
+    <!-- POPULAR COURSES SECTION -->
+    <section class="float-left w-100 position-relative popular-courses-con main-box padding-top116 padding-bottom116 text-center">
+        <img class="img-fluid position-absolute objct1" alt="object" src="{{ asset('assets/front/images/home2/vector3.png') }}">
+        <img class="img-fluid position-absolute objct2" alt="object" src="{{ asset('assets/front/images/home2/vector4.png') }}">
+        <img class="img-fluid position-absolute objct3" alt="object" src="{{ asset('assets/front/images/home2/vector2.png') }}">
+        <img class="img-fluid position-absolute objct4" alt="object" src="{{ asset('assets/front/images/home2/vector2.png') }}">
         <div class="container wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
             <div class="heading-title-con text-center">
                 <span class="d-block special-text">incidunt</span>
                 <h2 class="font-weight-600 large-font">Popular Courses</h2>
-                <p>Exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi <br>
-                    consequatur velit esse magni dolores</p>
-                <!-- heading title con -->
+                <p>Explore our comprehensive range of courses designed to help you achieve your career goals. <br>
+                    Choose from industry-leading programs taught by expert instructors.</p>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="courses-box">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="courses-box-modern">
                         <div class="course-inner-sub">
                             <div class="img-outer position-relative">
-                                <img class="img-fluid" alt="img"
-                                    src="{{ asset('assets/front/images/home2/course-img1.jpg') }}">
-                                <span class="d-block text-white position-absolute">$100</span>
+                                <img class="img-fluid" alt="img" src="{{ asset('assets/front/images/home2/course-img1.jpg') }}">
+                                <span class="course-price position-absolute">$100</span>
+                                <div class="course-overlay">
+                                    <a href="{{ url('courses') }}" class="course-preview-btn">
+                                        <i class="fa-solid fa-eye"></i> Preview
+                                    </a>
+                                </div>
                             </div>
                             <div class="course-bottom-con">
-                                <div class="icon d-flex justify-content-center align-items-center">
-                                    <div class="lesson">
-                                        <i class="fa-solid fa-book"></i>
-                                        <span class="text-size-13 text mr-0">38 Lessons</span>
+                                <div class="course-meta d-flex justify-content-center align-items-center mb-3">
+                                    <div class="lesson d-flex align-items-center mr-4">
+                                        <i class="fa-solid fa-book mr-2"></i>
+                                        <span class="text-size-13">38 Lessons</span>
                                     </div>
-                                    <div class="date">
-                                        <i class="fa-solid fa-calendar-days"></i>
-                                        <span class="text-size-13 text">25 Oct, 2020</span>
+                                    <div class="date d-flex align-items-center">
+                                        <i class="fa-solid fa-calendar-days mr-2"></i>
+                                        <span class="text-size-13">25 Oct, 2024</span>
                                     </div>
                                 </div>
-                                <h5 class="font-weight-600">English Course</h5>
-                                <p class="mb-0">Quis nostrud exercitation ullamco labor
-                                    nisi ut aliquip commodo.</p>
-                                <!-- course inner sub -->
+                                <h5 class="font-weight-600 mb-2">English</h5>
+                                <p class="mb-3">Master the English language with our comprehensive course designed for all skill levels. Improve your communication skills and boost your career.</p>
+                                <div class="course-instructor mb-3">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <img src="{{ asset('assets/front/images/home2/testimonial-person1.png') }}" alt="instructor" class="instructor-img">
+                                        <span class="ml-2 text-size-13">By John Smith</span>
+                                    </div>
+                                </div>
                             </div>
-                            <!-- course bottom con -->
                         </div>
-                        <hr>
-                        <a href="courses.html" class="d-inline-block">Enroll now <i
-                                class="fas fa-arrow-right ml-2"></i></a>
-
-                        <!-- courses box -->
+                        <hr class="course-divider">
+                        <div class="course-footer d-flex justify-content-between align-items-center">
+                            <a href="{{ url('courses') }}" class="course-enroll-link">
+                                Enroll now <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                            <div class="course-rating">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <span class="ml-1">4.8</span>
+                            </div>
+                        </div>
                     </div>
-                    <!-- col -->
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="courses-box">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="courses-box-modern">
                         <div class="course-inner-sub">
                             <div class="img-outer position-relative">
-                                <img class="img-fluid" alt="img"
-                                    src="{{ asset('assets/front/images/home2/course-img2.jpg') }}">
-                                <span class="d-block text-white position-absolute">$250</span>
+                                <img class="img-fluid" alt="img" src="{{ asset('assets/front/images/home2/course-img2.jpg') }}">
+                                <span class="course-price position-absolute">$200</span>
+                                <div class="course-overlay">
+                                    <a href="{{ url('courses') }}" class="course-preview-btn">
+                                        <i class="fa-solid fa-eye"></i> Preview
+                                    </a>
+                                </div>
                             </div>
                             <div class="course-bottom-con">
-                                <div class="icon d-flex justify-content-center align-items-center">
-                                    <div class="lesson">
-                                        <i class="fa-solid fa-book"></i>
-                                        <span class="text-size-13 text mr-0">38 Lessons</span>
+                                <div class="course-meta d-flex justify-content-center align-items-center mb-3">
+                                    <div class="lesson d-flex align-items-center mr-4">
+                                        <i class="fa-solid fa-book mr-2"></i>
+                                        <span class="text-size-13">45 Lessons</span>
                                     </div>
-                                    <div class="date">
-                                        <i class="fa-solid fa-calendar-days"></i>
-                                        <span class="text-size-13 text">25 Oct, 2020</span>
+                                    <div class="date d-flex align-items-center">
+                                        <i class="fa-solid fa-calendar-days mr-2"></i>
+                                        <span class="text-size-13">10 Nov, 2024</span>
                                     </div>
                                 </div>
-                                <h5 class="font-weight-600">Accounting</h5>
-                                <p class="mb-0">Quis nostrud exercitation ullamco labor
-                                    nisi ut aliquip commodo.</p>
-                                <!-- course inner sub -->
+                                <h5 class="font-weight-600 mb-2">Maths</h5>
+                                <p class="mb-3">Build strong mathematical foundations and problem-solving skills. Our comprehensive maths course covers all levels from basic to advanced concepts.</p>
+                                <div class="course-instructor mb-3">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <img src="{{ asset('assets/front/images/home2/testimonial-person2.png') }}" alt="instructor" class="instructor-img">
+                                        <span class="ml-2 text-size-13">By Sarah Johnson</span>
+                                    </div>
+                                </div>
                             </div>
-                            <!-- course bottom con -->
                         </div>
-                        <hr>
-                        <a href="{{ url('courses') }}" class="d-inline-block">Enroll now <i
-                                class="fas fa-arrow-right ml-2"></i></a>
-
-
-                        <!-- courses box -->
+                        <hr class="course-divider">
+                        <div class="course-footer d-flex justify-content-between align-items-center">
+                            <a href="{{ url('courses') }}" class="course-enroll-link">
+                                Enroll now <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                            <div class="course-rating">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <span class="ml-1">4.9</span>
+                            </div>
+                        </div>
                     </div>
-                    <!-- col -->
                 </div>
-                <div class="col-lg-4 col-md-6 last-con">
-                    <div class="courses-box mb-0">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="courses-box-modern">
                         <div class="course-inner-sub">
                             <div class="img-outer position-relative">
-                                <img class="img-fluid" alt="img"
-                                    src="{{ asset('assets/front/images/home2/course-img3.jpg') }}" alt="image">
-                                <span class="d-block text-white position-absolute">$400</span>
+                                <img class="img-fluid" alt="img" src="{{ asset('assets/front/images/home2/course-img3.jpg') }}">
+                                <span class="course-price position-absolute">$250</span>
+                                <div class="course-overlay">
+                                    <a href="{{ url('courses') }}" class="course-preview-btn">
+                                        <i class="fa-solid fa-eye"></i> Preview
+                                    </a>
+                                </div>
                             </div>
                             <div class="course-bottom-con">
-                                <div class="icon d-flex justify-content-center align-items-center">
-                                    <div class="lesson">
-                                        <i class="fa-solid fa-book"></i>
-                                        <span class="text-size-13 text mr-0">38 Lessons</span>
+                                <div class="course-meta d-flex justify-content-center align-items-center mb-3">
+                                    <div class="lesson d-flex align-items-center mr-4">
+                                        <i class="fa-solid fa-book mr-2"></i>
+                                        <span class="text-size-13">40 Lessons</span>
                                     </div>
-                                    <div class="date">
-                                        <i class="fa-solid fa-calendar-days"></i>
-                                        <span class="text-size-13 text">25 Oct, 2020</span>
+                                    <div class="date d-flex align-items-center">
+                                        <i class="fa-solid fa-calendar-days mr-2"></i>
+                                        <span class="text-size-13">20 Nov, 2024</span>
                                     </div>
                                 </div>
-                                <h5 class="font-weight-600">Technology</h5>
-                                <p class="mb-0">Quis nostrud exercitation ullamco labor
-                                    nisi ut aliquip commodo.</p>
-                                <!-- course inner sub -->
+                                <h5 class="font-weight-600 mb-2">Science</h5>
+                                <p class="mb-3">Explore the fascinating world of science through hands-on experiments and interactive learning. Perfect for curious minds of all ages.</p>
+                                <div class="course-instructor mb-3">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <img src="{{ asset('assets/front/images/home2/testimonial-person3.png') }}" alt="instructor" class="instructor-img">
+                                        <span class="ml-2 text-size-13">By Mike Davis</span>
+                                    </div>
+                                </div>
                             </div>
-                            <!-- course bottom con -->
                         </div>
-                        <hr>
-                        <a href="{{ url('courses') }}" class="d-inline-block">Enroll now <i
-                                class="fas fa-arrow-right ml-2"></i></a>
+                        <hr class="course-divider">
+                        <div class="course-footer d-flex justify-content-between align-items-center">
+                            <a href="{{ url('courses') }}" class="course-enroll-link">
+                                Enroll now <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                            <div class="course-rating">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <span class="ml-1">4.7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="courses-box-modern">
+                        <div class="course-inner-sub">
+                            <div class="img-outer position-relative">
+                                <img class="img-fluid" alt="img" src="{{ asset('assets/front/images/home2/course-img1.jpg') }}">
+                                <span class="course-price position-absolute">$300</span>
+                                <div class="course-overlay">
+                                    <a href="{{ url('courses') }}" class="course-preview-btn">
+                                        <i class="fa-solid fa-eye"></i> Preview
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="course-bottom-con">
+                                <div class="course-meta d-flex justify-content-center align-items-center mb-3">
+                                    <div class="lesson d-flex align-items-center mr-4">
+                                        <i class="fa-solid fa-book mr-2"></i>
+                                        <span class="text-size-13">50 Lessons</span>
+                                    </div>
+                                    <div class="date d-flex align-items-center">
+                                        <i class="fa-solid fa-calendar-days mr-2"></i>
+                                        <span class="text-size-13">5 Dec, 2024</span>
+                                    </div>
+                                </div>
+                                <h5 class="font-weight-600 mb-2">Olympiad</h5>
+                                <p class="mb-3">Prepare for competitive exams and olympiads with our specialized training program. Expert guidance to excel in national and international competitions.</p>
+                                <div class="course-instructor mb-3">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <img src="{{ asset('assets/front/images/home2/testimonial-person1.png') }}" alt="instructor" class="instructor-img">
+                                        <span class="ml-2 text-size-13">By Emily Rodriguez</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="course-divider">
+                        <div class="course-footer d-flex justify-content-between align-items-center">
+                            <a href="{{ url('courses') }}" class="course-enroll-link">
+                                Enroll now <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                            <div class="course-rating">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <span class="ml-1">5.0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="courses-box-modern">
+                        <div class="course-inner-sub">
+                            <div class="img-outer position-relative">
+                                <img class="img-fluid" alt="img" src="{{ asset('assets/front/images/home2/course-img3.jpg') }}">
+                                <span class="course-price position-absolute">$350</span>
+                                <div class="course-overlay">
+                                    <a href="{{ url('courses') }}" class="course-preview-btn">
+                                        <i class="fa-solid fa-eye"></i> Preview
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="course-bottom-con">
+                                <div class="course-meta d-flex justify-content-center align-items-center mb-3">
+                                    <div class="lesson d-flex align-items-center mr-4">
+                                        <i class="fa-solid fa-book mr-2"></i>
+                                        <span class="text-size-13">55 Lessons</span>
+                                    </div>
+                                    <div class="date d-flex align-items-center">
+                                        <i class="fa-solid fa-calendar-days mr-2"></i>
+                                        <span class="text-size-13">15 Dec, 2024</span>
+                                    </div>
+                                </div>
+                                <h5 class="font-weight-600 mb-2">Comp & E</h5>
+                                <p class="mb-3">Computer & Engineering course covering programming, software development, and engineering principles. Build practical skills for the tech industry.</p>
+                                <div class="course-instructor mb-3">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <img src="{{ asset('assets/front/images/home2/testimonial-person2.png') }}" alt="instructor" class="instructor-img">
+                                        <span class="ml-2 text-size-13">By David Kumar</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="course-divider">
+                        <div class="course-footer d-flex justify-content-between align-items-center">
+                            <a href="{{ url('courses') }}" class="course-enroll-link">
+                                Enroll now <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                            <div class="course-rating">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <span class="ml-1">4.9</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="light-green-btn d-inline-block mt-4">
+                <a href="{{ url('courses') }}" class="d-inline-block">View all Courses</a>
+            </div>
+        </div>
+    </section>
 
-                        <!-- courses box -->
-                    </div>
-                    <!-- col -->
-                </div>
-                <!-- row -->
+    <!-- MORE INFO SECTION -->
+    <section class="float-left w-100 more-info-section position-relative main-box padding-top116 padding-bottom116">
+        <img class="img-fluid position-absolute objct1" alt="object" src="{{ asset('assets/front/images/home2/vector3.png') }}" style="top: 10%; left: 0; opacity: 0.25; z-index: 0;">
+        <img class="img-fluid position-absolute objct2" alt="object" src="{{ asset('assets/front/images/home2/vector4.png') }}" style="bottom: 10%; right: 0; opacity: 0.25; z-index: 0;">
+        <img class="img-fluid position-absolute objct3" alt="object" src="{{ asset('assets/front/images/home2/vector2.png') }}" style="top: 50%; right: 5%; opacity: 0.2; z-index: 0; transform: translateY(-50%);">
+        <img class="img-fluid position-absolute dot1" alt="icon" src="{{ asset('assets/front/images/home2/dots.png') }}" style="top: 20%; left: 5%; opacity: 0.15; z-index: 0;">
+        <img class="img-fluid position-absolute dot2" alt="icon" src="{{ asset('assets/front/images/home2/dots.png') }}" style="bottom: 20%; right: 8%; opacity: 0.15; z-index: 0;">
+        <div class="container wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s" style="position: relative; z-index: 1;">
+            <div class="heading-title-con text-center mb-5">
+                <span class="d-block special-text">More Info</span>
+                <h2 class="font-weight-600 large-font">Experience Reformed Learning with Eternity</h2>
             </div>
-            <div class="light-green-btn d-inline-block">
-                <a href="{{ url('contact') }}" class="d-inline-block">View all Courses</a>
-            </div>
-            <!-- container -->
-        </div>
-        <!-- popular courses con -->
-    </section>
-    <!-- FIND OUT HOW WE HELP STUDENTS -->
-    <section
-        class="float-left w-100 position-relative helping-student-video-con  padding-top116 padding-bottom116 main-box text-center">
-        <div class="container wow fadeIn" data-wow-duration="2s" data-wow-delay="0.3s">
-            <div class="heading-title-con text-center">
-                <span class="d-block special-text">voluptatem</span>
-                <h2 class="font-weight-600 large-font">Find Out How We Help Students</h2>
-                <p>Exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi <br>
-                    consequatur velit esse magni dolores</p>
-                <!-- heading title con -->
-            </div>
-            <div class="video-inner-wrap position-relative d-table w-100 float-left">
-                <div class="d-table-cell align-middle text-center">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                            <img class="img-fluid position-absolute dot1" alt="icon"
-                                src="{{ asset('assets/front/images/home2/dots.png') }}">
-                            <img class="img-fluid position-absolute dot2" alt="icon"
-                                src="{{ asset('assets/front/images/home2/dots.png') }}">
-                            <div class="video_icon position-relative">
-                                <a class="popup-vimeo"
-                                    href="https://video-previews.elements.envatousercontent.com/h264-video-previews/79b865eb-60f3-41d7-8240-5beebaa70664/11687174.mp4">
-                                    <div class="video_wrapper">
-                                        <figure class="mb-0">
-                                            <img class="thumb img-fluid text-center" style="cursor: pointer"
-                                                src="{{ asset('assets/front/images/home2/video-icon.png') }}"
-                                                alt="video-icon">
-                                        </figure>
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="more-info-content text-center">
+                        <p class="lead mb-4" style="font-size: 18px; line-height: 1.8; color: #2d3748;">
+                            A platform where you unleash your fear of studies and grow a genuine love for learning. 
+                            Choose smarter, learn better and trust in our quality with a transparent, hassle-free refund 
+                            policy that gives along with a full week of real classes for every student.
+                        </p>
+                        <div class="row mt-5">
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="info-feature-box">
+                                    <div class="info-feature-icon mb-3">
+                                        <i class="fa-solid fa-brain" style="font-size: 48px; color: #28a745;"></i>
                                     </div>
-                                </a>
-                                <!-- video icon -->
+                                    <h5 class="font-weight-600 mb-3">Powerful Mind Maps</h5>
+                                    <p class="mb-0">Visual learning tools designed to enhance understanding and retention of complex concepts.</p>
+                                </div>
                             </div>
-                            <!-- col -->
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="info-feature-box">
+                                    <div class="info-feature-icon mb-3">
+                                        <i class="fa-solid fa-file-alt" style="font-size: 48px; color: #28a745;"></i>
+                                    </div>
+                                    <h5 class="font-weight-600 mb-3">Professional Study Materials</h5>
+                                    <p class="mb-0">Professionally designed notes, worksheets, and chapter summaries aligned with your pace.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="info-feature-box">
+                                    <div class="info-feature-icon mb-3">
+                                        <i class="fa-solid fa-user-tie" style="font-size: 48px; color: #28a745;"></i>
+                                    </div>
+                                    <h5 class="font-weight-600 mb-3">Expert Tutors & Support</h5>
+                                    <p class="mb-0">Backed by expert tutors, personalised progress plans, and diagnostic assessments.</p>
+                                </div>
+                            </div>
                         </div>
-                        <!-- row -->
-                    </div>
-                    <!-- table cell -->
-                </div>
-                <!-- video inner wrap -->
-            </div>
-            <!-- container -->
-        </div>
-        <!-- find how help students con -->
-    </section>
-    <!-- TESTIMONIAL SECTION -->
-    <section
-        class="electrictestimonial-con position-relative float-left w-100 padding-top116 padding-bottom116 main-box text-center">
-        <div class="container wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
-            <div class="heading-title-con text-center">
-                <span class="d-block special-text text-white">pariature</span>
-                <h2 class="font-weight-600 large-font text-white">Success Testimonials</h2>
-                <!-- heading title con -->
-            </div>
-            <div class="row">
-                <div class="col-lg-10 col-12 mx-auto">
-                    <div id="electric_testimonial_slider" class="carousel slide" data-ride="carousel">
-                        <ul class="carousel-indicators position-relative">
-                            <li data-target="#electric_testimonial_slider" data-slide-to="0">
-                                <figure class="mb-0">
-                                    <img src="{{ asset('assets/front/images/home2/testimonial-person2.png') }}"
-                                        alt="image" class="img-fluid">
-                                </figure>
-                            </li>
-                            <li data-target="#electric_testimonial_slider" data-slide-to="1" class="active">
-                                <figure class="mb-0">
-                                    <img src="{{ asset('assets/front/images/home2/testimonial-person1.png') }}"
-                                        alt="image" class="img-fluid">
-                                </figure>
-                            </li>
-                            <li data-target="#electric_testimonial_slider" data-slide-to="2">
-                                <figure class="mb-0">
-                                    <img src="{{ asset('assets/front/images/home2/testimonial-person3.png') }}"
-                                        alt="image" class="img-fluid">
-                                </figure>
-                            </li>
-                        </ul>
-                        <div class="carousel-inner">
-                            <div class="carousel-item">
-                                <div class="testimonial-box mb-0">
-                                    <h3 class="text-white mb-0">“ Duis aute irure dolor in reprehenderit in voluptate velit
-                                        esse cillum
-                                        dolore eu fugiat
-                                        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                        officia deserunt mollit anim id est laborum ”
-                                    </h3>
-                                    <!-- testimonial box -->
-                                </div>
-                                <!-- item -->
-                            </div>
-                            <div class="carousel-item active">
-                                <div class="testimonial-box mb-0">
-                                    <h3 class="text-white mb-0">“ Duis aute irure dolor in reprehenderit in voluptate velit
-                                        esse cillum
-                                        dolore eu fugiat
-                                        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                        officia deserunt mollit anim id est laborum ”
-                                    </h3>
-                                    <!-- testimonial box -->
-                                </div>
-                                <!-- item -->
-                            </div>
-                            <div class="carousel-item">
-                                <div class="testimonial-box mb-0">
-                                    <h3 class="text-white mb-0">“ Duis aute irure dolor in reprehenderit in voluptate velit
-                                        esse cillum
-                                        dolore eu fugiat
-                                        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                        officia deserunt mollit anim id est laborum ”
-                                    </h3>
-                                    <!-- testimonial box -->
-                                </div>
-                                <!-- item -->
-                            </div>
-                            <!-- carousel inner -->
-                        </div>
-                        <div class="pagination_outer">
-                            <button class="carousel-control-prev" type="button"
-                                data-target="#electric_testimonial_slider" data-slide="prev">
-                                <i class="fa-solid fa-arrow-left"></i>
-                            </button>
-                            <button class="carousel-control-next" type="button"
-                                data-target="#electric_testimonial_slider" data-slide="next">
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </button>
+                        <div class="more-info-highlight mt-5 p-4" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 15px; border-left: 5px solid #28a745;">
+                            <p class="mb-0" style="font-size: 20px; font-style: italic; color: #2d3748; font-weight: 500; line-height: 1.8;">
+                                Eternity ensures deeper clarity, stronger confidence & a learning journey that truly transforms you.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- NEWS BLOGS SECTION -->
-    <section
-        class="float-left w-100 position-relative news-blogs-con padding-top116 padding-bottom116 main-box text-center">
-        <img class="img-fluid position-absolute objct1" alt="object"
-            src="{{ asset('assets/front/images/home2/vector3.png') }}">
-        <img class="img-fluid position-absolute objct2" alt="object"
-            src="{{ asset('assets/front/images/home2/vector4.png') }}">
-        <img class="img-fluid position-absolute objct3" alt="object"
-            src="{{ asset('assets/front/images/home2/vector2.png') }}">
-        <img class="img-fluid position-absolute objct4" alt="object"
-            src="{{ asset('assets/front/images/home2/vector2.png') }}">
-        <div class="container wow fadeIn" data-wow-duration="2s" data-wow-delay="0.3s">
-            <div class="heading-title-con text-center">
-                <span class="d-block special-text">corporis</span>
-                <h2 class="font-weight-600 large-font">Our Latest Blogs</h2>
-                <p>Exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi <br>
-                    consequatur velit esse magni dolores</p>
-                <!-- heading title con -->
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-4">
-                    <div class="new-blog-box overlay position-relative text-left">
-                        <figure><img class="img-fluid" alt="image"
-                                src="{{ asset('assets/front/images/home2/news-blog-img1.jpg') }}"></figure>
-                        <div class="team-content position-absolute">
-                            <span class="text-white d-block sub-text">Dolore </span>
-                            <p class="text-white text-left"><a href="blog.html" class="text-white">Exercitationem ullam
-                                    coror
-                                    is aboriosam</a></p>
-                            <i class="fa-solid fa-calendar-days mr-1 text-white"></i>
-                            <span class="text-size-13 text text-white"> 25 Oct, 2020 | by admin</span>
-                            <!-- team content -->
-                        </div>
-                        <!-- blog box -->
-                    </div>
-                    <!-- col -->
+
+    <!-- ADDITIONAL INFORMATION ABOUT US SECTION -->
+    {{-- <section class="float-left w-100 additional-info-con position-relative main-box padding-top116 padding-bottom116">
+        <img class="img-fluid position-absolute objct1" alt="object" src="{{ asset('assets/front/images/home2/vector1.png') }}" style="top: 10%; right: 3%; opacity: 0.2; z-index: 0;">
+        <img class="img-fluid position-absolute objct2" alt="object" src="{{ asset('assets/front/images/home2/vector2.png') }}" style="bottom: 10%; left: 3%; opacity: 0.2; z-index: 0;">
+        <img class="img-fluid position-absolute objct3" alt="object" src="{{ asset('assets/front/images/home2/vector3.png') }}" style="top: 50%; left: 0; opacity: 0.15; z-index: 0;">
+        <img class="img-fluid position-absolute dot1" alt="icon" src="{{ asset('assets/front/images/home2/dots.png') }}" style="top: 25%; left: 5%; opacity: 0.1; z-index: 0;">
+        <img class="img-fluid position-absolute dot2" alt="icon" src="{{ asset('assets/front/images/home2/dots.png') }}" style="bottom: 25%; right: 5%; opacity: 0.1; z-index: 0;">
+        <div class="container wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s" style="position: relative; z-index: 1;">
+            <div class="additional-info-wrapper">
+                <div class="heading-title-con text-center mb-5">
+                    <span class="d-block special-text">Learn More</span>
+                    <h2 class="font-weight-600 large-font">Additional Information About Us</h2>
+                    <p>Discover what makes Eternity Classes the perfect choice for your educational journey</p>
                 </div>
-                <div class="col-lg-4 col-md-4">
-                    <div class="new-blog-box overlay position-relative text-left">
-                        <figure><img class="img-fluid" alt="image"
-                                src="{{ asset('assets/front/images/home2/news-blog-img2.jpg') }}"></figure>
-                        <div class="team-content position-absolute">
-                            <span class="text-white d-block sub-text">Laboris </span>
-                            <p class="text-white text-left"><a href="blog.html" class="text-white">Suscipit laboriosam,
-                                    nisi ut
-                                    aliquid exea</a></p>
-                            <i class="fa-solid fa-calendar-days mr-1 text-white"></i>
-                            <span class="text-size-13 text text-white"> 25 Oct, 2020 | by admin</span>
-                            <!-- team content -->
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <h5 class="font-weight-600">25+ Years Experience</h5>
+                            <p>With over two decades of excellence in education, we have helped thousands of students achieve their dreams and build successful careers.</p>
                         </div>
-                        <!-- blog box -->
                     </div>
-                    <!-- col -->
-                </div>
-                <div class="col-lg-4 col-md-4">
-                    <div class="new-blog-box overlay position-relative text-left">
-                        <figure><img class="img-fluid" alt="image"
-                                src="{{ asset('assets/front/images/home2/news-blog-img3.jpg') }}"></figure>
-                        <div class="team-content position-absolute">
-                            <span class="text-white d-block sub-text">Venia </span>
-                            <p class="text-white text-left"><a href="blog.html" class="text-white">Nihil molestiae
-                                    consequatu
-                                    vel illum sui</a></p>
-                            <i class="fa-solid fa-calendar-days mr-1 text-white"></i>
-                            <span class="text-size-13 text text-white"> 25 Oct, 2020 | by admin</span>
-                            <!-- team content -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <h5 class="font-weight-600">50,000+ Students</h5>
+                            <p>Join our growing community of successful graduates who have transformed their lives through our comprehensive learning programs.</p>
                         </div>
-                        <!-- blog box -->
                     </div>
-                    <!-- col -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-trophy"></i>
+                            </div>
+                            <h5 class="font-weight-600">Award Winning</h5>
+                            <p>Recognized as the best educational institution with multiple awards for excellence in teaching and student success.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+                            <h5 class="font-weight-600">Global Recognition</h5>
+                            <p>Our certificates are recognized worldwide, opening doors to international career opportunities for our students.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-handshake"></i>
+                            </div>
+                            <h5 class="font-weight-600">Industry Partnerships</h5>
+                            <p>We collaborate with leading companies to provide real-world experience and direct placement opportunities for our students.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <h5 class="font-weight-600">95% Success Rate</h5>
+                            <p>Our proven teaching methodology ensures that 95% of our students successfully complete their courses and achieve their goals.</p>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- row -->
             </div>
-            <div class="light-green-btn d-inline-block">
-                <a href="{{ url('blog') }}" class="d-inline-block">View all Blogs</a>
-            </div>
-            <!-- container -->
         </div>
-        <!-- news blogs con -->
-    </section>
-    <!-- GET IN TOUCH SECTION -->
-    <section class="float-left w-100 position-relative contact-us-con padding-top116 main-box text-center">
-        <img class="img-fluid position-absolute dot1" alt="icon"
-            src="{{ asset('assets/front/images/home2/dots.png') }}">
-        <img class="img-fluid position-absolute dot2" alt="icon"
-            src="{{ asset('assets/front/images/home2/dots.png') }}">
-        <div class="container wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
-            <div class="row mb-0">
-                <div class="col-xl-10 col-lg-12 col-md-12 col-12 mr-auto ml-auto">
-                    <div class="heading-title-con text-center">
-                        <span class="d-block special-text">Get in touch</span>
-                        <h2 class="font-weight-600">Contact Us Now</h2>
-                        <!-- heading title con -->
-                    </div>
-                    <form class="contact-form-modern" method="post" id="contactpage">
-                        <div class="row">
-                            <div class="col-md-6 mb-4">
-                                <div class="form-group position-relative">
-                                    <label for="fname" class="form-label">
-                                        <i class="fa-solid fa-user"></i> Full Name
-                                    </label>
-                                    <input type="text" class="form-control form-control-modern" placeholder="Enter your full name" name="fname" id="fname" required>
-                                    <div class="form-icon-wrapper">
-                                        <i class="fa-solid fa-user"></i>
-                                    </div>
+    </section> --}}
+
+    <!-- MOVING REVIEWS SECTION -->
+    <section class="float-left w-100 moving-reviews-con position-relative main-box padding-top116 padding-bottom116">
+        <img class="img-fluid position-absolute objct1" alt="object" src="{{ asset('assets/front/images/home2/vector4.png') }}" style="top: 15%; left: 2%; opacity: 0.25; z-index: 0;">
+        <img class="img-fluid position-absolute objct2" alt="object" src="{{ asset('assets/front/images/home2/vector1.png') }}" style="bottom: 15%; right: 2%; opacity: 0.25; z-index: 0;">
+        <img class="img-fluid position-absolute objct3" alt="object" src="{{ asset('assets/front/images/home2/vector2.png') }}" style="top: 50%; right: 0; opacity: 0.15; z-index: 0;">
+        <img class="img-fluid position-absolute dot1" alt="icon" src="{{ asset('assets/front/images/home2/dots.png') }}" style="top: 30%; right: 8%; opacity: 0.12; z-index: 0;">
+        <img class="img-fluid position-absolute dot2" alt="icon" src="{{ asset('assets/front/images/home2/dots.png') }}" style="bottom: 30%; left: 8%; opacity: 0.12; z-index: 0;">
+        <div class="container wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s" style="position: relative; z-index: 1;">
+            <div class="heading-title-con text-center mb-5">
+                <span class="d-block special-text">Testimonials</span>
+                <h2 class="font-weight-600 large-font">What Our Students Say</h2>
+                <p>Read what our students have to say about their learning experience with us</p>
+            </div>
+            <div class="reviews-carousel-wrapper position-relative">
+                <button class="carousel-nav-btn prev-btn" type="button" id="reviewsPrev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <div class="reviews-carousel-container">
+                    <div class="reviews-track" id="reviewsTrack">
+                        <div class="review-card">
+                            <div class="review-content">
+                                <div class="review-stars mb-3" style="display: flex; gap: 5px;">
+                                    <i class="fa-solid fa-star" style="color: #ffc107; font-size: 18px;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffc107; font-size: 18px;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffc107; font-size: 18px;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffc107; font-size: 18px;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffc107; font-size: 18px;"></i>
                                 </div>
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="form-group position-relative">
-                                    <label for="email" class="form-label">
-                                        <i class="fa-solid fa-envelope"></i> Email Address
-                                    </label>
-                                    <input type="email" class="form-control form-control-modern" placeholder="Enter your email address" name="email" id="email" required>
-                                    <div class="form-icon-wrapper">
-                                        <i class="fa-solid fa-envelope"></i>
+                                <p class="review-text" style="font-size: 15px; line-height: 1.6; color: #2d3748; margin-bottom: 20px; min-height: 100px;">"Eternity Classes transformed my career completely. The instructors are amazing and the course material is comprehensive. I got placed in a top company right after completing the course!"</p>
+                                <div class="review-author" style="display: flex; align-items: center; gap: 15px;">
+                                    <img src="{{ asset('assets/front/images/home2/testimonial-person1.png') }}" alt="reviewer" class="reviewer-img" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+                                    <div class="reviewer-info">
+                                        <h6 class="mb-0" style="font-weight: 600; color: #2d3748; margin-bottom: 5px;">Sarah Johnson</h6>
+                                        <span class="reviewer-role" style="font-size: 14px; color: #718096;">Web Developer</span>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="form-group position-relative">
-                                    <label for="phone" class="form-label">
-                                        <i class="fa-solid fa-phone"></i> Phone Number
-                                    </label>
-                                    <input type="tel" class="form-control form-control-modern" placeholder="Enter your phone number" name="phone" id="phone" required>
-                                    <div class="form-icon-wrapper">
-                                        <i class="fa-solid fa-phone"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="form-group position-relative">
-                                    <label for="subject" class="form-label">
-                                        <i class="fa-solid fa-tag"></i> Subject
-                                    </label>
-                                    <input type="text" class="form-control form-control-modern" placeholder="Enter message subject" name="subject" id="subject" required>
-                                    <div class="form-icon-wrapper">
-                                        <i class="fa-solid fa-tag"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12 mb-4">
-                                <div class="form-group position-relative">
-                                    <label for="msg" class="form-label">
-                                        <i class="fa-solid fa-message"></i> Message
-                                    </label>
-                                    <textarea class="form-control form-control-modern" placeholder="Enter your message here..." rows="6" name="msg" id="msg" required></textarea>
-                                    <div class="form-icon-wrapper textarea-icon">
-                                        <i class="fa-solid fa-message"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12 text-center">
-                                <div class="light-green-btn">
-                                    <button type="submit" id="submit" class="btn-submit-modern">
-                                        <span>Send Message</span>
-                                        <i class="fa-solid fa-paper-plane ml-2"></i>
-                                    </button>
                                 </div>
                             </div>
                         </div>
-                    </form>
-                    <!-- col -->
+                        <div class="review-card">
+                            <div class="review-content">
+                                <div class="review-stars mb-3" style="display: flex; gap: 5px;">
+                                    <i class="fa-solid fa-star" style="color: #ffc107; font-size: 18px;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffc107; font-size: 18px;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffc107; font-size: 18px;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffc107; font-size: 18px;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffc107; font-size: 18px;"></i>
+                                </div>
+                                <p class="review-text" style="font-size: 15px; line-height: 1.6; color: #2d3748; margin-bottom: 20px; min-height: 100px;">"The best decision I made was joining Eternity Classes. The support from faculty and career guidance helped me land my dream job. Highly recommended!"</p>
+                                <div class="review-author" style="display: flex; align-items: center; gap: 15px;">
+                                    <img src="{{ asset('assets/front/images/home2/testimonial-person2.png') }}" alt="reviewer" class="reviewer-img" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+                                    <div class="reviewer-info">
+                                        <h6 class="mb-0" style="font-weight: 600; color: #2d3748; margin-bottom: 5px;">Michael Chen</h6>
+                                        <span class="reviewer-role" style="font-size: 14px; color: #718096;">Data Analyst</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-content">
+                                <div class="review-stars mb-3" style="display: flex; gap: 5px;">
+                                    <i class="fa-solid fa-star" style="color: #ffc107; font-size: 18px;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffc107; font-size: 18px;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffc107; font-size: 18px;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffc107; font-size: 18px;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffc107; font-size: 18px;"></i>
+                                </div>
+                                <p class="review-text" style="font-size: 15px; line-height: 1.6; color: #2d3748; margin-bottom: 20px; min-height: 100px;">"Excellent teaching methodology and practical approach. The live sessions and doubt resolution made learning so much easier. Thank you Eternity Classes!"</p>
+                                <div class="review-author" style="display: flex; align-items: center; gap: 15px;">
+                                    <img src="{{ asset('assets/front/images/home2/testimonial-person3.png') }}" alt="reviewer" class="reviewer-img" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+                                    <div class="reviewer-info">
+                                        <h6 class="mb-0" style="font-weight: 600; color: #2d3748; margin-bottom: 5px;">Emily Rodriguez</h6>
+                                        <span class="reviewer-role" style="font-size: 14px; color: #718096;">Graphic Designer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-content">
+                                <div class="review-stars mb-3" style="display: flex; gap: 5px;">
+                                    <i class="fa-solid fa-star" style="color: #ffc107; font-size: 18px;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffc107; font-size: 18px;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffc107; font-size: 18px;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffc107; font-size: 18px;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffc107; font-size: 18px;"></i>
+                                </div>
+                                <p class="review-text" style="font-size: 15px; line-height: 1.6; color: #2d3748; margin-bottom: 20px; min-height: 100px;">"The course structure is perfect and the instructors are very knowledgeable. I learned so much in such a short time. Worth every penny!"</p>
+                                <div class="review-author" style="display: flex; align-items: center; gap: 15px;">
+                                    <img src="{{ asset('assets/front/images/home2/testimonial-person1.png') }}" alt="reviewer" class="reviewer-img" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+                                    <div class="reviewer-info">
+                                        <h6 class="mb-0" style="font-weight: 600; color: #2d3748; margin-bottom: 5px;">David Kumar</h6>
+                                        <span class="reviewer-role" style="font-size: 14px; color: #718096;">Software Engineer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-content">
+                                <div class="review-stars mb-3" style="display: flex; gap: 5px;">
+                                    <i class="fa-solid fa-star" style="color: #ffc107; font-size: 18px;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffc107; font-size: 18px;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffc107; font-size: 18px;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffc107; font-size: 18px;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffc107; font-size: 18px;"></i>
+                                </div>
+                                <p class="review-text" style="font-size: 15px; line-height: 1.6; color: #2d3748; margin-bottom: 20px; min-height: 100px;">"Amazing experience! The flexible schedule allowed me to learn while working. The placement support team is outstanding and helped me get multiple job offers."</p>
+                                <div class="review-author" style="display: flex; align-items: center; gap: 15px;">
+                                    <img src="{{ asset('assets/front/images/home2/testimonial-person2.png') }}" alt="reviewer" class="reviewer-img" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+                                    <div class="reviewer-info">
+                                        <h6 class="mb-0" style="font-weight: 600; color: #2d3748; margin-bottom: 5px;">Lisa Anderson</h6>
+                                        <span class="reviewer-role" style="font-size: 14px; color: #718096;">Business Analyst</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- row -->
+                <button class="carousel-nav-btn next-btn" type="button" id="reviewsNext">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
             </div>
-            <!-- container -->
         </div>
-        <!-- contact us con -->
     </section>
 @endsection
 
 @section('js')
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Enrollment Form Handler
+        const enrollmentForm = document.getElementById('enrollmentForm');
+        if (enrollmentForm) {
+            enrollmentForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your enrollment! We will contact you soon.');
+                this.reset();
+            });
+        }
+
+        // Reviews Carousel
+        const reviewsTrack = document.getElementById('reviewsTrack');
+        const reviewCards = document.querySelectorAll('.review-card');
+        const reviewsContainer = document.querySelector('.reviews-carousel-container');
+        
+        if (reviewsTrack && reviewCards.length > 0 && reviewsContainer) {
+            let currentReviewIndex = 0;
+            const totalReviews = reviewCards.length;
+            let autoSlideInterval;
+            
+            function getReviewsPerView() {
+                const width = window.innerWidth;
+                if (width >= 992) return 3;
+                if (width >= 768) return 2;
+                return 1;
+            }
+
+            function updateCarousel() {
+                if (reviewCards.length === 0 || !reviewsTrack) return;
+                
+                const reviewsPerView = getReviewsPerView();
+                const containerWidth = reviewsContainer.offsetWidth;
+                const gap = window.innerWidth >= 768 ? 30 : 20;
+                
+                // Calculate card width based on container width and gaps
+                let cardWidth;
+                
+                if (window.innerWidth >= 992) {
+                    // Desktop: 3 cards visible
+                    cardWidth = (containerWidth - (gap * 2)) / 3;
+                } else if (window.innerWidth >= 768) {
+                    // Tablet: 2 cards visible
+                    cardWidth = (containerWidth - gap) / 2;
+                } else {
+                    // Mobile: 1 card visible
+                    cardWidth = containerWidth;
+                }
+                
+                // Set card widths dynamically
+                reviewCards.forEach(card => {
+                    card.style.width = `${cardWidth}px`;
+                    card.style.minWidth = `${cardWidth}px`;
+                    card.style.maxWidth = `${cardWidth}px`;
+                });
+                
+                // Calculate the total width needed to move one card (card width + gap)
+                const totalCardWidth = cardWidth + gap;
+                
+                // Ensure we don't go beyond the last card
+                const maxIndex = Math.max(0, totalReviews - reviewsPerView);
+                currentReviewIndex = Math.min(currentReviewIndex, maxIndex);
+                currentReviewIndex = Math.max(0, currentReviewIndex);
+                
+                // Calculate translateX - ensure last card is fully visible
+                let translateX = currentReviewIndex * totalCardWidth;
+                
+                // Ensure we don't scroll past the last card
+                const totalTrackWidth = (cardWidth * totalReviews) + (gap * (totalReviews - 1));
+                const maxTranslateX = Math.max(0, totalTrackWidth - containerWidth);
+                translateX = Math.min(translateX, maxTranslateX);
+                
+                reviewsTrack.style.transform = `translateX(-${translateX}px)`;
+            }
+
+            const reviewsNext = document.getElementById('reviewsNext');
+            const reviewsPrev = document.getElementById('reviewsPrev');
+
+            if (reviewsNext) {
+                reviewsNext.addEventListener('click', function() {
+                    const reviewsPerView = getReviewsPerView();
+                    const maxIndex = Math.max(0, totalReviews - reviewsPerView);
+                    if (currentReviewIndex < maxIndex) {
+                        currentReviewIndex++;
+                    } else {
+                        currentReviewIndex = 0;
+                    }
+                    updateCarousel();
+                });
+            }
+
+            if (reviewsPrev) {
+                reviewsPrev.addEventListener('click', function() {
+                    const reviewsPerView = getReviewsPerView();
+                    const maxIndex = Math.max(0, totalReviews - reviewsPerView);
+                    if (currentReviewIndex > 0) {
+                        currentReviewIndex--;
+                    } else {
+                        currentReviewIndex = maxIndex;
+                    }
+                    updateCarousel();
+                });
+            }
+
+            // Auto-slide reviews
+            function startAutoSlide() {
+                if (autoSlideInterval) clearInterval(autoSlideInterval);
+                autoSlideInterval = setInterval(function() {
+                    const reviewsPerView = getReviewsPerView();
+                    const maxIndex = Math.max(0, totalReviews - reviewsPerView);
+                    if (currentReviewIndex < maxIndex) {
+                        currentReviewIndex++;
+                    } else {
+                        currentReviewIndex = 0;
+                    }
+                    updateCarousel();
+                }, 5000);
+            }
+
+            // Pause auto-slide on hover
+            const carouselWrapper = document.querySelector('.reviews-carousel-wrapper');
+            if (carouselWrapper) {
+                carouselWrapper.addEventListener('mouseenter', function() {
+                    if (autoSlideInterval) clearInterval(autoSlideInterval);
+                });
+                carouselWrapper.addEventListener('mouseleave', function() {
+                    startAutoSlide();
+                });
+            }
+
+            // Update on window resize
+            let resizeTimeout;
+            window.addEventListener('resize', function() {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(function() {
+                    currentReviewIndex = 0;
+                    updateCarousel();
+                    startAutoSlide();
+                }, 300);
+            });
+
+            // Initialize
+            setTimeout(function() {
+                updateCarousel();
+                startAutoSlide();
+            }, 200);
+        }
+    });
+</script>
 @endsection

@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="{{ asset('assets/front/bootstrap/bootstrap.min.css') }}" type="text/css">
   <link rel="stylesheet" href="{{ asset('assets/front/css/superclasses.css') }}" type="text/css">
   <link rel="stylesheet" href="{{ asset('assets/front/css/custom.css') }}" type="text/css">
+  <link rel="stylesheet" href="{{ asset('assets/front/css/style.css') }}" type="text/css">
   <link rel="stylesheet" href="{{ asset('assets/front/css/responsive.css') }}" type="text/css">
   <link rel="stylesheet" href="{{ asset('assets/front/css/owl.carousel.min.css') }}" type="text/css">
   <link rel="stylesheet" href="{{ asset('assets/front/css/owl.theme.default.min.css') }}" type="text/css">
