@@ -26,7 +26,7 @@
             action="{{ url(env('ADMIN_URL_PREFIX') . '/blog-edit') }}" method="post"
             autocomplete="off" enctype="multipart/form-data" class="frm-blog">
             <input type="hidden" name="_token" value="{{ csrf_token() }}" />
-            <input type="hidden" name="id" value="{{ $blog->id }}">
+            <input type="hidden" name="id" value="{{ $blog->blog_id }}">
             <input type="hidden" name="fileOld" value="{{ $blog->og_image_url ?? '' }}">
             
             <div class="row mb-1">

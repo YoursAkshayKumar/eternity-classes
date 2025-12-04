@@ -2701,7 +2701,7 @@ body.index2-outer-wrapper {
 
 @-webkit-keyframes spineer1 {
     from {
-        box-shadow: 0 0 0 0 rgb(251, 88, 123, .99);
+        box-shadow: 0 0 0 0 rgb(0, 218, 178, .99);
     }
 
     to {
@@ -2711,7 +2711,7 @@ body.index2-outer-wrapper {
 
 @keyframes spineer1 {
     from {
-        box-shadow: 0 0 0 0 rgb(251, 88, 123, .99);
+        box-shadow: 0 0 0 0 rgb(0, 218, 178, .99);
     }
 
     to {
@@ -2723,7 +2723,7 @@ body.index2-outer-wrapper {
 
 /* footer section */
 .index2-outer-wrapper .footer-con {
-    background-image: url(../images/home2/footer-bg-img.png);
+    background-image: url(../images/footer.png);
     background-repeat: no-repeat;
     background-size: cover;
 }

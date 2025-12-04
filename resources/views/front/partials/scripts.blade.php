@@ -87,3 +87,51 @@
       }
     });
   </script>
+  
+  <!-- Floating Icons Mobile Touch Support -->
+  <script>
+    $(document).ready(function() {
+      // Handle mobile touch for floating icons
+      var $floatingIcons = $('.floating-icon-email, .floating-icon-whatsapp');
+      var activeIcon = null;
+      
+      // Touch start
+      $floatingIcons.on('touchstart', function(e) {
+        e.preventDefault();
+        var $this = $(this);
+        
+        // Remove active class from other icons
+        $floatingIcons.not($this).removeClass('active');
+        
+        // Toggle active class on current icon
+        $this.toggleClass('active');
+        activeIcon = $this.hasClass('active') ? $this : null;
+      });
+      
+      // Click outside to close
+      $(document).on('touchstart click', function(e) {
+        if (!$(e.target).closest('.floating-icon').length && activeIcon) {
+          activeIcon.removeClass('active');
+          activeIcon = null;
+        }
+      });
+      
+      // Prevent link navigation on first touch (show text first)
+      $floatingIcons.on('click', function(e) {
+        if (!$(this).hasClass('active')) {
+          e.preventDefault();
+          $(this).addClass('active');
+          activeIcon = $(this);
+          
+          // Allow navigation on second click
+          setTimeout(function() {
+            if (activeIcon) {
+              activeIcon.off('click').on('click', function() {
+                // Allow default link behavior
+              });
+            }
+          }, 300);
+        }
+      });
+    });
+  </script>

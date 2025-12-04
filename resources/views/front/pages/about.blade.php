@@ -73,7 +73,7 @@
                 </div>
                 <!-- row -->
             </div>
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="counter-box d-flex align-items-center justify-content-around">
                         <img class="img-fluid d-inline-block" alt="icon" src="{{ asset('assets/front/images/about-icon1.png') }}">
@@ -125,13 +125,13 @@
                     <!-- col -->
                 </div>
                 <!-- row -->
-            </div>
+            </div> --}}
             <!-- container -->
         </div>
         <!-- get to know con -->
     </section>
     <!-- VIDEO SECTION -->
-    <div class="float-left w-100 video-con d-table main-box text-center">
+    {{-- <div class="float-left w-100 video-con d-table main-box text-center">
         <div class="d-table-cell align-middle text-center">
             <div class="container wow fadeIn" data-wow-duration="2s" data-wow-delay="0.3s">
                 <div class="row">
@@ -160,9 +160,9 @@
             <!-- d table cell -->
         </div>
         <!-- video section -->
-    </div>
+    </div> --}}
     <!-- MEET THE LEADERSHIP TEAM SECTION -->
-    <section class="float-left w-100 text-center meet-the-team-con position-relative padding-top padding-bottom">
+    {{-- <section class="float-left w-100 text-center meet-the-team-con position-relative padding-top padding-bottom">
         <div class="container wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
             <div class="heading-title-con">
                 <span class="d-block special-text">quisquam</span>
@@ -253,9 +253,9 @@
             <!-- container -->
         </div>
         <!-- meet the team con -->
-    </section>
+    </section> --}}
     <!-- HELPING STUDENTS SECTION -->
-    <section
+    {{-- <section
         class="float-left w-100 position-relative helping-students-con padding-top padding-bottom text-center lavender-bg">
         <div class="container wow fadeIn" data-wow-duration="2s" data-wow-delay="0.3s">
             <div class="heading-title-con">
@@ -358,7 +358,7 @@
             <!-- container -->
         </div>
         <!-- helping students con -->
-    </section>
+    </section> --}}
 @endsection
 
 @section('js')

@@ -15,14 +15,14 @@
     <div class="container">
         <div class="justify-content-center row gy-0">
 
-            <div class="col-lg-6 auth-banners">
+            {{-- <div class="col-lg-6 auth-banners">
                 <div class="bg-login card card-body m-0 h-100 border-0">
                     <img src="{{ asset('assets/admin/images/auth/yoga-chakra-banner.webp') }}" class="img-fluid auth-banner"
                         alt="auth-banner">
                 </div>
-            </div>
+            </div> --}}
 
-            <div class="col-lg-6">
+            <div class="col-lg-12 text-center">
                 <div class="auth-box card card-body m-0 h-100 border-0 justify-content-center">
                     <div class="mb-5 text-center">
                         <a href="index">

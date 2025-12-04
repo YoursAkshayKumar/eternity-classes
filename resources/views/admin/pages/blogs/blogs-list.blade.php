@@ -107,9 +107,9 @@
                     visible: false
                 },
                 {
-                    name: 'id',
+                    name: 'blog_id',
                     render: function(data, type, row, meta) {
-                        let cnt = row.id;
+                        let cnt = row.blog_id;
                         return cnt;
                     }
                 },
@@ -165,7 +165,7 @@
                 {
                     render: function(data, type, row, meta) {
                         data = `<div class="hstack gap-2 fs-15">
-                                    <a href="{{ url(env('ADMIN_URL_PREFIX') . '/blog-edit') }}/${row.id}" class="btn icon-btn-sm btn-light-primary">
+                                    <a href="{{ url(env('ADMIN_URL_PREFIX') . '/blog-edit') }}/${row.blog_id}" class="btn icon-btn-sm btn-light-primary">
                                         <i class="ri-pencil-line"></i>
                                     </a>
                                 </div>`;
@@ -176,7 +176,7 @@
                 {
                     render: function(data, type, row, meta) {
                         data = `<div class="hstack gap-2 fs-15">
-                                      <a href="{{ url(env('ADMIN_URL_PREFIX') . '/blog-delete') }}/${row.id}" class="btn icon-btn-sm btn-light-danger delete-item">
+                                      <a href="{{ url(env('ADMIN_URL_PREFIX') . '/blog-delete') }}/${row.blog_id}" class="btn icon-btn-sm btn-light-danger delete-item">
                                         <i class="ri-delete-bin-line"></i>
                                     </a>
                                 </div>`;

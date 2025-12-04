@@ -11,7 +11,7 @@ class Blogs extends Model
 {
   use HasFactory;
   protected $table = 'blogs';
-  protected $primaryKey = 'id';
+  protected $primaryKey = 'blog_id';
   const CREATED_AT = 'created_on';
   const UPDATED_AT = 'updated_on';
   public $timestamps = false;
@@ -79,14 +79,14 @@ class Blogs extends Model
       'updated_on' => date('Y-m-d H:i:s'),
     );
     $rtVal = $this
-      ->where('id', $_Request_Data['id'])
+      ->where('blog_id', $_Request_Data['id'])
       ->update($data);
     return $rtVal;
   }
 
   public function remove($id)
   {
-    $rtVal = $this->where('id', $id)->delete();
+    $rtVal = $this->where('blog_id', $id)->delete();
     return $rtVal;
   }
 
@@ -140,17 +140,17 @@ class Blogs extends Model
     $selectClause = "";
     $groupByClause = "";
     $limitClause = "";
-    $orderClause = (count($orderInfo) > 0) ? " ORDER BY b." . $orderInfo['orderByCol'] . " " . $orderInfo['orderByDir'] . " , b.id " . $orderInfo['orderByDir'] . " "  : " ORDER BY b.created_on desc, b.id desc ";
+    $orderClause = (count($orderInfo) > 0) ? " ORDER BY b." . $orderInfo['orderByCol'] . " " . $orderInfo['orderByDir'] . " , b.blog_id " . $orderInfo['orderByDir'] . " "  : " ORDER BY b.created_on desc, b.blog_id desc ";
 
     if ($count === true) {
       $joinClause = "";
 
-      $selectClause = " COUNT(b.id) as BlogCount FROM blogs as b $joinClause WHERE 1=1";
+      $selectClause = " COUNT(b.blog_id) as BlogCount FROM blogs as b $joinClause WHERE 1=1";
       $groupByClause = "";
       $limitClause = "";
       $orderClause = "";
     } else {
-      $selectClause = " b.id,
+      $selectClause = " b.blog_id,
       b.title,
       b.slug,
       b.content,

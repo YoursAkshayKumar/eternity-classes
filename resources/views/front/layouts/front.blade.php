@@ -10,6 +10,7 @@
     @include('front.partials.header')
     @yield('content')
     @include('front.partials.footer')
+    @include('front.partials.floating-icons')
     @include('front.partials.scripts')
 </body>
 

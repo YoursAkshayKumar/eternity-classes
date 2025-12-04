@@ -1446,3 +1446,296 @@
         font-size: 14px;
     }
 }
+
+
+.index2-outer-wrapper #back-to-top-btn{
+    background-color: var(--primary--color) !important;
+    color: #fff !important;
+    border-color: #10b981 !important;
+    box-shadow: 0px 5px 20px rgba(0, 218, 178, 0.4) !important;
+    &:hover {
+        background-color: #059666 !important;
+        color: #fff !important;
+        border-color: #059666 !important;
+        box-shadow: 0px 8px 30px rgba(0, 218, 178, 0.5) !important;
+    }
+}
+
+/* Floating Contact Icons */
+.floating-contact-icons {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-end;
+}
+
+.floating-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #fff !important;
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    position: relative;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.floating-icon i {
+    font-size: 20px;
+    flex-shrink: 0;
+    transition: margin-right 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.floating-icon-text {
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, width 0.3s ease, margin-left 0.3s ease;
+    margin-left: 0;
+    display: inline-block;
+}
+
+/* Email Icon - Expands on hover/touch */
+.floating-icon-email {
+    background-color: #2196F3;
+    /* justify-content: flex-start; */
+}
+
+.floating-icon-email i {
+    margin-right: 0;
+}
+
+.floating-icon-email:hover,
+.floating-icon-email:active,
+.floating-icon-email.active {
+    background-color: #1976D2;
+    width: auto;
+    min-width: 50px;
+    padding: 0 15px;
+    justify-content: flex-start;
+    transform: translateX(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.floating-icon-email:hover i,
+.floating-icon-email:active i,
+.floating-icon-email.active i {
+    margin-right: 10px;
+}
+
+.floating-icon-email:hover .floating-icon-text,
+.floating-icon-email:active .floating-icon-text,
+.floating-icon-email.active .floating-icon-text {
+    opacity: 1;
+    width: auto;
+    margin-left: 0;
+}
+
+/* Phone Icon - Expands on hover/touch */
+.floating-icon-phone {
+    background-color: #FF5722;
+    /* justify-content: flex-start; */
+}
+
+.floating-icon-phone i {
+    margin-right: 0;
+}
+
+.floating-icon-phone:hover,
+.floating-icon-phone:active,
+.floating-icon-phone.active {
+    background-color: #E64A19;
+    width: auto;
+    min-width: 50px;
+    padding: 0 15px;
+    justify-content: flex-start;
+    transform: translateX(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.floating-icon-phone:hover i,
+.floating-icon-phone:active i,
+.floating-icon-phone.active i {
+    margin-right: 10px;
+}
+
+.floating-icon-phone:hover .floating-icon-text,
+.floating-icon-phone:active .floating-icon-text,
+.floating-icon-phone.active .floating-icon-text {
+    opacity: 1;
+    width: auto;
+    margin-left: 0;
+}
+
+/* WhatsApp Icon - Expands on hover/touch */
+.floating-icon-whatsapp {
+    background-color: #4CAF50;
+    /* justify-content: flex-start; */
+}
+
+.floating-icon-whatsapp i {
+    margin-right: 0;
+}
+
+.floating-icon-whatsapp:hover,
+.floating-icon-whatsapp:active,
+.floating-icon-whatsapp.active {
+    background-color: #388E3C;
+    width: auto;
+    min-width: 50px;
+    padding: 0 15px;
+    justify-content: flex-start;
+    transform: translateX(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.floating-icon-whatsapp:hover i,
+.floating-icon-whatsapp:active i,
+.floating-icon-whatsapp.active i {
+    margin-right: 10px;
+}
+
+.floating-icon-whatsapp:hover .floating-icon-text,
+.floating-icon-whatsapp:active .floating-icon-text,
+.floating-icon-whatsapp.active .floating-icon-text {
+    opacity: 1;
+    width: auto;
+    margin-left: 0;
+}
+
+/* Mobile Touch Support - Show expanded on touch */
+@media (hover: none) and (pointer: coarse) {
+    .floating-icon-email:active,
+    .floating-icon-phone:active,
+    .floating-icon-whatsapp:active {
+        width: auto;
+        min-width: 50px;
+        padding: 0 15px;
+        justify-content: flex-start;
+    }
+    
+    .floating-icon-email:active i,
+    .floating-icon-phone:active i,
+    .floating-icon-whatsapp:active i {
+        margin-right: 10px;
+    }
+    
+    .floating-icon-email:active .floating-icon-text,
+    .floating-icon-phone:active .floating-icon-text,
+    .floating-icon-whatsapp:active .floating-icon-text {
+        opacity: 1;
+        width: auto;
+        margin-left: 0;
+    }
+}
+
+/* Responsive Design for Floating Icons */
+@media (max-width: 768px) {
+    .floating-contact-icons {
+        right: 15px;
+        gap: 10px;
+    }
+    
+    .floating-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
+    
+    .floating-icon i {
+        font-size: 18px;
+    }
+    
+    .floating-icon-text {
+        font-size: 12px;
+    }
+    
+    .floating-icon-email:hover,
+    .floating-icon-email:active,
+    .floating-icon-email.active,
+    .floating-icon-phone:hover,
+    .floating-icon-phone:active,
+    .floating-icon-phone.active,
+    .floating-icon-whatsapp:hover,
+    .floating-icon-whatsapp:active,
+    .floating-icon-whatsapp.active {
+        padding: 0 12px;
+    }
+    
+    .floating-icon-email:hover i,
+    .floating-icon-email:active i,
+    .floating-icon-email.active i,
+    .floating-icon-phone:hover i,
+    .floating-icon-phone:active i,
+    .floating-icon-phone.active i,
+    .floating-icon-whatsapp:hover i,
+    .floating-icon-whatsapp:active i,
+    .floating-icon-whatsapp.active i {
+        margin-right: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .floating-contact-icons {
+        right: 10px;
+        gap: 8px;
+    }
+    
+    .floating-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+    
+    .floating-icon i {
+        font-size: 16px;
+    }
+    
+    .floating-icon-text {
+        font-size: 11px;
+    }
+    
+    .floating-icon-email:hover,
+    .floating-icon-email:active,
+    .floating-icon-email.active,
+    .floating-icon-phone:hover,
+    .floating-icon-phone:active,
+    .floating-icon-phone.active,
+    .floating-icon-whatsapp:hover,
+    .floating-icon-whatsapp:active,
+    .floating-icon-whatsapp.active {
+        padding: 0 10px;
+    }
+    
+    .floating-icon-email:hover i,
+    .floating-icon-email:active i,
+    .floating-icon-email.active i,
+    .floating-icon-phone:hover i,
+    .floating-icon-phone:active i,
+    .floating-icon-phone.active i,
+    .floating-icon-whatsapp:hover i,
+    .floating-icon-whatsapp:active i,
+    .floating-icon-whatsapp.active i {
+        margin-right: 6px;
+    }
+}

@@ -33,9 +33,9 @@
                 <div class="col-lg-7 col-md-6">
                     <div class="banner-content-con">
                         <span class="d-block special-text">Welcome to Eternity Classes</span>
-                        <h1 class="mb-3">Transform Your Future <br>Through Quality Education</h1>
+                        <h1 class="mb-3">Your SUCCESS story <br>Begins here</h1>
                         <p class="mb-3" style="font-size: 16px; color: #718096; font-style: italic; font-weight: 500;">Indian-style learning with global readiness</p>
-                        <p class="font-weight-light mb-3">Eternity brings you a personalised learning experience that makes education enjoyable, engaging and effective. Our holistic approach creates a happy, motivating environment where students thrive academically and personally.</p>
+                        <p class="font-weight-light mb-3">Eternity brings you a personalised learning experience with timeless <b><strong>mindmaps</strong></b> & <b><strong>conceptual clarity</strong></b> that makes education enjoyable, engaging and effective. Our holistic approach creates a happy, motivating environment where students thrive academically and personally.</p>
                         <p class="font-weight-light mb-3">Each learner moves at their own accelerated pace through methods designed around their strengths and unique style of learning. With innovative timeless mindmap & conceptual clarity throughout.</p>
                         {{-- <div class="hero-features mb-4">
                             <div class="d-flex align-items-center mb-2">
@@ -74,6 +74,7 @@
         </div>
     </section>
 
+     
     <!-- TRANSITION CARDS SECTION -->
     <section class="float-left w-100 transition-cards-section position-relative main-box padding-top80 padding-bottom116">
         <img class="img-fluid position-absolute objct1" alt="object" src="{{ asset('assets/front/images/home2/vector3.png') }}" style="top: 15%; left: 0; opacity: 0.25; z-index: 0;">
@@ -139,6 +140,204 @@
         </div>
     </section>
 
+         <!-- MERGED: US VS OTHERS & ENROLLMENT FORM SECTION -->
+         <section id="enrollment-form" class="float-left w-100 merged-comparison-form-con position-relative main-box padding-top116 padding-bottom116">
+            <img class="img-fluid position-absolute dot1" alt="icon" src="{{ asset('assets/front/images/home2/dots.png') }}">
+            <img class="img-fluid position-absolute dot2" alt="icon" src="{{ asset('assets/front/images/home2/dots.png') }}">
+            <div class="container-fluid px-0">
+                <div class="merged-section-wrapper">
+                    <div class="row no-gutters">
+                        <!-- Left Side: Us vs Others Comparison -->
+                        {{-- <div class="col-lg-6 comparison-side"> --}}
+                        <div class="col-lg-7">
+                            <div class="comparison-content-wrapper">
+                                <div class="comparison-wrapper-modern">
+                                    <div class="heading-title-con mb-4">
+                                        <span class="d-block special-text">Why Choose Us</span>
+                                        <h2 class="font-weight-600 large-font text-white">ETERNITY vs Others</h2>
+                                        <p class="text-white">See why thousands of students choose Eternity Classes over other institutions</p>
+                                    </div>
+    
+                                    <div class="table-responsive">
+                                        <table class="table comparison-table-modern">
+                                            <thead>
+                                                <tr>                                                
+                                                    <th class="us-col-modern text-center">Eternity Classes</th>
+                                                    <th class="others-col-modern text-center">Others</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="us-cell-modern text-left">
+                                                        <i class="fa-solid fa-check-circle"></i>
+                                                        <span class="ml-2">Money back Guarantee</span>
+                                                    </td>
+                                                    <td class="others-cell-modern text-left">
+                                                        <i class="fa-solid fa-times-circle"></i>
+                                                        <span class="ml-2">No Refund Assurance</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="image.png">
+                                                        <i class="fa-solid fa-check-circle"></i>
+                                                        <span class="ml-2">One-week free Class</span>
+                                                    </td>
+                                                    <td class="others-cell-modern text-left">
+                                                        <i class="fa-solid fa-times-circle"></i>
+                                                        <span class="ml-2">No full trial</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="us-cell-modern text-left">
+                                                        <i class="fa-solid fa-check-circle"></i>
+                                                        <span class="ml-2">Assessment-based Study phase</span>
+                                                    </td>
+                                                    <td class="others-cell-modern text-left">
+                                                        <i class="fa-solid fa-times-circle"></i>
+                                                        <span class="ml-2">Uniform teaching for All.</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="us-cell-modern text-left">
+                                                        <i class="fa-solid fa-check-circle"></i>
+                                                        <span class="ml-2">24x7 support for doubt solving</span>
+                                                    </td>
+                                                    <td class="others-cell-modern text-left">
+                                                        <i class="fa-solid fa-times-circle"></i>
+                                                        <span class="ml-2">No response support</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="us-cell-modern text-left">
+                                                        <i class="fa-solid fa-check-circle"></i>
+                                                        <span class="ml-2">Different Teachers for every subject.</span>
+                                                    </td>
+                                                    <td class="others-cell-modern text-left">
+                                                        <i class="fa-solid fa-times-circle"></i>
+                                                        <span class="ml-2">one teacher for multiple subject.</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="us-cell-modern text-left">
+                                                        <i class="fa-solid fa-check-circle"></i>
+                                                        <span class="ml-2">On Demand classes across all subjects.</span>
+                                                    </td>
+                                                    <td class="others-cell-modern text-left">
+                                                        <i class="fa-solid fa-times-circle"></i>
+                                                        <span class="ml-2">No on-demand classes.</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Right Side: Enrollment Form -->
+                        {{-- <div class="col-lg-6 form-side"> --}}
+                        <div class="col-lg-5">
+                            <div class="enrollment-form-content-wrapper">
+                                <div class="form-card-wrapper">
+                                    <div class="heading-title-con mb-4">
+                                        <span class="d-block special-text">Get Started</span>
+                                        <h2 class="font-weight-600 large-font">Book Free Demo Class</h2>
+                                        <p>Fill out the form to start your learning journey with us</p>
+                                    </div>
+                                    <form class="main-form enrollment-form-modern" method="post" id="enrollmentForm" action="{{ url('/enrollment/submit') }}">
+                                        @csrf
+                                    <div class="form-row">
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group-modern">
+                                                <label for="enroll_fname">Full Name <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control-modern" placeholder="Enter your full name" name="fname" id="enroll_fname" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group-modern">
+                                                <label for="enroll_email">Email Address <span class="text-danger">*</span></label>
+                                                <input type="email" class="form-control-modern" placeholder="Enter your email" name="email" id="enroll_email" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group-modern">
+                                                <label for="enroll_phone">Phone Number <span class="text-danger">*</span></label>
+                                                <input type="tel" class="form-control-modern" placeholder="Enter your phone" name="phone" id="enroll_phone" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group-modern">
+                                                <label for="enroll_course">Select Course <span class="text-danger">*</span></label>
+                                                <select class="form-control-modern" name="course" id="enroll_course" required>
+                                                    <option value="">Choose a course</option>
+                                                    <option value="maths">Maths</option>
+                                                    <option value="science">Science</option>
+                                                    <option value="english">English</option>
+                                                    <option value="olympiad">Olympiad</option>
+                                                    <option value="competitive-exams">Competitive Exams</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group-modern">
+                                                <label for="enroll_education">Grade</label>
+                                                <select class="form-control-modern" name="Grade" id="enroll_education">
+                                                    <option value="">Select Grade</option>
+                                                    <option value="kinder-garden">Kinder Garden</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group-modern">
+                                                <label for="enroll_source">How did you hear about us?</label>
+                                                <select class="form-control-modern" name="source" id="enroll_source">
+                                                    <option value="">Select Option</option>
+                                                    <option value="facebook">Facebook</option>
+                                                    <option value="instagram">Instagram</option>
+                                                    <option value="twitter">Twitter</option>
+                                                    <option value="linkedin">LinkedIn</option>
+                                                    <option value="other">Other</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group-modern mb-3">
+                                        <div class="form-check-modern">
+                                            <input class="form-check-input-modern" type="checkbox" id="enroll_terms" name="terms" required>
+                                            <label class="form-check-label-modern" for="enroll_terms">
+                                                I agree to the <a href="#" class="text-primary">Terms & Conditions</a> and <a href="#" class="text-primary">Privacy Policy</a>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="button" id="enroll_submit" class="btn-enroll-modern">
+                                            <span>Book a free Demo Class</span>
+                                            <i class="fa-solid fa-arrow-right ml-2"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
     <!-- FEATURES SECTION 1 -->
     <section class="float-left w-100 features-section-1 position-relative main-box padding-top116 padding-bottom116">
         <img class="img-fluid position-absolute objct1" alt="object" src="{{ asset('assets/front/images/home2/vector2.png') }}" style="top: 10%; right: 5%; opacity: 0.2; z-index: 0;">
@@ -146,9 +345,9 @@
         <img class="img-fluid position-absolute dot1" alt="icon" src="{{ asset('assets/front/images/home2/dots.png') }}" style="top: 50%; right: 10%; opacity: 0.15; z-index: 0;">
         <div class="container" style="position: relative; z-index: 1;">
             <div class="heading-title-con text-center mb-5">
-                <span class="d-block special-text">Our Approach</span>
-                <h2 class="font-weight-600 large-font">What We Offer</h2>
-                <p>Discover how we transform learning into an empowering journey</p>
+                {{-- <span class="d-block special-text">Our Approach</span> --}}
+                <h2 class="font-weight-600 large-font">Our Core Values</h2>
+                <p>On your journey to success</p>
             </div>
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
@@ -229,21 +428,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- FEATURES SECTION 2 -->
-    <section class="float-left w-100 features-section-2 position-relative main-box padding-top116 padding-bottom116">
-        <img class="img-fluid position-absolute objct1" alt="object" src="{{ asset('assets/front/images/home2/vector4.png') }}" style="top: 15%; left: 0; opacity: 0.25; z-index: 0;">
-        <img class="img-fluid position-absolute objct2" alt="object" src="{{ asset('assets/front/images/home2/vector3.png') }}" style="bottom: 15%; right: 0; opacity: 0.25; z-index: 0;">
-        <img class="img-fluid position-absolute dot1" alt="icon" src="{{ asset('assets/front/images/home2/dots.png') }}" style="top: 30%; left: 8%; opacity: 0.15; z-index: 0;">
-        <img class="img-fluid position-absolute dot2" alt="icon" src="{{ asset('assets/front/images/home2/dots.png') }}" style="bottom: 30%; right: 8%; opacity: 0.15; z-index: 0;">
-        <div class="container" style="position: relative; z-index: 1;">
-            <div class="heading-title-con text-center mb-5">
-                <span class="d-block special-text">Our Support</span>
-                <h2 class="font-weight-600 large-font">Additional Benefits</h2>
-                <p>Everything you need to succeed in your learning journey</p>
-            </div>
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
                     <div class="feature-card-box feature-card-5 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.1s">
@@ -274,7 +458,7 @@
                                     <h5 class="font-weight-600">Study Material</h5>
                                 </div>
                                 <div class="feature-content-hover">
-                                    <p class="mb-0">Quick, sharp and effective notes for study, designed to accelerate learning according to your comfort level curriculum.</p>
+                                    <p class="mb-0">Quick, sharp and effective notes for study, designed to accelerate learning according to your comfort & curriculum.</p>
                                     {{-- <p class="mb-0">Access comprehensive study materials including quick, sharp, and effective notes designed to accelerate your learning. All materials are tailored to your comfort level and curriculum requirements.</p> --}}
                                 </div>
                             </div>
@@ -321,198 +505,23 @@
         </div>
     </section>
 
-      <!-- MERGED: US VS OTHERS & ENROLLMENT FORM SECTION -->
-      <section id="enrollment-form" class="float-left w-100 merged-comparison-form-con position-relative main-box padding-top116 padding-bottom116">
-        <img class="img-fluid position-absolute dot1" alt="icon" src="{{ asset('assets/front/images/home2/dots.png') }}">
-        <img class="img-fluid position-absolute dot2" alt="icon" src="{{ asset('assets/front/images/home2/dots.png') }}">
-        <div class="container-fluid px-0">
-            <div class="merged-section-wrapper">
-                <div class="row no-gutters">
-                    <!-- Left Side: Us vs Others Comparison -->
-                    {{-- <div class="col-lg-6 comparison-side"> --}}
-                    <div class="col-lg-7">
-                        <div class="comparison-content-wrapper">
-                            <div class="comparison-wrapper-modern">
-                                <div class="heading-title-con mb-4">
-                                    <span class="d-block special-text">Why Choose Us</span>
-                                    <h2 class="font-weight-600 large-font text-white">Us vs Others</h2>
-                                    <p class="text-white">See why thousands of students choose Eternity Classes over other institutions</p>
-                                </div>
-
-                                <div class="table-responsive">
-                                    <table class="table comparison-table-modern">
-                                        <thead>
-                                            <tr>                                                
-                                                <th class="us-col-modern text-center">Eternity Classes</th>
-                                                <th class="others-col-modern text-center">Others</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="us-cell-modern text-left">
-                                                    <i class="fa-solid fa-check-circle"></i>
-                                                    <span class="ml-2">Money back Guarantee</span>
-                                                </td>
-                                                <td class="others-cell-modern text-left">
-                                                    <i class="fa-solid fa-times-circle"></i>
-                                                    <span class="ml-2">No Refund Assurance</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="image.png">
-                                                    <i class="fa-solid fa-check-circle"></i>
-                                                    <span class="ml-2">One-week free Class</span>
-                                                </td>
-                                                <td class="others-cell-modern text-left">
-                                                    <i class="fa-solid fa-times-circle"></i>
-                                                    <span class="ml-2">No full trial</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="us-cell-modern text-left">
-                                                    <i class="fa-solid fa-check-circle"></i>
-                                                    <span class="ml-2">Assessment-based Study phase</span>
-                                                </td>
-                                                <td class="others-cell-modern text-left">
-                                                    <i class="fa-solid fa-times-circle"></i>
-                                                    <span class="ml-2">Uniform teaching for All.</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="us-cell-modern text-left">
-                                                    <i class="fa-solid fa-check-circle"></i>
-                                                    <span class="ml-2">24x7 support for doubt solving</span>
-                                                </td>
-                                                <td class="others-cell-modern text-left">
-                                                    <i class="fa-solid fa-times-circle"></i>
-                                                    <span class="ml-2">No response support</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="us-cell-modern text-left">
-                                                    <i class="fa-solid fa-check-circle"></i>
-                                                    <span class="ml-2">Different Teachers for every subject.</span>
-                                                </td>
-                                                <td class="others-cell-modern text-left">
-                                                    <i class="fa-solid fa-times-circle"></i>
-                                                    <span class="ml-2">one teacher for multiple subject.</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="us-cell-modern text-left">
-                                                    <i class="fa-solid fa-check-circle"></i>
-                                                    <span class="ml-2">On Demand classes across all subjects.</span>
-                                                </td>
-                                                <td class="others-cell-modern text-left">
-                                                    <i class="fa-solid fa-times-circle"></i>
-                                                    <span class="ml-2">No on-demand classes.</span>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Right Side: Enrollment Form -->
-                    {{-- <div class="col-lg-6 form-side"> --}}
-                    <div class="col-lg-5">
-                        <div class="enrollment-form-content-wrapper">
-                            <div class="form-card-wrapper">
-                                <div class="heading-title-con mb-4">
-                                    <span class="d-block special-text">Get Started</span>
-                                    <h2 class="font-weight-600 large-font">Enroll Now</h2>
-                                    <p>Fill out the form to start your learning journey with us</p>
-                                </div>
-                                <form class="main-form enrollment-form-modern" method="post" id="enrollmentForm">
-                                <div class="form-row">
-                                    <div class="col-md-6 mb-3">
-                                        <div class="form-group-modern">
-                                            <label for="enroll_fname">Full Name <span class="text-danger">*</span></label>
-                                            <input type="text" class="form-control-modern" placeholder="Enter your full name" name="fname" id="enroll_fname" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <div class="form-group-modern">
-                                            <label for="enroll_email">Email Address <span class="text-danger">*</span></label>
-                                            <input type="email" class="form-control-modern" placeholder="Enter your email" name="email" id="enroll_email" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="col-md-6 mb-3">
-                                        <div class="form-group-modern">
-                                            <label for="enroll_phone">Phone Number <span class="text-danger">*</span></label>
-                                            <input type="tel" class="form-control-modern" placeholder="Enter your phone" name="phone" id="enroll_phone" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <div class="form-group-modern">
-                                            <label for="enroll_course">Select Course <span class="text-danger">*</span></label>
-                                            <select class="form-control-modern" name="course" id="enroll_course" required>
-                                                <option value="">Choose a course</option>
-                                                <option value="web-development">Web Development</option>
-                                                <option value="data-science">Data Science</option>
-                                                <option value="digital-marketing">Digital Marketing</option>
-                                                <option value="graphic-design">Graphic Design</option>
-                                                <option value="business-management">Business Management</option>
-                                                <option value="accounting">Accounting</option>
-                                                <option value="english">English Language</option>
-                                                <option value="technology">Technology</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="col-md-6 mb-3">
-                                        <div class="form-group-modern">
-                                            <label for="enroll_education">Grade</label>
-                                            <select class="form-control-modern" name="Grade" id="enroll_education">
-                                                <option value="">Select Grade</option>
-                                                <option value="high-school">High School</option>
-                                                <option value="diploma">Diploma</option>
-                                                <option value="bachelor">Bachelor's Degree</option>
-                                                <option value="master">Master's Degree</option>
-                                                <option value="other">Other</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <div class="form-group-modern">
-                                            <label for="enroll_source">How did you hear about us?</label>
-                                            <select class="form-control-modern" name="source" id="enroll_source">
-                                                <option value="">Select Option</option>
-                                                <option value="facebook">Facebook</option>
-                                                <option value="instagram">Instagram</option>
-                                                <option value="twitter">Twitter</option>
-                                                <option value="linkedin">LinkedIn</option>
-                                                <option value="other">Other</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group-modern mb-3">
-                                    <div class="form-check-modern">
-                                        <input class="form-check-input-modern" type="checkbox" id="enroll_terms" name="terms" required>
-                                        <label class="form-check-label-modern" for="enroll_terms">
-                                            I agree to the <a href="#" class="text-primary">Terms & Conditions</a> and <a href="#" class="text-primary">Privacy Policy</a>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="text-center">
-                                    <button type="submit" id="enroll_submit" class="btn-enroll-modern">
-                                        <span>Submit Enrollment</span>
-                                        <i class="fa-solid fa-arrow-right ml-2"></i>
-                                    </button>
-                                </div>
-                            </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- FEATURES SECTION 2 -->
+    {{-- <section class="float-left w-100 features-section-2 position-relative main-box padding-top116 padding-bottom116">
+        <img class="img-fluid position-absolute objct1" alt="object" src="{{ asset('assets/front/images/home2/vector4.png') }}" style="top: 15%; left: 0; opacity: 0.25; z-index: 0;">
+        <img class="img-fluid position-absolute objct2" alt="object" src="{{ asset('assets/front/images/home2/vector3.png') }}" style="bottom: 15%; right: 0; opacity: 0.25; z-index: 0;">
+        <img class="img-fluid position-absolute dot1" alt="icon" src="{{ asset('assets/front/images/home2/dots.png') }}" style="top: 30%; left: 8%; opacity: 0.15; z-index: 0;">
+        <img class="img-fluid position-absolute dot2" alt="icon" src="{{ asset('assets/front/images/home2/dots.png') }}" style="bottom: 30%; right: 8%; opacity: 0.15; z-index: 0;">
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="heading-title-con text-center mb-5">
+                <span class="d-block special-text">Our Support</span>
+                <h2 class="font-weight-600 large-font">Additional Benefits</h2>
+                <p>Everything you need to succeed in your learning journey</p>
             </div>
+            
         </div>
-    </section>
+    </section> --}}
+
+
 
     <!-- POPULAR COURSES SECTION -->
     <section class="float-left w-100 position-relative popular-courses-con main-box padding-top116 padding-bottom116 text-center">
@@ -522,10 +531,11 @@
         <img class="img-fluid position-absolute objct4" alt="object" src="{{ asset('assets/front/images/home2/vector2.png') }}">
         <div class="container wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
             <div class="heading-title-con text-center">
-                <span class="d-block special-text">incidunt</span>
-                <h2 class="font-weight-600 large-font">Popular Courses</h2>
-                <p>Explore our comprehensive range of courses designed to help you achieve your career goals. <br>
-                    Choose from industry-leading programs taught by expert instructors.</p>
+                {{-- <span class="d-block special-text">incidunt</span> --}}
+                <h2 class="font-weight-600 large-font">Our Programs</h2>
+                <p></p>
+                {{-- <p>Explore our comprehensive range of courses designed to help you achieve your career goals. <br>
+                    Choose from industry-leading programs taught by expert instructors.</p> --}}
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4">
@@ -533,7 +543,7 @@
                         <div class="course-inner-sub">
                             <div class="img-outer position-relative">
                                 <img class="img-fluid" alt="img" src="{{ asset('assets/front/images/home2/course-img1.jpg') }}">
-                                <span class="course-price position-absolute">$100</span>
+                                {{-- <span class="course-price position-absolute">$100</span> --}}
                                 <div class="course-overlay">
                                     <a href="{{ url('courses') }}" class="course-preview-btn">
                                         <i class="fa-solid fa-eye"></i> Preview
@@ -546,23 +556,23 @@
                                         <i class="fa-solid fa-book mr-2"></i>
                                         <span class="text-size-13">38 Lessons</span>
                                     </div>
-                                    <div class="date d-flex align-items-center">
+                                    {{-- <div class="date d-flex align-items-center">
                                         <i class="fa-solid fa-calendar-days mr-2"></i>
                                         <span class="text-size-13">25 Oct, 2024</span>
-                                    </div>
+                                    </div> --}}
                                 </div>
                                 <h5 class="font-weight-600 mb-2">English</h5>
                                 <p class="mb-3">Master the English language with our comprehensive course designed for all skill levels. Improve your communication skills and boost your career.</p>
-                                <div class="course-instructor mb-3">
+                                {{-- <div class="course-instructor mb-3">
                                     <div class="d-flex align-items-center justify-content-center">
                                         <img src="{{ asset('assets/front/images/home2/testimonial-person1.png') }}" alt="instructor" class="instructor-img">
                                         <span class="ml-2 text-size-13">By John Smith</span>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
-                        <hr class="course-divider">
-                        <div class="course-footer d-flex justify-content-between align-items-center">
+                        {{-- <hr class="course-divider"> --}}
+                        {{-- <div class="course-footer d-flex justify-content-between align-items-center">
                             <a href="{{ url('courses') }}" class="course-enroll-link">
                                 Enroll now <i class="fas fa-arrow-right ml-2"></i>
                             </a>
@@ -570,7 +580,7 @@
                                 <i class="fa-solid fa-star text-warning"></i>
                                 <span class="ml-1">4.8</span>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
@@ -578,7 +588,7 @@
                         <div class="course-inner-sub">
                             <div class="img-outer position-relative">
                                 <img class="img-fluid" alt="img" src="{{ asset('assets/front/images/home2/course-img2.jpg') }}">
-                                <span class="course-price position-absolute">$200</span>
+                                {{-- <span class="course-price position-absolute">$200</span> --}}
                                 <div class="course-overlay">
                                     <a href="{{ url('courses') }}" class="course-preview-btn">
                                         <i class="fa-solid fa-eye"></i> Preview
@@ -591,23 +601,23 @@
                                         <i class="fa-solid fa-book mr-2"></i>
                                         <span class="text-size-13">45 Lessons</span>
                                     </div>
-                                    <div class="date d-flex align-items-center">
+                                    {{-- <div class="date d-flex align-items-center">
                                         <i class="fa-solid fa-calendar-days mr-2"></i>
                                         <span class="text-size-13">10 Nov, 2024</span>
-                                    </div>
+                                    </div> --}}
                                 </div>
                                 <h5 class="font-weight-600 mb-2">Maths</h5>
                                 <p class="mb-3">Build strong mathematical foundations and problem-solving skills. Our comprehensive maths course covers all levels from basic to advanced concepts.</p>
-                                <div class="course-instructor mb-3">
+                                {{-- <div class="course-instructor mb-3">
                                     <div class="d-flex align-items-center justify-content-center">
                                         <img src="{{ asset('assets/front/images/home2/testimonial-person2.png') }}" alt="instructor" class="instructor-img">
                                         <span class="ml-2 text-size-13">By Sarah Johnson</span>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
-                        <hr class="course-divider">
-                        <div class="course-footer d-flex justify-content-between align-items-center">
+                        {{-- <hr class="course-divider"> --}}
+                        {{-- <div class="course-footer d-flex justify-content-between align-items-center">
                             <a href="{{ url('courses') }}" class="course-enroll-link">
                                 Enroll now <i class="fas fa-arrow-right ml-2"></i>
                             </a>
@@ -615,7 +625,7 @@
                                 <i class="fa-solid fa-star text-warning"></i>
                                 <span class="ml-1">4.9</span>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
@@ -623,7 +633,7 @@
                         <div class="course-inner-sub">
                             <div class="img-outer position-relative">
                                 <img class="img-fluid" alt="img" src="{{ asset('assets/front/images/home2/course-img3.jpg') }}">
-                                <span class="course-price position-absolute">$250</span>
+                                {{-- <span class="course-price position-absolute">$250</span> --}}
                                 <div class="course-overlay">
                                     <a href="{{ url('courses') }}" class="course-preview-btn">
                                         <i class="fa-solid fa-eye"></i> Preview
@@ -636,22 +646,22 @@
                                         <i class="fa-solid fa-book mr-2"></i>
                                         <span class="text-size-13">40 Lessons</span>
                                     </div>
-                                    <div class="date d-flex align-items-center">
+                                    {{-- <div class="date d-flex align-items-center">
                                         <i class="fa-solid fa-calendar-days mr-2"></i>
                                         <span class="text-size-13">20 Nov, 2024</span>
-                                    </div>
+                                    </div> --}}
                                 </div>
                                 <h5 class="font-weight-600 mb-2">Science</h5>
                                 <p class="mb-3">Explore the fascinating world of science through hands-on experiments and interactive learning. Perfect for curious minds of all ages.</p>
-                                <div class="course-instructor mb-3">
+                                {{-- <div class="course-instructor mb-3">
                                     <div class="d-flex align-items-center justify-content-center">
                                         <img src="{{ asset('assets/front/images/home2/testimonial-person3.png') }}" alt="instructor" class="instructor-img">
                                         <span class="ml-2 text-size-13">By Mike Davis</span>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
-                        <hr class="course-divider">
+                        {{-- <hr class="course-divider">
                         <div class="course-footer d-flex justify-content-between align-items-center">
                             <a href="{{ url('courses') }}" class="course-enroll-link">
                                 Enroll now <i class="fas fa-arrow-right ml-2"></i>
@@ -660,7 +670,7 @@
                                 <i class="fa-solid fa-star text-warning"></i>
                                 <span class="ml-1">4.7</span>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
@@ -668,7 +678,7 @@
                         <div class="course-inner-sub">
                             <div class="img-outer position-relative">
                                 <img class="img-fluid" alt="img" src="{{ asset('assets/front/images/home2/course-img1.jpg') }}">
-                                <span class="course-price position-absolute">$300</span>
+                                {{-- <span class="course-price position-absolute">$300</span> --}}
                                 <div class="course-overlay">
                                     <a href="{{ url('courses') }}" class="course-preview-btn">
                                         <i class="fa-solid fa-eye"></i> Preview
@@ -681,22 +691,22 @@
                                         <i class="fa-solid fa-book mr-2"></i>
                                         <span class="text-size-13">50 Lessons</span>
                                     </div>
-                                    <div class="date d-flex align-items-center">
+                                    {{-- <div class="date d-flex align-items-center">
                                         <i class="fa-solid fa-calendar-days mr-2"></i>
                                         <span class="text-size-13">5 Dec, 2024</span>
-                                    </div>
+                                    </div> --}}
                                 </div>
                                 <h5 class="font-weight-600 mb-2">Olympiad</h5>
                                 <p class="mb-3">Prepare for competitive exams and olympiads with our specialized training program. Expert guidance to excel in national and international competitions.</p>
-                                <div class="course-instructor mb-3">
+                                {{-- <div class="course-instructor mb-3">
                                     <div class="d-flex align-items-center justify-content-center">
                                         <img src="{{ asset('assets/front/images/home2/testimonial-person1.png') }}" alt="instructor" class="instructor-img">
                                         <span class="ml-2 text-size-13">By Emily Rodriguez</span>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
-                        <hr class="course-divider">
+                        {{-- <hr class="course-divider">
                         <div class="course-footer d-flex justify-content-between align-items-center">
                             <a href="{{ url('courses') }}" class="course-enroll-link">
                                 Enroll now <i class="fas fa-arrow-right ml-2"></i>
@@ -705,7 +715,7 @@
                                 <i class="fa-solid fa-star text-warning"></i>
                                 <span class="ml-1">5.0</span>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
@@ -713,7 +723,7 @@
                         <div class="course-inner-sub">
                             <div class="img-outer position-relative">
                                 <img class="img-fluid" alt="img" src="{{ asset('assets/front/images/home2/course-img3.jpg') }}">
-                                <span class="course-price position-absolute">$350</span>
+                                {{-- <span class="course-price position-absolute">$350</span> --}}
                                 <div class="course-overlay">
                                     <a href="{{ url('courses') }}" class="course-preview-btn">
                                         <i class="fa-solid fa-eye"></i> Preview
@@ -726,22 +736,22 @@
                                         <i class="fa-solid fa-book mr-2"></i>
                                         <span class="text-size-13">55 Lessons</span>
                                     </div>
-                                    <div class="date d-flex align-items-center">
+                                    {{-- <div class="date d-flex align-items-center">
                                         <i class="fa-solid fa-calendar-days mr-2"></i>
                                         <span class="text-size-13">15 Dec, 2024</span>
-                                    </div>
+                                    </div> --}}
                                 </div>
                                 <h5 class="font-weight-600 mb-2">Comp & E</h5>
                                 <p class="mb-3">Computer & Engineering course covering programming, software development, and engineering principles. Build practical skills for the tech industry.</p>
-                                <div class="course-instructor mb-3">
+                                {{-- <div class="course-instructor mb-3">
                                     <div class="d-flex align-items-center justify-content-center">
                                         <img src="{{ asset('assets/front/images/home2/testimonial-person2.png') }}" alt="instructor" class="instructor-img">
                                         <span class="ml-2 text-size-13">By David Kumar</span>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
-                        <hr class="course-divider">
+                        {{-- <hr class="course-divider">
                         <div class="course-footer d-flex justify-content-between align-items-center">
                             <a href="{{ url('courses') }}" class="course-enroll-link">
                                 Enroll now <i class="fas fa-arrow-right ml-2"></i>
@@ -750,12 +760,12 @@
                                 <i class="fa-solid fa-star text-warning"></i>
                                 <span class="ml-1">4.9</span>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
             <div class="light-green-btn d-inline-block mt-4">
-                <a href="{{ url('courses') }}" class="d-inline-block">View all Courses</a>
+                <a href="{{ url('courses') }}" class="d-inline-block">View Courses</a>
             </div>
         </div>
     </section>
@@ -777,8 +787,8 @@
                     <div class="more-info-content text-center">
                         <p class="lead mb-4" style="font-size: 18px; line-height: 1.8; color: #2d3748;">
                             A platform where you unleash your fear of studies and grow a genuine love for learning. 
-                            Choose smarter, learn better and trust in our quality with a transparent, hassle-free refund 
-                            policy that gives along with a full week of real classes for every student.
+                            Choose smarter, learn better and trust in our quality with a transparent, <b class="text-dark"><strong>hassle-free refund 
+                            policy</strong></b> that gives along with a <b class="text-dark"><strong>full week of real classes</strong></b> for every student.
                         </p>
                         <div class="row mt-5">
                             <div class="col-lg-4 col-md-6 mb-4">
@@ -796,7 +806,7 @@
                                         <i class="fa-solid fa-file-alt" style="font-size: 48px; color: #28a745;"></i>
                                     </div>
                                     <h5 class="font-weight-600 mb-3">Professional Study Materials</h5>
-                                    <p class="mb-0">Professionally designed notes, worksheets, and chapter summaries aligned with your pace.</p>
+                                    <p class="mb-0">Professionally designed notes, worksheets, and chapter summaries just for you aligned with your pace.</p>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 mb-4">
@@ -1029,8 +1039,48 @@
         if (enrollmentForm) {
             enrollmentForm.addEventListener('submit', function(e) {
                 e.preventDefault();
-                alert('Thank you for your enrollment! We will contact you soon.');
-                this.reset();
+                
+                const formData = new FormData(this);
+                const submitButton = document.getElementById('enroll_submit');
+                const originalButtonText = submitButton.innerHTML;
+                
+                // Disable submit button and show loading
+                submitButton.disabled = true;
+                submitButton.innerHTML = '<span>Submitting...</span><i class="fa-solid fa-spinner fa-spin ml-2"></i>';
+                
+                fetch(this.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        alert(data.message || 'Thank you for your enrollment! We will contact you soon.');
+                        this.reset();
+                    } else {
+                        let errorMessage = data.message || 'An error occurred. Please try again.';
+                        if (data.data && typeof data.data === 'object') {
+                            const errors = Object.values(data.data).flat();
+                            if (errors.length > 0) {
+                                errorMessage = errors.join('\n');
+                            }
+                        }
+                        alert(errorMessage);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred. Please try again later.');
+                })
+                .finally(() => {
+                    // Re-enable submit button
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = originalButtonText;
+                });
             });
         }
 

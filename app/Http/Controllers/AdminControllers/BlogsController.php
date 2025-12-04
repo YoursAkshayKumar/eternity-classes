@@ -19,27 +19,37 @@ class BlogsController extends WebAppBaseController
 
 	public function loadBlogList(Request $request)
 	{
+		$data = [];
 		try {
 			$data = $request->all();
 			$projectionData = array();
-			$params['draw'] = $data['draw'];
-			$start = $data['start'];
-			$length = $data['length'];
-			$orderByColNo = $data['order'][0]['column'];
-			$orderByCol = $data["columns"][$orderByColNo]["name"];
-			$orderByDir = $data['order'][0]['dir'];
+			$params['draw'] = isset($data['draw']) ? $data['draw'] : 1;
+			$start = isset($data['start']) ? $data['start'] : 0;
+			$length = isset($data['length']) ? $data['length'] : 10;
+			
+			$orderByCol = 'created_on';
+			$orderByDir = 'desc';
+			if (isset($data['order'][0]['column']) && isset($data["columns"][$data['order'][0]['column']]["name"])) {
+				$orderByColNo = $data['order'][0]['column'];
+				$orderByCol = $data["columns"][$orderByColNo]["name"];
+				$orderByDir = isset($data['order'][0]['dir']) ? $data['order'][0]['dir'] : 'desc';
+			}
 
 			$orderInfo = array(
 				'orderByCol' => $orderByCol,
 				'orderByDir' => $orderByDir
 			);
 
-			parse_str($data['frmData'], $frmData);
+			$frmData = array();
+			if (isset($data['frmData']) && !empty($data['frmData'])) {
+				parse_str($data['frmData'], $frmData);
+			}
 
 			$objBlogs = new Blogs();
 			$recordsTotal = $objBlogs->getCount($frmData);
 
-			$recordsFiltered = $objBlogs->ajaxBlogList($length, $start, $frmData, true)[0]->BlogCount;
+			$countResult = $objBlogs->ajaxBlogList($length, $start, $frmData, true);
+			$recordsFiltered = !empty($countResult) && isset($countResult[0]->BlogCount) ? $countResult[0]->BlogCount : 0;
 			$projectionData = $objBlogs->ajaxBlogList($length, $start, $frmData, false, $orderInfo);
 
 			$jsonData = array(
@@ -52,7 +62,14 @@ class BlogsController extends WebAppBaseController
 			return $jsonData;
 
 		} catch (\Exception $ex) {
-			return $this->sendError($ex->getMessage(), $ex->getTrace(), 500);
+			// Return DataTables compatible error format
+			return response()->json([
+				"draw" => isset($data['draw']) ? intval($data['draw']) : 0,
+				"recordsTotal" => 0,
+				"recordsFiltered" => 0,
+				"data" => [],
+				"error" => $ex->getMessage()
+			], 200);
 		}
 	}
 

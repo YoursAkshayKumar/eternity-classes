@@ -33,7 +33,7 @@ class BlogsController extends WebAppBaseController
 
             // Get related blogs (excluding current blog)
             $relatedBlogs = $objBlogs->getRecAll(['status' => 'published', 'is_delete' => 0])
-                ->where('id', '!=', $blog->id)
+                ->where('blog_id', '!=', $blog->blog_id)
                 ->take(3);
 
             return view('front.pages.blog-details', [

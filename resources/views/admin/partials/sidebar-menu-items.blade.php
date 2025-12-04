@@ -25,4 +25,30 @@
             </li>
         </ul>
     </li>
+
+    <li class="slide">
+        <a href="#!" class="side-menu__item" role="menuitem">
+            <span class="side_menu_icon"><i class="ri-user-add-line"></i></span>
+            <span class="side-menu__label">Enrollments</span>
+            <i class="ri-arrow-down-s-line side-menu__angle"></i>
+        </a>
+        <ul class="slide-menu" role="menu">
+            <li class="slide">
+                <a href="{{ url(env('ADMIN_URL_PREFIX'). '/enrollments') }}" class="side-menu__item" role="menuitem">Enrollments List</a>
+            </li>
+        </ul>
+    </li>
+
+    <li class="slide">
+        <a href="#!" class="side-menu__item" role="menuitem">
+            <span class="side_menu_icon"><i class="ri-mail-line"></i></span>
+            <span class="side-menu__label">Newsletter</span>
+            <i class="ri-arrow-down-s-line side-menu__angle"></i>
+        </a>
+        <ul class="slide-menu" role="menu">
+            <li class="slide">
+                <a href="{{ url(env('ADMIN_URL_PREFIX'). '/newsletter-subscriptions') }}" class="side-menu__item" role="menuitem">Subscriptions List</a>
+            </li>
+        </ul>
+    </li>
 </ul>

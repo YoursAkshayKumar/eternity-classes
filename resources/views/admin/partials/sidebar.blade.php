@@ -3,8 +3,8 @@
     <!-- START BRAND LOGO -->
     <div class="app-sidebar-logo px-6 justify-content-center align-items-center">
         <a href="{{ url('admin/dashboard') }}">
-            <img height="75" class="app-sidebar-logo-default" alt="Logo" src="{{ asset('assets/images/logo.png') }}">
-            <img height="40" class="app-sidebar-logo-minimize" alt="Logo" src="{{ asset('assets/images/logo.png') }}">
+            <img height="75" class="app-sidebar-logo-default" alt="Logo" src="{{ asset('assets/front/images/logo/logo.png') }}">
+            <img height="40" class="app-sidebar-logo-minimize" alt="Logo" src="{{ asset('assets/front/images/logo/logo.png') }}">
         </a>
     </div>
     <!-- END BRAND LOGO -->

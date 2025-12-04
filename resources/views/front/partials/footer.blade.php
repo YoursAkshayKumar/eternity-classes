@@ -4,7 +4,7 @@
       <div class="row align-items-center">
         <div class="col-lg-4 col-md-6 col-sm-6">
           <div class="footer-inner-content">
-            <a href="{{ url('/') }}"><img class="img-fluid" alt="icon" src="{{ asset('assets/front/images/logo/logo.png') }}" height="100" width="100"></a>
+            <a href="{{ url('/') }}"><img class="img-fluid" alt="icon" src="{{ asset('assets/front/images/logo-footer.png') }}" height="100" width="100"></a>
             <p>Sed ut perspiciatis unde omnis iste natus
               error sit accusantium laudantium totam
               rem aperiam, eaque ipsa quae.</p>

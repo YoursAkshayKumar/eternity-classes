@@ -6,6 +6,7 @@ use App\Models\Admin;
 use App\Models\Applicant;
 use App\Models\ApplicationStatus;
 use App\Models\NewsletterSubscription;
+use App\Models\Enrollment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -93,6 +94,48 @@ class HomeController extends WebAppBaseController
             ]);
 
             return $this->sendResponse([], 'Thank you for subscribing to our newsletter!');
+        } catch (\Exception $ex) {
+            return $this->sendError('Something went wrong. Please try again later.', $ex->getTrace(), 500);
+        }
+    }
+
+    public function submitEnrollment(Request $request)
+    {
+        try {
+            $niceNames = array(
+                'fname' => 'Full Name',
+                'email' => 'Email Address',
+                'phone' => 'Phone Number',
+                'course' => 'Course',
+                'terms' => 'Terms & Conditions',
+            );
+
+            $validator = Validator::make($request->all(), [
+                'fname' => 'required|string|max:255',
+                'email' => 'required|email|max:255',
+                'phone' => 'required|string|max:20',
+                'course' => 'required|string|max:255',
+                'terms' => 'required',
+            ], [], $niceNames);
+
+            if ($validator->fails()) {
+                return $this->sendError('Validation Error', $validator->errors(), 422);
+            }
+
+            $data = [
+                'full_name' => $request->input('fname'),
+                'email' => $request->input('email'),
+                'phone' => $request->input('phone'),
+                'course' => $request->input('course'),
+                'grade' => $request->input('Grade', null),
+                'source' => $request->input('source', null),
+                'terms_accepted' => $request->has('terms') ? true : false,
+            ];
+
+            $objEnrollment = new Enrollment();
+            $enrollmentId = $objEnrollment->insertRec($data);
+
+            return $this->sendResponse(['enrollment_id' => $enrollmentId], 'Thank you for your enrollment! We will contact you soon.');
         } catch (\Exception $ex) {
             return $this->sendError('Something went wrong. Please try again later.', $ex->getTrace(), 500);
         }
