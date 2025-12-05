@@ -5,41 +5,20 @@
         <div class="col-lg-4 col-md-6 col-sm-6">
           <div class="footer-inner-content">
             <a href="{{ url('/') }}"><img class="img-fluid" alt="icon" src="{{ asset('assets/front/images/logo-footer.png') }}" height="100" width="100"></a>
-            <p>Sed ut perspiciatis unde omnis iste natus
-              error sit accusantium laudantium totam
-              rem aperiam, eaque ipsa quae.</p>
-            <p class="mb-0">
-              Duis aute irure dolor in reprehenderit in
-              voluptate velit esse cillum dolore .</p>
+            <p>Your dedicated partner in academic excellence and holistic growth. We deliver personalized, expert-guided tuition to ensure seamless learning and help every student unlock their full potential.</p>
+            
             <!-- footer inner content -->
           </div>
           <!-- col -->
         </div>
-        <div class="col-lg-2 col-md-6 col-sm-6">
+        <div class="col-lg-4 col-md-6 col-sm-6">
           <div class="footer-inner-links-con">
             <h6 class="text-white span-heading d-block">Quick Links</h6>
             <ul class="p-0 m-0 list-unstyled">
+              <li><a href="{{ url('/') }}"> Home</a></li>
               <li><a href="{{ url('about') }}"> About</a></li>
-              <li><a href="{{ url('services') }}">Services</a></li>
               <li><a href="{{ url('courses') }}">Courses</a></li>
-              <li><a href="{{ url('faq') }}">Faq</a></li>
-              <li class="mb-0"><a href="testimonial.html">Testimonial</a></li>
-              <!-- list unstyled -->
-            </ul>
-            <!--  footer inner links con-->
-          </div>
-          <!-- col -->
-        </div>
-        <div class="col-lg-2 col-md-6 col-sm-6">
-          <div class="footer-inner-links-con">
-            <h6 class="text-white span-heading d-block">Support</h6>
-            <ul class="p-0 m-0 list-unstyled">
-              <li><a href="{{ url('courses') }}">Courses</a></li> 
-              <li><a href="{{ url('blog') }}"> Blog</a></li>
-              <li><a href="{{ url('blog-detail') }}">Blog Details</a></li>
-              <li><a href="{{ url('services') }}">Services</a></li>
-              <li class="mb-0"><a href="{{ url('contact') }}">Contact Us</a></li>
-
+              <li><a href="{{ url('blogs') }}"> Blog</a></li>
               <!-- list unstyled -->
             </ul>
             <!--  footer inner links con-->

@@ -81,8 +81,8 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
                     <div class="transition-card-box card-by-you wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.1s">
-                        <div class="transition-icon-wrapper">
-                            <img class="img-fluid" alt="icon" src="{{ asset('assets/front/images/single-blog-tab-img4.jpg') }}">
+                        <div class="transition-icon-wrapper text-center">
+                            <img class="img-fluid" alt="icon" src="{{ asset('assets/front/images/by-you.png') }}" width="250" height="250">
                         </div>
                         <div class="transition-content">
                             <h5 class="font-weight-600">By You</h5>
@@ -99,8 +99,8 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
                     <div class="transition-card-box card-for-you wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.3s">
-                        <div class="transition-icon-wrapper">
-                            <img class="img-fluid" alt="icon" src="{{ asset('assets/front/images/single-blog-tab-img5.jpg') }}">
+                        <div class="transition-icon-wrapper text-center">
+                            <img class="img-fluid" alt="icon" src="{{ asset('assets/front/images/for-you.png') }}" width="250" height="250">
                         </div>
                         <div class="transition-content">
                             <h5 class="font-weight-600">For You</h5>
@@ -117,8 +117,8 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
                     <div class="transition-card-box card-to-you wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.5s">
-                        <div class="transition-icon-wrapper">
-                            <img class="img-fluid" alt="icon" src="{{ asset('assets/front/images/single-blog-tab-img6.jpg') }}">
+                        <div class="transition-icon-wrapper text-center">
+                            <img class="img-fluid" alt="icon" src="{{ asset('assets/front/images/to-you.png') }}" width="250" height="250">
                         </div>
                         <div class="transition-content">
                             <h5 class="font-weight-600">To You</h5>
@@ -350,17 +350,15 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
                     <div class="feature-card-box feature-card-1 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.1s">
                         <div class="feature-icon-wrapper">
-                            <i class="fa-solid fa-user-graduate"></i>
+                            <img src="{{ asset('assets/front/images/complete-personality-development.png') }}" height="150" width="150" alt="Complete Personality Development" class="img-fluid">
                         </div>
                         <div class="feature-content">
-                            {{-- <h5 class="font-weight-600">Complete Personality Development</h5> --}}
                             <div class="feature-content-wrapper">
                                 <div class="feature-content-default">
-                                    <h5 class="font-weight-600">Complete Personality Development</h5>
+                                    <h5 class="font-weight-600 lh-sm">Complete Personality Development</h5>
                                 </div>
                                 <div class="feature-content-hover">
                                     <p class="mb-0">Confidence and Esteem building, Critical thinking & Problem Solving and Self-growth.</p>
-                                    {{-- <p class="mb-0">We focus on building confidence and self-esteem, developing critical thinking skills, problem-solving abilities, and fostering overall self-growth to create well-rounded individuals.</p> --}}
                                 </div>
                             </div>
                         </div>
@@ -369,17 +367,15 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
                     <div class="feature-card-box feature-card-2 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
                         <div class="feature-icon-wrapper">
-                            <i class="fa-solid fa-rocket"></i>
+                            <img src="{{ asset('assets/front/images/accelerated-growth-of-your-child.png') }}" height="150" width="150" alt="Accelerated growth of your child" class="img-fluid">
                         </div>
                         <div class="feature-content">
-                            {{-- <h5 class="font-weight-600">Accelerated growth of your child</h5> --}}
                             <div class="feature-content-wrapper">
                                 <div class="feature-content-default">
-                                    <h5 class="font-weight-600">Accelerated growth of your child</h5>
+                                    <h5 class="font-weight-600 lh-sm">Accelerated growth of your child</h5>
                                 </div>
                                 <div class="feature-content-hover">
                                     <p class="mb-0">we aim to enhance the student's learning process & elevate their overall learning curve.</p>
-                                    {{-- <p class="mb-0">Our innovative teaching methods are designed to accelerate learning, helping students achieve faster progress and reach their full potential through personalized attention and effective strategies.</p> --}}
                                 </div>
                             </div>
                         </div>
@@ -388,17 +384,15 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
                     <div class="feature-card-box feature-card-3 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.3s">
                         <div class="feature-icon-wrapper">
-                            <i class="fa-solid fa-user-check"></i>
+                            <img src="{{ asset('assets/front/images/personalised-learning.png') }}" height="150" width="150" alt="Personalised Learning" class="img-fluid">
                         </div>
                         <div class="feature-content">
-                            {{-- <h5 class="font-weight-600">Personalised Learning</h5> --}}
                             <div class="feature-content-wrapper">
                                 <div class="feature-content-default">
-                                    <h5 class="font-weight-600">Personalised Learning</h5>
+                                    <h5 class="font-weight-600 lh-sm">Personalised Learning</h5>
                                 </div>
                                 <div class="feature-content-hover">
                                     <p class="mb-0">We customize learning journey based on their performance, interests & learning needs.</p>
-                                    {{-- <p class="mb-0">Every student is unique. We tailor the learning experience to match individual performance levels, personal interests, and specific learning needs for optimal results.</p> --}}
                                 </div>
                             </div>
                         </div>
@@ -407,17 +401,14 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
                     <div class="feature-card-box feature-card-4 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.4s">
                         <div class="feature-icon-wrapper">
-                            <i class="fa-solid fa-calendar-check"></i>
+                            <img src="{{ asset('assets/front/images/seamless-rescheduling.png') }}" height="150" width="150" alt="Seamless Rescheduling" class="img-fluid">
                         </div>
                         <div class="feature-content">
-                            {{-- <h5 class="font-weight-600">Seamless Rescheduling</h5> --}}
                             <div class="feature-content-wrapper">
                                 <div class="feature-content-default">
-                                    <h5 class="font-weight-600">Seamless Rescheduling</h5>
-                                    
+                                    <h5 class="font-weight-600 lh-sm">Seamless Rescheduling</h5>
                                 </div>
                                 <div class="feature-content-hover">
-                                    {{-- <p class="mb-0">We understand that life can get busy. Our flexible rescheduling system makes it easy to adjust your learning schedule without any hassle, ensuring you never miss out on your education.</p> --}}
                                     <p class="mb-0">Effortless and Hassle free Rescheduling. So that you don't miss out. Because life gets busy & we understand that.</p>
                                 </div>
                             </div>
@@ -429,16 +420,15 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
                     <div class="feature-card-box feature-card-5 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.1s">
                         <div class="feature-icon-wrapper">
-                            <i class="fa-solid fa-comments"></i>
+                            <img src="{{ asset('assets/front/images/doubt-clearing-sessions.png') }}" height="150" width="150" alt="Doubt & Clearing Sessions" class="img-fluid">
                         </div>
                         <div class="feature-content">
                             <div class="feature-content-wrapper">
                                 <div class="feature-content-default">
-                                    <h5 class="font-weight-600">Doubt & Clearing Sessions</h5>
+                                    <h5 class="font-weight-600 lh-sm">Doubt & Clearing Sessions</h5>
                                 </div>
                                 <div class="feature-content-hover">
                                     <p class="mb-0">We believe no doubt should go unanswered. Instant, personalised doubt-clearing sessions.</p>
-                                    {{-- <p class="mb-0">Get instant, personalized doubt-clearing sessions whenever you need them. We believe no question should go unanswered, ensuring continuous learning without obstacles.</p> --}}
                                 </div>
                             </div>
                         </div>
@@ -447,16 +437,15 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
                     <div class="feature-card-box feature-card-6 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
                         <div class="feature-icon-wrapper">
-                            <i class="fa-solid fa-book-open"></i>
+                            <img src="{{ asset('assets/front/images/study-material.png') }}" height="150" width="150" alt="Study Material" class="img-fluid">
                         </div>
                         <div class="feature-content">
                             <div class="feature-content-wrapper">
                                 <div class="feature-content-default">
-                                    <h5 class="font-weight-600">Study Material</h5>
+                                    <h5 class="font-weight-600 lh-sm">Study Material</h5>
                                 </div>
                                 <div class="feature-content-hover">
                                     <p class="mb-0">Quick, sharp and effective notes for study, designed to accelerate learning according to your comfort & curriculum.</p>
-                                    {{-- <p class="mb-0">Access comprehensive study materials including quick, sharp, and effective notes designed to accelerate your learning. All materials are tailored to your comfort level and curriculum requirements.</p> --}}
                                 </div>
                             </div>
                         </div>
@@ -465,16 +454,15 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
                     <div class="feature-card-box feature-card-7 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.3s">
                         <div class="feature-icon-wrapper">
-                            <i class="fa-solid fa-lightbulb"></i>
+                            <img src="{{ asset('assets/front/images/beyond-academic.png') }}" height="150" width="150" alt="Beyond Academic" class="img-fluid">
                         </div>
                         <div class="feature-content">
                             <div class="feature-content-wrapper">
                                 <div class="feature-content-default">
-                                    <h5 class="font-weight-600">Beyond Academic</h5>
+                                    <h5 class="font-weight-600 lh-sm">Beyond Academic</h5>
                                 </div>
                                 <div class="feature-content-hover">
                                     <p class="mb-0">We primarily focus on developing essential life skills, real world abilities that go far beyond textbooks.</p>
-                                    {{-- <p class="mb-0">Our curriculum goes beyond traditional academics. We focus on developing essential life skills and real-world abilities that prepare you for success in all aspects of life, far beyond textbooks.</p> --}}
                                 </div>
                             </div>
                         </div>
@@ -483,16 +471,15 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
                     <div class="feature-card-box feature-card-8 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.4s">
                         <div class="feature-icon-wrapper">
-                            <i class="fa-solid fa-star"></i>
+                            <img src="{{ asset('assets/front/images/your-own-story.png') }}" height="150" width="150" alt="Your own Story" class="img-fluid">
                         </div>
                         <div class="feature-content">
                             <div class="feature-content-wrapper">
                                 <div class="feature-content-default">
-                                    <h5 class="font-weight-600">Your own Story</h5>
+                                    <h5 class="font-weight-600 lh-sm">Your own Story</h5>
                                 </div>
                                 <div class="feature-content-hover">
                                     <p class="mb-0">We eagerly look forward to feature your success story to shine in this section.</p>
-                                    {{-- <p class="mb-0">Your success is our pride! We eagerly look forward to featuring your success story, celebrating your achievements, and inspiring others through your journey of growth and accomplishment.</p> --}}
                                 </div>
                             </div>
                         </div>
@@ -502,24 +489,6 @@
         </div>
     </section>
 
-    <!-- FEATURES SECTION 2 -->
-    {{-- <section class="float-left w-100 features-section-2 position-relative main-box padding-top116 padding-bottom116">
-        <img class="img-fluid position-absolute objct1" alt="object" src="{{ asset('assets/front/images/home2/vector4.png') }}" style="top: 15%; left: 0; opacity: 0.25; z-index: 0;">
-        <img class="img-fluid position-absolute objct2" alt="object" src="{{ asset('assets/front/images/home2/vector3.png') }}" style="bottom: 15%; right: 0; opacity: 0.25; z-index: 0;">
-        <img class="img-fluid position-absolute dot1" alt="icon" src="{{ asset('assets/front/images/home2/dots.png') }}" style="top: 30%; left: 8%; opacity: 0.15; z-index: 0;">
-        <img class="img-fluid position-absolute dot2" alt="icon" src="{{ asset('assets/front/images/home2/dots.png') }}" style="bottom: 30%; right: 8%; opacity: 0.15; z-index: 0;">
-        <div class="container" style="position: relative; z-index: 1;">
-            <div class="heading-title-con text-center mb-5">
-                <span class="d-block special-text">Our Support</span>
-                <h2 class="font-weight-600 large-font">Additional Benefits</h2>
-                <p>Everything you need to succeed in your learning journey</p>
-            </div>
-            
-        </div>
-    </section> --}}
-
-
-
     <!-- POPULAR COURSES SECTION -->
     <section class="float-left w-100 position-relative popular-courses-con main-box padding-top116 padding-bottom116 text-center">
         <img class="img-fluid position-absolute objct1" alt="object" src="{{ asset('assets/front/images/home2/vector3.png') }}">
@@ -528,236 +497,79 @@
         <img class="img-fluid position-absolute objct4" alt="object" src="{{ asset('assets/front/images/home2/vector2.png') }}">
         <div class="container wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
             <div class="heading-title-con text-center">
-                {{-- <span class="d-block special-text">incidunt</span> --}}
                 <h2 class="font-weight-600 large-font">Our Programs</h2>
                 <p></p>
-                {{-- <p>Explore our comprehensive range of courses designed to help you achieve your career goals. <br>
-                    Choose from industry-leading programs taught by expert instructors.</p> --}}
+
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
+            <div class="row courses-row-single">
+                <div class="col-lg col-md-6 mb-4">
                     <div class="courses-box-modern">
                         <div class="course-inner-sub">
                             <div class="img-outer position-relative">
-                                <img class="img-fluid" alt="img" src="{{ asset('assets/front/images/home2/course-img1.jpg') }}">
-                                {{-- <span class="course-price position-absolute">$100</span> --}}
-                                <div class="course-overlay">
-                                    <a href="{{ url('courses') }}" class="course-preview-btn">
-                                        <i class="fa-solid fa-eye"></i> Preview
-                                    </a>
-                                </div>
+                                <img class="img-fluid" alt="English Course" src="{{ asset('assets/front/images/english.png') }}">
                             </div>
-                            <div class="course-bottom-con">
-                                <div class="course-meta d-flex justify-content-center align-items-center mb-3">
-                                    <div class="lesson d-flex align-items-center mr-4">
-                                        <i class="fa-solid fa-book mr-2"></i>
-                                        <span class="text-size-13">38 Lessons</span>
-                                    </div>
-                                    {{-- <div class="date d-flex align-items-center">
-                                        <i class="fa-solid fa-calendar-days mr-2"></i>
-                                        <span class="text-size-13">25 Oct, 2024</span>
-                                    </div> --}}
-                                </div>
-                                <h5 class="font-weight-600 mb-2">English</h5>
-                                <p class="mb-3">Master the English language with our comprehensive course designed for all skill levels. Improve your communication skills and boost your career.</p>
-                                {{-- <div class="course-instructor mb-3">
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <img src="{{ asset('assets/front/images/home2/testimonial-person1.png') }}" alt="instructor" class="instructor-img">
-                                        <span class="ml-2 text-size-13">By John Smith</span>
-                                    </div>
-                                </div> --}}
+                            <div class="course-bottom-con text-center">
+                                <a href="{{ url('courses') }}" class="course-title-link">
+                                    <h5 class="font-weight-600 mb-0">English</h5>
+                                </a>
                             </div>
                         </div>
-                        {{-- <hr class="course-divider"> --}}
-                        {{-- <div class="course-footer d-flex justify-content-between align-items-center">
-                            <a href="{{ url('courses') }}" class="course-enroll-link">
-                                Enroll now <i class="fas fa-arrow-right ml-2"></i>
-                            </a>
-                            <div class="course-rating">
-                                <i class="fa-solid fa-star text-warning"></i>
-                                <span class="ml-1">4.8</span>
-                            </div>
-                        </div> --}}
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
+                <div class="col-lg col-md-6 mb-4">
                     <div class="courses-box-modern">
                         <div class="course-inner-sub">
                             <div class="img-outer position-relative">
-                                <img class="img-fluid" alt="img" src="{{ asset('assets/front/images/home2/course-img2.jpg') }}">
-                                {{-- <span class="course-price position-absolute">$200</span> --}}
-                                <div class="course-overlay">
-                                    <a href="{{ url('courses') }}" class="course-preview-btn">
-                                        <i class="fa-solid fa-eye"></i> Preview
-                                    </a>
-                                </div>
+                                <img class="img-fluid" alt="Maths Course" src="{{ asset('assets/front/images/maths.png') }}">
                             </div>
-                            <div class="course-bottom-con">
-                                <div class="course-meta d-flex justify-content-center align-items-center mb-3">
-                                    <div class="lesson d-flex align-items-center mr-4">
-                                        <i class="fa-solid fa-book mr-2"></i>
-                                        <span class="text-size-13">45 Lessons</span>
-                                    </div>
-                                    {{-- <div class="date d-flex align-items-center">
-                                        <i class="fa-solid fa-calendar-days mr-2"></i>
-                                        <span class="text-size-13">10 Nov, 2024</span>
-                                    </div> --}}
-                                </div>
-                                <h5 class="font-weight-600 mb-2">Maths</h5>
-                                <p class="mb-3">Build strong mathematical foundations and problem-solving skills. Our comprehensive maths course covers all levels from basic to advanced concepts.</p>
-                                {{-- <div class="course-instructor mb-3">
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <img src="{{ asset('assets/front/images/home2/testimonial-person2.png') }}" alt="instructor" class="instructor-img">
-                                        <span class="ml-2 text-size-13">By Sarah Johnson</span>
-                                    </div>
-                                </div> --}}
+                            <div class="course-bottom-con text-center">
+                                <a href="{{ url('courses') }}" class="course-title-link">
+                                    <h5 class="font-weight-600 mb-0">Maths</h5>
+                                </a>
                             </div>
                         </div>
-                        {{-- <hr class="course-divider"> --}}
-                        {{-- <div class="course-footer d-flex justify-content-between align-items-center">
-                            <a href="{{ url('courses') }}" class="course-enroll-link">
-                                Enroll now <i class="fas fa-arrow-right ml-2"></i>
-                            </a>
-                            <div class="course-rating">
-                                <i class="fa-solid fa-star text-warning"></i>
-                                <span class="ml-1">4.9</span>
-                            </div>
-                        </div> --}}
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
+                <div class="col-lg col-md-6 mb-4">
                     <div class="courses-box-modern">
                         <div class="course-inner-sub">
                             <div class="img-outer position-relative">
-                                <img class="img-fluid" alt="img" src="{{ asset('assets/front/images/home2/course-img3.jpg') }}">
-                                {{-- <span class="course-price position-absolute">$250</span> --}}
-                                <div class="course-overlay">
-                                    <a href="{{ url('courses') }}" class="course-preview-btn">
-                                        <i class="fa-solid fa-eye"></i> Preview
-                                    </a>
-                                </div>
+                                <img class="img-fluid" alt="Science Course" src="{{ asset('assets/front/images/science.png') }}">
                             </div>
-                            <div class="course-bottom-con">
-                                <div class="course-meta d-flex justify-content-center align-items-center mb-3">
-                                    <div class="lesson d-flex align-items-center mr-4">
-                                        <i class="fa-solid fa-book mr-2"></i>
-                                        <span class="text-size-13">40 Lessons</span>
-                                    </div>
-                                    {{-- <div class="date d-flex align-items-center">
-                                        <i class="fa-solid fa-calendar-days mr-2"></i>
-                                        <span class="text-size-13">20 Nov, 2024</span>
-                                    </div> --}}
-                                </div>
-                                <h5 class="font-weight-600 mb-2">Science</h5>
-                                <p class="mb-3">Explore the fascinating world of science through hands-on experiments and interactive learning. Perfect for curious minds of all ages.</p>
-                                {{-- <div class="course-instructor mb-3">
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <img src="{{ asset('assets/front/images/home2/testimonial-person3.png') }}" alt="instructor" class="instructor-img">
-                                        <span class="ml-2 text-size-13">By Mike Davis</span>
-                                    </div>
-                                </div> --}}
+                            <div class="course-bottom-con text-center">
+                                <a href="{{ url('courses') }}" class="course-title-link">
+                                    <h5 class="font-weight-600 mb-0">Science</h5>
+                                </a>
                             </div>
                         </div>
-                        {{-- <hr class="course-divider">
-                        <div class="course-footer d-flex justify-content-between align-items-center">
-                            <a href="{{ url('courses') }}" class="course-enroll-link">
-                                Enroll now <i class="fas fa-arrow-right ml-2"></i>
-                            </a>
-                            <div class="course-rating">
-                                <i class="fa-solid fa-star text-warning"></i>
-                                <span class="ml-1">4.7</span>
-                            </div>
-                        </div> --}}
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
+                <div class="col-lg col-md-6 mb-4">
                     <div class="courses-box-modern">
                         <div class="course-inner-sub">
                             <div class="img-outer position-relative">
-                                <img class="img-fluid" alt="img" src="{{ asset('assets/front/images/home2/course-img1.jpg') }}">
-                                {{-- <span class="course-price position-absolute">$300</span> --}}
-                                <div class="course-overlay">
-                                    <a href="{{ url('courses') }}" class="course-preview-btn">
-                                        <i class="fa-solid fa-eye"></i> Preview
-                                    </a>
-                                </div>
+                                <img class="img-fluid" alt="Olympiad Course" src="{{ asset('assets/front/images/olympiad.png') }}">
                             </div>
-                            <div class="course-bottom-con">
-                                <div class="course-meta d-flex justify-content-center align-items-center mb-3">
-                                    <div class="lesson d-flex align-items-center mr-4">
-                                        <i class="fa-solid fa-book mr-2"></i>
-                                        <span class="text-size-13">50 Lessons</span>
-                                    </div>
-                                    {{-- <div class="date d-flex align-items-center">
-                                        <i class="fa-solid fa-calendar-days mr-2"></i>
-                                        <span class="text-size-13">5 Dec, 2024</span>
-                                    </div> --}}
-                                </div>
-                                <h5 class="font-weight-600 mb-2">Olympiad</h5>
-                                <p class="mb-3">Prepare for competitive exams and olympiads with our specialized training program. Expert guidance to excel in national and international competitions.</p>
-                                {{-- <div class="course-instructor mb-3">
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <img src="{{ asset('assets/front/images/home2/testimonial-person1.png') }}" alt="instructor" class="instructor-img">
-                                        <span class="ml-2 text-size-13">By Emily Rodriguez</span>
-                                    </div>
-                                </div> --}}
+                            <div class="course-bottom-con text-center">
+                                <a href="{{ url('courses') }}" class="course-title-link">
+                                    <h5 class="font-weight-600 mb-0">Olympiad</h5>
+                                </a>
                             </div>
                         </div>
-                        {{-- <hr class="course-divider">
-                        <div class="course-footer d-flex justify-content-between align-items-center">
-                            <a href="{{ url('courses') }}" class="course-enroll-link">
-                                Enroll now <i class="fas fa-arrow-right ml-2"></i>
-                            </a>
-                            <div class="course-rating">
-                                <i class="fa-solid fa-star text-warning"></i>
-                                <span class="ml-1">5.0</span>
-                            </div>
-                        </div> --}}
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
+                <div class="col-lg col-md-6 mb-4">
                     <div class="courses-box-modern">
                         <div class="course-inner-sub">
                             <div class="img-outer position-relative">
-                                <img class="img-fluid" alt="img" src="{{ asset('assets/front/images/home2/course-img3.jpg') }}">
-                                {{-- <span class="course-price position-absolute">$350</span> --}}
-                                <div class="course-overlay">
-                                    <a href="{{ url('courses') }}" class="course-preview-btn">
-                                        <i class="fa-solid fa-eye"></i> Preview
-                                    </a>
-                                </div>
+                                <img class="img-fluid" alt="Competitive Exams" src="{{ asset('assets/front/images/competitve-exams.png') }}">
                             </div>
-                            <div class="course-bottom-con">
-                                <div class="course-meta d-flex justify-content-center align-items-center mb-3">
-                                    <div class="lesson d-flex align-items-center mr-4">
-                                        <i class="fa-solid fa-book mr-2"></i>
-                                        <span class="text-size-13">55 Lessons</span>
-                                    </div>
-                                    {{-- <div class="date d-flex align-items-center">
-                                        <i class="fa-solid fa-calendar-days mr-2"></i>
-                                        <span class="text-size-13">15 Dec, 2024</span>
-                                    </div> --}}
-                                </div>
-                                <h5 class="font-weight-600 mb-2">Comp & E</h5>
-                                <p class="mb-3">Computer & Engineering course covering programming, software development, and engineering principles. Build practical skills for the tech industry.</p>
-                                {{-- <div class="course-instructor mb-3">
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <img src="{{ asset('assets/front/images/home2/testimonial-person2.png') }}" alt="instructor" class="instructor-img">
-                                        <span class="ml-2 text-size-13">By David Kumar</span>
-                                    </div>
-                                </div> --}}
+                            <div class="course-bottom-con text-center">
+                                <a href="{{ url('courses') }}" class="course-title-link">
+                                    <h5 class="font-weight-600 mb-0">Competitive Exams</h5>
+                                </a>
                             </div>
                         </div>
-                        {{-- <hr class="course-divider">
-                        <div class="course-footer d-flex justify-content-between align-items-center">
-                            <a href="{{ url('courses') }}" class="course-enroll-link">
-                                Enroll now <i class="fas fa-arrow-right ml-2"></i>
-                            </a>
-                            <div class="course-rating">
-                                <i class="fa-solid fa-star text-warning"></i>
-                                <span class="ml-1">4.9</span>
-                            </div>
-                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -933,9 +745,9 @@
                                 </div>
                                 <p class="review-text" style="font-size: 15px; line-height: 1.6; color: #2d3748; margin-bottom: 20px; min-height: 100px;">"Eternity Classes transformed my career completely. The instructors are amazing and the course material is comprehensive. I got placed in a top company right after completing the course!"</p>
                                 <div class="review-author" style="display: flex; align-items: center; gap: 15px;">
-                                    <img src="{{ asset('assets/front/images/home2/testimonial-person1.png') }}" alt="reviewer" class="reviewer-img" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+                                    {{-- <img src="{{ asset('assets/front/images/home2/testimonial-person1.png') }}" alt="reviewer" class="reviewer-img" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;"> --}}
                                     <div class="reviewer-info">
-                                        <h6 class="mb-0" style="font-weight: 600; color: #2d3748; margin-bottom: 5px;">Sarah Johnson</h6>
+                                        <h6 class="mb-0" style="font-weight: 600; color: #2d3748; margin-bottom: 5px;">Sarah Khan</h6>
                                         <span class="reviewer-role" style="font-size: 14px; color: #718096;">Web Developer</span>
                                     </div>
                                 </div>
@@ -952,9 +764,9 @@
                                 </div>
                                 <p class="review-text" style="font-size: 15px; line-height: 1.6; color: #2d3748; margin-bottom: 20px; min-height: 100px;">"The best decision I made was joining Eternity Classes. The support from faculty and career guidance helped me land my dream job. Highly recommended!"</p>
                                 <div class="review-author" style="display: flex; align-items: center; gap: 15px;">
-                                    <img src="{{ asset('assets/front/images/home2/testimonial-person2.png') }}" alt="reviewer" class="reviewer-img" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+                                    {{-- <img src="{{ asset('assets/front/images/home2/testimonial-person2.png') }}" alt="reviewer" class="reviewer-img" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;"> --}}
                                     <div class="reviewer-info">
-                                        <h6 class="mb-0" style="font-weight: 600; color: #2d3748; margin-bottom: 5px;">Michael Chen</h6>
+                                        <h6 class="mb-0" style="font-weight: 600; color: #2d3748; margin-bottom: 5px;">Mukesh Chandra</h6>
                                         <span class="reviewer-role" style="font-size: 14px; color: #718096;">Data Analyst</span>
                                     </div>
                                 </div>
@@ -971,9 +783,9 @@
                                 </div>
                                 <p class="review-text" style="font-size: 15px; line-height: 1.6; color: #2d3748; margin-bottom: 20px; min-height: 100px;">"Excellent teaching methodology and practical approach. The live sessions and doubt resolution made learning so much easier. Thank you Eternity Classes!"</p>
                                 <div class="review-author" style="display: flex; align-items: center; gap: 15px;">
-                                    <img src="{{ asset('assets/front/images/home2/testimonial-person3.png') }}" alt="reviewer" class="reviewer-img" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+                                    {{-- <img src="{{ asset('assets/front/images/home2/testimonial-person3.png') }}" alt="reviewer" class="reviewer-img" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;"> --}}
                                     <div class="reviewer-info">
-                                        <h6 class="mb-0" style="font-weight: 600; color: #2d3748; margin-bottom: 5px;">Emily Rodriguez</h6>
+                                        <h6 class="mb-0" style="font-weight: 600; color: #2d3748; margin-bottom: 5px;">Esha Gupta</h6>
                                         <span class="reviewer-role" style="font-size: 14px; color: #718096;">Graphic Designer</span>
                                     </div>
                                 </div>
@@ -990,7 +802,7 @@
                                 </div>
                                 <p class="review-text" style="font-size: 15px; line-height: 1.6; color: #2d3748; margin-bottom: 20px; min-height: 100px;">"The course structure is perfect and the instructors are very knowledgeable. I learned so much in such a short time. Worth every penny!"</p>
                                 <div class="review-author" style="display: flex; align-items: center; gap: 15px;">
-                                    <img src="{{ asset('assets/front/images/home2/testimonial-person1.png') }}" alt="reviewer" class="reviewer-img" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+                                    {{-- <img src="{{ asset('assets/front/images/home2/testimonial-person1.png') }}" alt="reviewer" class="reviewer-img" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;"> --}}
                                     <div class="reviewer-info">
                                         <h6 class="mb-0" style="font-weight: 600; color: #2d3748; margin-bottom: 5px;">David Kumar</h6>
                                         <span class="reviewer-role" style="font-size: 14px; color: #718096;">Software Engineer</span>
@@ -1009,9 +821,9 @@
                                 </div>
                                 <p class="review-text" style="font-size: 15px; line-height: 1.6; color: #2d3748; margin-bottom: 20px; min-height: 100px;">"Amazing experience! The flexible schedule allowed me to learn while working. The placement support team is outstanding and helped me get multiple job offers."</p>
                                 <div class="review-author" style="display: flex; align-items: center; gap: 15px;">
-                                    <img src="{{ asset('assets/front/images/home2/testimonial-person2.png') }}" alt="reviewer" class="reviewer-img" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+                                    {{-- <img src="{{ asset('assets/front/images/home2/testimonial-person2.png') }}" alt="reviewer" class="reviewer-img" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;"> --}}
                                     <div class="reviewer-info">
-                                        <h6 class="mb-0" style="font-weight: 600; color: #2d3748; margin-bottom: 5px;">Lisa Anderson</h6>
+                                        <h6 class="mb-0" style="font-weight: 600; color: #2d3748; margin-bottom: 5px;">Lokesh Yadav</h6>
                                         <span class="reviewer-role" style="font-size: 14px; color: #718096;">Business Analyst</span>
                                     </div>
                                 </div>
