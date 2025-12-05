@@ -1444,7 +1444,7 @@
     }
     
     .feature-icon-wrapper {
-        height: 100px;
+        height: 130px;
         margin-bottom: 20px;
     }
     
@@ -1469,7 +1469,7 @@
     }
     
     .feature-icon-wrapper {
-        height: 90px;
+        height: 120px;
         margin-bottom: 18px;
     }
     
@@ -1819,4 +1819,11 @@
     transition: color 0.4s ease;
     min-height: 60px;
     letter-spacing: 2px;
+}
+
+
+@media (max-width: 576px) {
+    .transition-icon-wrapper img {
+        height: 250px;
+    }
 }

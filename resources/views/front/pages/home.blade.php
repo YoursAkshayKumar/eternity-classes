@@ -502,70 +502,70 @@
 
             </div>
             <div class="row courses-row-single">
-                <div class="col-lg col-md-6 mb-4">
+                <div class="col mb-4">
                     <div class="courses-box-modern">
                         <div class="course-inner-sub">
                             <div class="img-outer position-relative">
                                 <img class="img-fluid" alt="English Course" src="{{ asset('assets/front/images/english.png') }}">
                             </div>
                             <div class="course-bottom-con text-center">
-                                <a href="{{ url('courses') }}" class="course-title-link">
+                                <a href="{{ url('courses#english') }}" class="course-title-link">
                                     <h5 class="font-weight-600 mb-0">English</h5>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg col-md-6 mb-4">
+                <div class="col mb-4">
                     <div class="courses-box-modern">
                         <div class="course-inner-sub">
                             <div class="img-outer position-relative">
                                 <img class="img-fluid" alt="Maths Course" src="{{ asset('assets/front/images/maths.png') }}">
                             </div>
                             <div class="course-bottom-con text-center">
-                                <a href="{{ url('courses') }}" class="course-title-link">
+                                <a href="{{ url('courses#maths') }}" class="course-title-link">
                                     <h5 class="font-weight-600 mb-0">Maths</h5>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg col-md-6 mb-4">
+                <div class="col mb-4">
                     <div class="courses-box-modern">
                         <div class="course-inner-sub">
                             <div class="img-outer position-relative">
                                 <img class="img-fluid" alt="Science Course" src="{{ asset('assets/front/images/science.png') }}">
                             </div>
                             <div class="course-bottom-con text-center">
-                                <a href="{{ url('courses') }}" class="course-title-link">
+                                <a href="{{ url('courses#science') }}" class="course-title-link">
                                     <h5 class="font-weight-600 mb-0">Science</h5>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg col-md-6 mb-4">
+                <div class="col mb-4">
                     <div class="courses-box-modern">
                         <div class="course-inner-sub">
                             <div class="img-outer position-relative">
                                 <img class="img-fluid" alt="Olympiad Course" src="{{ asset('assets/front/images/olympiad.png') }}">
                             </div>
                             <div class="course-bottom-con text-center">
-                                <a href="{{ url('courses') }}" class="course-title-link">
+                                <a href="{{ url('courses#olympiad') }}" class="course-title-link">
                                     <h5 class="font-weight-600 mb-0">Olympiad</h5>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg col-md-6 mb-4">
+                <div class="col mb-4">
                     <div class="courses-box-modern">
                         <div class="course-inner-sub">
                             <div class="img-outer position-relative">
                                 <img class="img-fluid" alt="Competitive Exams" src="{{ asset('assets/front/images/competitve-exams.png') }}">
                             </div>
                             <div class="course-bottom-con text-center">
-                                <a href="{{ url('courses') }}" class="course-title-link">
+                                <a href="{{ url('courses#competitive-exams') }}" class="course-title-link">
                                     <h5 class="font-weight-600 mb-0">Competitive Exams</h5>
                                 </a>
                             </div>
