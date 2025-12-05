@@ -1739,3 +1739,22 @@
         margin-right: 6px;
     }
 }
+
+/* Topic Cards Styling for Courses Page */
+.topic-card {
+    cursor: pointer;
+    border: none;
+}
+
+.topic-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2) !important;
+}
+
+.topic-card i {
+    transition: transform 0.3s ease;
+}
+
+.topic-card:hover i {
+    transform: scale(1.2);
+}

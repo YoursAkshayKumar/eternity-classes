@@ -9,15 +9,12 @@
         <div class="container" style="position: relative; z-index: 1;">
             <div class="offers-marquee">
                 <div class="offers-content">
-                    <span class="offer-text">🎓 Special Offer: Get 50% Off on All Courses - Limited Time Only!</span>
+                    <span class="offer-text">🎓 One Week Free Classes!</span>
                     <span class="offer-separator">•</span>
-                    <span class="offer-text">✨ New Batch Starting Soon - Enroll Now & Get Free Study Materials!</span>
+                    <span class="offer-text">✨ Money Back Guarantee!</span>
                     <span class="offer-separator">•</span>
-                    <span class="offer-text">🏆 Join 10,000+ Successful Students - Start Your Journey Today!</span>
+                    <span class="offer-text">💼 24*7 Support!</span>
                     <span class="offer-separator">•</span>
-                    <span class="offer-text">💼 Career Guidance Included - Transform Your Future Now!</span>
-                    <span class="offer-separator">•</span>
-                    <span class="offer-text">🎁 Early Bird Discount: Save Up to 60% - Don't Miss Out!</span>
                 </div>
             </div>
         </div>
@@ -169,61 +166,61 @@
                                             <tbody>
                                                 <tr>
                                                     <td class="us-cell-modern text-left">
-                                                        <i class="fa-solid fa-check-circle"></i>
+                                                        <span style="font-size: 20px; margin-right: 8px;">✨</span>
                                                         <span class="ml-2">Money back Guarantee</span>
                                                     </td>
                                                     <td class="others-cell-modern text-left">
-                                                        <i class="fa-solid fa-times-circle"></i>
+                                                        <span style="font-size: 20px; margin-right: 8px;">🚫</span>
                                                         <span class="ml-2">No Refund Assurance</span>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="image.png">
-                                                        <i class="fa-solid fa-check-circle"></i>
+                                                    <td class="us-cell-modern text-left">
+                                                        <span style="font-size: 20px; margin-right: 8px;">🎓</span>
                                                         <span class="ml-2">One-week free Class</span>
                                                     </td>
                                                     <td class="others-cell-modern text-left">
-                                                        <i class="fa-solid fa-times-circle"></i>
+                                                        <span style="font-size: 20px; margin-right: 8px;">⏰</span>
                                                         <span class="ml-2">No full trial</span>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="us-cell-modern text-left">
-                                                        <i class="fa-solid fa-check-circle"></i>
+                                                        <span style="font-size: 20px; margin-right: 8px;">📊</span>
                                                         <span class="ml-2">Assessment-based Study phase</span>
                                                     </td>
                                                     <td class="others-cell-modern text-left">
-                                                        <i class="fa-solid fa-times-circle"></i>
+                                                        <span style="font-size: 20px; margin-right: 8px;">👥</span>
                                                         <span class="ml-2">Uniform teaching for All.</span>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="us-cell-modern text-left">
-                                                        <i class="fa-solid fa-check-circle"></i>
+                                                        <span style="font-size: 20px; margin-right: 8px;">💼</span>
                                                         <span class="ml-2">24x7 support for doubt solving</span>
                                                     </td>
                                                     <td class="others-cell-modern text-left">
-                                                        <i class="fa-solid fa-times-circle"></i>
+                                                        <span style="font-size: 20px; margin-right: 8px;">🔇</span>
                                                         <span class="ml-2">No response support</span>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="us-cell-modern text-left">
-                                                        <i class="fa-solid fa-check-circle"></i>
+                                                        <span style="font-size: 20px; margin-right: 8px;">👨‍🏫</span>
                                                         <span class="ml-2">Different Teachers for every subject.</span>
                                                     </td>
                                                     <td class="others-cell-modern text-left">
-                                                        <i class="fa-solid fa-times-circle"></i>
+                                                        <span style="font-size: 20px; margin-right: 8px;">👤</span>
                                                         <span class="ml-2">one teacher for multiple subject.</span>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="us-cell-modern text-left">
-                                                        <i class="fa-solid fa-check-circle"></i>
+                                                        <span style="font-size: 20px; margin-right: 8px;">📅</span>
                                                         <span class="ml-2">On Demand classes across all subjects.</span>
                                                     </td>
                                                     <td class="others-cell-modern text-left">
-                                                        <i class="fa-solid fa-times-circle"></i>
+                                                        <span style="font-size: 20px; margin-right: 8px;">📵</span>
                                                         <span class="ml-2">No on-demand classes.</span>
                                                     </td>
                                                 </tr>

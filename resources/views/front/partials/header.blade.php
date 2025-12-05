@@ -29,13 +29,13 @@
             <a class="nav-link p-0" href="{{ url('blogs') }}">Blogs</a>
           </li>
         </ul>
-        <div class="header-contact">
+        {{-- <div class="header-contact">
           <ul class="list-unstyled mb-0">
             <li><a href="{{ url('contact') }}" class="contact-btn d-inline-block">Contact</a></li>
             <!-- list unstyled -->
           </ul>
           <!-- header contact -->
-        </div>
+        </div> --}}
         <!-- navbar collapse -->
       </div>
     </nav>
