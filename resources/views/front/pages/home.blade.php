@@ -22,7 +22,7 @@
 
     <!-- MAIN LANDING PAGE HERO SECTION -->
     <section class="float-left w-100 banner-con postion-relative main-box">
-        <img class="img-fluid position-absolute objct1" alt="object" src="{{ asset('assets/front/images/home2/vector1.png') }}" style="top: 40%; left: 2%; opacity: 0.3; z-index: 0;">
+        <img class="img-fluid position-absolute objct1" alt="object" src="{{ asset('assets/front/images/home2/vector1.png') }}" width="100" style="top: 55%; left: 1%; opacity: 0.3; z-index: 0;">
         <img class="img-fluid position-absolute objct2" alt="object" src="{{ asset('assets/front/images/home2/vector2.png') }}" style="bottom: 10%; right: 5%; opacity: 0.3; z-index: 0;">
         <img class="img-fluid position-absolute dot1" alt="icon" src="{{ asset('assets/front/images/home2/dots.png') }}" style="top: 20%; right: 10%; opacity: 0.2; z-index: 0;">
         <div class="container" style="position: relative; z-index: 1;">
@@ -150,7 +150,7 @@
                             <div class="comparison-content-wrapper">
                                 <div class="comparison-wrapper-modern">
                                     <div class="heading-title-con mb-4">
-                                        <span class="d-block special-text">Why Choose Us</span>
+                                        <span class="d-block special-text text-white">Why Choose Us</span>
                                         <h2 class="font-weight-600 large-font text-white">ETERNITY vs Others</h2>
                                         <p class="text-white">See why thousands of students choose Eternity Classes over other institutions</p>
                                     </div>

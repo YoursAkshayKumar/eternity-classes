@@ -4,8 +4,8 @@
     @section('title', 'Eternity Classes')
     @section('sub-title', 'Eternity Classes ' )
     @section('pagetitle', 'Dashboard')
-    @section('buttonTitle', 'Add Applicant')
-    @section('link', '/admin/applicant-add')
+    @section('buttonTitle', '')
+    @section('link', '')
   
 
     @section('content')
@@ -16,13 +16,7 @@
                     <div class="card-body p-4">
                         <div class="hstack flex-wrap justify-content-between gap-3 align-items-end">
                             <div class="flex-grow-1">
-                                <div class="hstack gap-3 mb-3">
-                                    <div class="bg-warning-subtle text-warning avatar avatar-item rounded-2">
-                                        <!-- <i class="ri-money-dollar-circle-line fs-16 fw-medium"></i> -->
-                                        <i class="bi bi-house-heart-fill fs-16 fw-medium"></i>
-                                    </div>
-                                    <h6 class="mb-0 fs-13">Total Applicants</h6>
-                                </div>
+                               
                                 <h4 class="fw-semibold fs-5 mb-0">
                                     <!-- <span data-target="84573" data-duration="5">84573</span> -->
                                 </h4>

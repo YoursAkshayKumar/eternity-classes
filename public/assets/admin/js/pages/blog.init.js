@@ -5,16 +5,22 @@ Contact: sup.srbthemes@gmail.com
 File: Blog init js
 */
 
-let createBlogEditor = document.getElementById('createBlogEditor');
-if (createBlogEditor) {
+// Check if editor is already initialized to avoid conflicts
+var createBlogEditor = document.getElementById('createBlogEditor');
+if (createBlogEditor && !window.blogQuillEditor) {
     // Initialize Quill editor
-    const snowEditor = new Quill('#createBlogEditor', {
+    var snowEditor = new Quill('#createBlogEditor', {
         theme: 'snow', // Using snow theme
         modules: {
             toolbar: true,
         },
         placeholder: 'Compose your content here...',
     });
+    // Store globally to avoid duplicate initialization
+    window.blogQuillEditor = snowEditor;
+} else if (window.blogQuillEditor) {
+    // Editor already initialized, use existing instance
+    var snowEditor = window.blogQuillEditor;
 }
 
 var myDropzoneMain = document.getElementById('my-dropzone');

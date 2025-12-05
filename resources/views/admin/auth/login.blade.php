@@ -22,7 +22,10 @@
                 </div>
             </div> --}}
 
-            <div class="col-lg-12 text-center">
+            
+            <div class="col-lg-3"></div>
+           
+            <div class="col-lg-6">
                 <div class="auth-box card card-body m-0 h-100 border-0 justify-content-center">
                     <div class="mb-5 text-center">
                         <a href="index">
@@ -59,6 +62,7 @@
                     </form>
                 </div>
             </div>
+            <div class="col-lg-3"></div>
 
         </div>
     </div>

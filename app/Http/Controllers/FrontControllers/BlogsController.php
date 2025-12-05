@@ -14,7 +14,11 @@ class BlogsController extends WebAppBaseController
     {
         try {
             $objBlogs = new Blogs();
-            $blogs = $objBlogs->getRecAll(['status' => 'published', 'is_delete' => 0]);
+            // Use pagination with 9 blogs per page
+            $blogs = $objBlogs->where('status', 'published')
+                ->where('is_delete', 0)
+                ->orderBy('created_on', 'desc')
+                ->paginate(9);
             return view('front.pages.blogs', ['blogs' => $blogs]);
         } catch (\Exception $ex) {
             return $this->sendError($ex->getMessage(), $ex->getTrace(), 500);

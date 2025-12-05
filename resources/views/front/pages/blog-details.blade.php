@@ -55,9 +55,9 @@
                         </div>
                         <div class="blog-details-content-con">
                             <h2 class="font-weight-600 mb-3">{{ $blog->title }}</h2>
-                            <div class="blog-meta mb-4">
-                                <span class="d-inline-block mr-3"><i class="fa-solid fa-calendar"></i> {{ \Carbon\Carbon::parse($blog->created_on)->format('F d, Y') }}</span>
-                                <span class="d-inline-block"><i class="fa-solid fa-user"></i> Admin</span>
+                            <div class="blog-meta">
+                                <span><i class="fa-solid fa-calendar"></i> {{ \Carbon\Carbon::parse($blog->created_on)->format('F d, Y') }}</span>
+                                <span><i class="fa-solid fa-user"></i> Admin</span>
                             </div>
                             @if($blog->excerpt)
                                 <div class="blog-excerpt mb-4">

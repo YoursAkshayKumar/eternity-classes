@@ -37,7 +37,7 @@
     <section class="float-left w-100 blog-con position-relative padding-top116 padding-bottom main-box">
         <div class="container">
             <div class="row">
-                @if(isset($blogs) && count($blogs) > 0)
+                @if(isset($blogs) && $blogs->count() > 0)
                     @foreach($blogs as $blog)
                         <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                             <div class="blog-box position-relative float-left w-100">
@@ -75,6 +75,17 @@
                     </div>
                 @endif
             </div>
+            
+            <!-- Pagination -->
+            @if(isset($blogs) && $blogs->hasPages())
+                <div class="row">
+                    <div class="col-12">
+                        <div class="pagination-wrapper">
+                            {{ $blogs->links() }}
+                        </div>
+                    </div>
+                </div>
+            @endif
         </div>
     </section>
 @endsection

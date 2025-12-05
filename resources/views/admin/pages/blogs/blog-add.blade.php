@@ -163,10 +163,10 @@
 <script src="{{ asset('assets/admin/js/app-custom.js') }}"></script>
 
 <script type="text/javascript">
-  // Initialize Quill editor
-  let createBlogEditor = document.getElementById('createBlogEditor');
-  let quillEditor;
-  if (createBlogEditor) {
+  // Initialize Quill editor - use var to avoid redeclaration error if blog.init.js is loaded
+  var createBlogEditor = document.getElementById('createBlogEditor');
+  var quillEditor;
+  if (createBlogEditor && !window.blogQuillEditor) {
     quillEditor = new Quill('#createBlogEditor', {
       theme: 'snow',
       modules: {
@@ -174,12 +174,16 @@
       },
       placeholder: 'Compose your content here...',
     });
+    // Store globally to avoid duplicate initialization
+    window.blogQuillEditor = quillEditor;
+  } else if (window.blogQuillEditor) {
+    quillEditor = window.blogQuillEditor;
   }
 
   // Auto-generate slug from title
   $('#title').on('input', function() {
     if ($('#slug').val() == '') {
-      let slug = $(this).val().toLowerCase()
+      var slug = $(this).val().toLowerCase()
         .replace(/[^\w\s-]/g, '')
         .replace(/\s+/g, '-')
         .replace(/-+/g, '-')
@@ -188,20 +192,103 @@
     }
   });
 
+  // Initialize jQuery Validate on the form
   var elm = $('form[name=frmAddBlog]');
-  stsPanel_JS.Forms_Submit(elm.find('#btnSubmit'), elm, true, '', (response) => {
-    // Update content textarea with Quill content before submit
+  
+  // Add custom validation method for Quill content
+  $.validator.addMethod("quillRequired", function(value, element) {
+    // Sync Quill content to textarea before validation
     if (quillEditor) {
       $('#content').val(quillEditor.root.innerHTML);
+      // Check if content has actual text (not just empty tags)
+      var textContent = quillEditor.getText().trim();
+      return textContent.length > 0;
+    }
+    return false;
+  }, "Content is required");
+
+  elm.validate({
+    rules: {
+      title: {
+        required: true
+      },
+      content: {
+        quillRequired: true
+      },
+      status: {
+        required: true
+      }
+    },
+    messages: {
+      title: {
+        required: "Title is required"
+      },
+      content: {
+        quillRequired: "Content is required"
+      },
+      status: {
+        required: "Status is required"
+      }
+    },
+    errorClass: "error",
+    validClass: "valid",
+    errorPlacement: function(error, element) {
+      if (element.attr("name") == "content") {
+        error.insertAfter("#createBlogEditor");
+      } else {
+        error.insertAfter(element);
+      }
+    }
+  });
+
+  // Override the click handler to sync content before Forms_Submit validation
+  elm.find('#btnSubmit').off('click').on('click', function(e) {
+    // Sync Quill content to textarea before any validation
+    if (quillEditor) {
+      $('#content').val(quillEditor.root.innerHTML);
+    }
+    
+    // Now trigger validation - Forms_Submit will check this
+    if (elm.valid()) {
+      // If valid, manually trigger the AJAX submission
+      var btn = $(this);
+      btn.find('.fa-spinner').removeClass('d-none');
+      
+      var dataVal = "ctime=" + new Date().getTime();
+      var frm = elm[0];
+      
+      $.ajax({
+        processData: false,
+        contentType: false,
+        url: elm.attr("action") + "?" + dataVal,
+        type: 'POST',
+        data: new FormData(frm),
+        success: (data) => {
+          console.log({ data });
+          if (data.redirect != undefined) {
+            window.location.href = data.redirect;
+          }
+          if (data.message && data.message.length > 0) {
+            toastr[data.status](data.message);
+          }
+          btn.find('.fa-spinner').addClass('d-none');
+        },
+        error: (error) => {
+          console.log({ error });
+          var errorMsg = error.responseJSON && error.responseJSON.message ? error.responseJSON.message : 'An error occurred';
+          toastr["error"](errorMsg);
+          btn.find('.fa-spinner').addClass('d-none');
+        },
+      });
     }
   });
 
   // Image preview
-  const imgInp = document.getElementById('imgInp');
-  const preview = document.getElementById('preview');
+  var imgInp = document.getElementById('imgInp');
+  var preview = document.getElementById('preview');
   if (imgInp) {
     imgInp.onchange = evt => {
-      const [file] = imgInp.files
+      var file = imgInp.files[0];
       if (file) {
         preview.src = URL.createObjectURL(file)
         preview.style.display = 'block';
