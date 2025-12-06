@@ -4605,3 +4605,31 @@
         font-size: 12px !important;
     }
 }
+
+/* Mobile Floating Icons Fix - Ensure active state persists */
+@media (max-width: 768px) {
+    .floating-icon.active {
+        width: auto !important;
+        min-width: 50px !important;
+        padding: 0 15px !important;
+        justify-content: flex-start !important;
+        transform: translateX(-5px) !important;
+    }
+    
+    .floating-icon.active i {
+        margin-right: 10px !important;
+    }
+    
+    .floating-icon.active .floating-icon-text {
+        opacity: 1 !important;
+        width: auto !important;
+        margin-left: 0 !important;
+    }
+    
+    /* Prevent collapse on touch */
+    .floating-icon:active {
+        width: auto !important;
+        min-width: 50px !important;
+        padding: 0 15px !important;
+    }
+}

@@ -91,48 +91,78 @@
   <!-- Floating Icons Mobile Touch Support -->
   <script>
     $(document).ready(function() {
-      // Handle mobile touch for floating icons
-      var $floatingIcons = $('.floating-icon-email, .floating-icon-whatsapp');
-      var activeIcon = null;
+      // Check if device is touch-enabled
+      var isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
       
-      // Touch start
-      $floatingIcons.on('touchstart', function(e) {
-        e.preventDefault();
-        var $this = $(this);
+      if (isTouchDevice) {
+        var $floatingIcons = $('.floating-icon-email, .floating-icon-whatsapp, .floating-icon-phone');
+        var touchHandled = false;
         
-        // Remove active class from other icons
-        $floatingIcons.not($this).removeClass('active');
-        
-        // Toggle active class on current icon
-        $this.toggleClass('active');
-        activeIcon = $this.hasClass('active') ? $this : null;
-      });
-      
-      // Click outside to close
-      $(document).on('touchstart click', function(e) {
-        if (!$(e.target).closest('.floating-icon').length && activeIcon) {
-          activeIcon.removeClass('active');
-          activeIcon = null;
-        }
-      });
-      
-      // Prevent link navigation on first touch (show text first)
-      $floatingIcons.on('click', function(e) {
-        if (!$(this).hasClass('active')) {
-          e.preventDefault();
-          $(this).addClass('active');
-          activeIcon = $(this);
+        // Handle touch start
+        $floatingIcons.on('touchstart', function(e) {
+          touchHandled = false;
+          var $this = $(this);
           
-          // Allow navigation on second click
-          setTimeout(function() {
-            if (activeIcon) {
-              activeIcon.off('click').on('click', function() {
-                // Allow default link behavior
-              });
-            }
-          }, 300);
-        }
-      });
+          // Remove active from other icons
+          $floatingIcons.not($this).removeClass('active');
+          
+          // If icon is not active, expand it on first tap
+          if (!$this.hasClass('active')) {
+            $this.addClass('active');
+            touchHandled = true;
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+          }
+        });
+        
+        // Handle touch end
+        $floatingIcons.on('touchend', function(e) {
+          var $this = $(this);
+          
+          // If we prevented default on touchstart (first tap), prevent navigation
+          if (touchHandled) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+          }
+          
+          // If icon is already active (second tap), allow navigation
+          // Don't prevent default - let the link work
+        });
+        
+        // Handle click events (for devices that fire both touch and click)
+        // Use a small delay to distinguish between touch-initiated clicks and actual clicks
+        $floatingIcons.on('click', function(e) {
+          var $this = $(this);
+          
+          // If this click was preceded by a touch event, ignore it
+          if (touchHandled) {
+            touchHandled = false;
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+          }
+          
+          // If icon is not active, expand it and prevent navigation
+          if (!$this.hasClass('active')) {
+            $this.addClass('active');
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+          }
+          
+          // If icon is active, allow navigation (don't prevent default)
+        });
+        
+        // Close icon when clicking outside
+        $(document).on('touchend click', function(e) {
+          if (!$(e.target).closest('.floating-icon').length) {
+            $floatingIcons.removeClass('active');
+            touchHandled = false;
+          }
+        });
+      }
     });
   </script>
   
