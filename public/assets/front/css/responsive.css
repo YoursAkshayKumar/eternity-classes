@@ -29,7 +29,7 @@
     }
 
     .header-con {
-        padding: 10px 0 10px;
+        padding: 2px 0 2px;
     }
 
     .header-con .navbar-light .navbar-nav .nav-link {
@@ -1388,7 +1388,7 @@
 
     /*  */
     .header-con {
-        padding: 12px 0;
+        padding: 2px 0;
     }
 
     .header-contact {
@@ -1649,6 +1649,10 @@
 
     .footer-con .footer-inner-content {
         margin-bottom: 15px
+    }
+
+    .index2-outer-wrapper .footer-con .footer-inner-content{
+        padding-right: 0px !important;
     }
 
     .footer-con .footer-inner-links-con h6 {
@@ -3265,7 +3269,14 @@
 
     /* header */
     .header-con {
-        padding: 12px 3% !important;
+        padding: 2px 3% !important;
+    }
+
+    .header-con .navbar-brand img {
+        display: block;
+        height: auto;
+        max-height: 80px;
+        max-width: 80px;
     }
 
     .navbar-brand img {
@@ -3423,7 +3434,7 @@
 
     .footer-con .footer-inner-links-con ul {
         margin: 0 auto 13px !important;
-        width: 160px;
+        width: 70px;
     }
 
     .footer-con .footer-inner-links-con.var4 ul.social-icon {
@@ -4124,5 +4135,473 @@
     .footer-con .footer-inner-links-con ul {
         margin: 0 auto 13px !important;
         width: 104px;
+    }
+}
+
+/* Why Choose Us Section - Responsive Styles */
+@media screen and (max-width: 991px) {
+    .merged-section-wrapper {
+        padding: 40px 15px;
+    }
+    
+    .comparison-wrapper-modern {
+        padding: 35px 25px;
+        border-radius: 20px;
+    }
+    
+    .comparison-wrapper-modern .heading-title-con {
+        margin-bottom: 30px;
+    }
+    
+    .comparison-wrapper-modern .heading-title-con h2 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    
+    .comparison-table-modern thead th {
+        padding: 15px 12px;
+        font-size: 16px;
+    }
+    
+    .comparison-table-modern tbody td {
+        padding: 15px 12px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .merged-comparison-form-con {
+        overflow-x: hidden;
+    }
+    
+    .merged-comparison-form-con::before {
+        width: 400px;
+        height: 400px;
+        top: -30%;
+        right: -15%;
+    }
+    
+    .merged-comparison-form-con::after {
+        width: 350px;
+        height: 350px;
+        bottom: -20%;
+        left: -10%;
+    }
+    
+    .comparison-decorative-dot {
+        opacity: 0.08 !important;
+        max-width: 80px;
+    }
+    
+    .merged-section-wrapper {
+        padding: 30px 10px;
+        overflow-x: hidden;
+        max-width: 100%;
+    }
+    
+    .comparison-wrapper-modern {
+        padding: 30px 15px;
+        border-radius: 18px;
+        margin: 0;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .table-responsive {
+        overflow-x: visible;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .comparison-wrapper-modern .heading-title-con {
+        margin-bottom: 25px;
+    }
+    
+    .comparison-wrapper-modern .heading-title-con h2 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    
+    .comparison-wrapper-modern .heading-title-con p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    
+    .comparison-table-modern {
+        font-size: 14px;
+        width: 100% !important;
+        table-layout: fixed;
+    }
+    
+    .comparison-table-modern thead th {
+        padding: 12px 8px;
+        font-size: 13px;
+        letter-spacing: 0.2px;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        width: 50% !important;
+    }
+    
+    .comparison-table-modern tbody td {
+        padding: 12px 8px;
+        font-size: 13px;
+        line-height: 1.4;
+        vertical-align: top;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+        width: 50% !important;
+    }
+    
+    .us-cell-modern .comparison-icon,
+    .others-cell-modern .comparison-icon {
+        font-size: 18px;
+        margin-right: 6px;
+        vertical-align: middle;
+    }
+    
+    .comparison-table-modern tbody tr:hover td {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .merged-comparison-form-con {
+        overflow-x: hidden;
+    }
+    
+    .merged-comparison-form-con::before {
+        width: 300px;
+        height: 300px;
+        top: -20%;
+        right: -20%;
+    }
+    
+    .merged-comparison-form-con::after {
+        width: 250px;
+        height: 250px;
+        bottom: -15%;
+        left: -15%;
+    }
+    
+    .comparison-decorative-dot {
+        opacity: 0.06 !important;
+        max-width: 60px;
+    }
+    
+    .container-fluid.px-0 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        overflow-x: hidden !important;
+        max-width: 100% !important;
+    }
+    
+    .merged-section-wrapper {
+        padding: 25px 5px !important;
+        overflow-x: hidden !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    .comparison-content-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    
+    .comparison-wrapper-modern {
+        padding: 20px 8px !important;
+        border-radius: 16px;
+        margin: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important;
+    }
+    
+    .comparison-wrapper-modern .heading-title-con {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .comparison-wrapper-modern .heading-title-con .special-text {
+        font-size: 12px;
+    }
+    
+    .comparison-wrapper-modern .heading-title-con h2 {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 10px;
+    }
+    
+    .comparison-wrapper-modern .heading-title-con p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+    
+    /* Remove horizontal scroll on mobile - ensure both columns visible */
+    .container-fluid.px-0 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        overflow-x: hidden !important;
+    }
+    
+    .merged-section-wrapper {
+        padding: 25px 5px !important;
+        overflow-x: hidden !important;
+    }
+    
+    .comparison-wrapper-modern {
+        padding: 20px 8px !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important;
+    }
+    
+    .table-responsive {
+        overflow-x: visible !important;
+        overflow: visible !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        display: block !important;
+    }
+    
+    .comparison-table-modern {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        font-size: 10px !important;
+        display: table !important;
+        table-layout: fixed !important;
+        border-collapse: separate !important;
+        border-spacing: 0 !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+    
+    .comparison-table-modern thead th {
+        padding: 6px 3px !important;
+        font-size: 13px !important;
+        letter-spacing: 0 !important;
+        white-space: normal !important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+        width: 50% !important;
+        min-width: 50% !important;
+        max-width: 50% !important;
+        line-height: 1.2 !important;
+        box-sizing: border-box !important;
+        display: table-cell !important;
+    }
+    
+    .comparison-table-modern tbody td {
+        padding: 6px 3px !important;
+        font-size: 9px !important;
+        line-height: 1.2 !important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+        width: 50% !important;
+        min-width: 50% !important;
+        max-width: 50% !important;
+        white-space: normal !important;
+        vertical-align: top !important;
+        box-sizing: border-box !important;
+        display: table-cell !important;
+    }
+    
+    .us-col-modern,
+    .others-col-modern {
+        width: 50% !important;
+        min-width: 50% !important;
+        max-width: 50% !important;
+    }
+    
+    .us-cell-modern,
+    .others-cell-modern {
+        padding-left: 18px !important;
+        padding-right: 2px !important;
+        width: 50% !important;
+        min-width: 50% !important;
+        max-width: 50% !important;
+        box-sizing: border-box !important;
+    }
+    
+    .us-cell-modern::before,
+    .others-cell-modern::before {
+        width: 14px;
+        height: 14px;
+        font-size: 7px;
+        left: 2px;
+    }
+    
+    .us-cell-modern .comparison-icon,
+    .others-cell-modern .comparison-icon {
+        font-size: 12px !important;
+        margin-right: 3px !important;
+        vertical-align: middle;
+        display: inline-block;
+        line-height: 1;
+    }
+    
+    .us-cell-modern span:not(.comparison-icon),
+    .others-cell-modern span:not(.comparison-icon) {
+        display: inline !important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+        line-height: 1.5 !important;
+        font-size: 12px !important;
+    }
+    
+    .comparison-table-modern tbody tr:hover td {
+        padding-left: 3px !important;
+        padding-right: 3px !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .merged-comparison-form-con {
+        overflow-x: hidden;
+    }
+    
+    .merged-section-wrapper {
+        padding: 20px 5px;
+        overflow-x: hidden;
+        max-width: 100%;
+    }
+    
+    .comparison-wrapper-modern {
+        padding: 18px 10px;
+        margin: 0;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .comparison-wrapper-modern .heading-title-con {
+        margin-bottom: 15px;
+    }
+    
+    .comparison-wrapper-modern .heading-title-con h2 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 8px;
+    }
+    
+    .comparison-wrapper-modern .heading-title-con p {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    
+    .merged-section-wrapper {
+        padding: 20px 3px !important;
+    }
+    
+    .comparison-wrapper-modern {
+        padding: 15px 5px !important;
+        box-sizing: border-box !important;
+    }
+    
+    .table-responsive {
+        overflow-x: visible !important;
+        overflow: visible !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        display: block !important;
+    }
+    
+    .comparison-table-modern {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        font-size: 8px !important;
+        table-layout: fixed !important;
+        border-collapse: separate !important;
+        border-spacing: 0 !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+    
+    .comparison-table-modern thead th {
+        padding: 5px 2px !important;
+        font-size: 12px !important;
+        white-space: normal !important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+        line-height: 1.1 !important;
+        width: 50% !important;
+        min-width: 50% !important;
+        max-width: 50% !important;
+        box-sizing: border-box !important;
+        letter-spacing: 0 !important;
+    }
+    
+    .comparison-table-modern tbody td {
+        padding: 5px 2px !important;
+        font-size: 12px !important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+        line-height: 1.1 !important;
+        width: 50% !important;
+        min-width: 50% !important;
+        max-width: 50% !important;
+        white-space: normal !important;
+        vertical-align: top !important;
+        box-sizing: border-box !important;
+    }
+    
+    .us-col-modern,
+    .others-col-modern {
+        width: 50% !important;
+        min-width: 50% !important;
+        max-width: 50% !important;
+    }
+    
+    .us-cell-modern,
+    .others-cell-modern {
+        padding-left: 16px !important;
+        padding-right: 2px !important;
+        width: 50% !important;
+        min-width: 50% !important;
+        max-width: 50% !important;
+        box-sizing: border-box !important;
+    }
+    
+    .us-cell-modern::before,
+    .others-cell-modern::before {
+        width: 10px;
+        height: 10px;
+        font-size: 5px;
+        left: 2px;
+    }
+    
+    .us-cell-modern .comparison-icon,
+    .others-cell-modern .comparison-icon {
+        font-size: 10px !important;
+        margin-right: 2px !important;
+        vertical-align: middle;
+        display: inline-block;
+        line-height: 1;
+    }
+    
+    .us-cell-modern span:not(.comparison-icon),
+    .others-cell-modern span:not(.comparison-icon) {
+        display: inline !important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+        line-height: 1.5 !important;
+        font-size: 12px !important;
     }
 }

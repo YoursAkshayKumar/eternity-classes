@@ -48,10 +48,10 @@
             <div class="row">
                 <div class="col-12">
                     <div class="text-center mb-5">
-                        <h2 class="font-weight-600 mb-3">Eternity Classes — Expanded Programs Overview</h2>
-                        <p class="lead">An enriched academic structure with detailed subject-wise progression while
+                        <h2 class="font-weight-600 mb-3">Eternity Classes — Programs Overview</h2>
+                        {{-- <p class="lead">An enriched academic structure with detailed subject-wise progression while
                             keeping your original approach intact. Olympiad and Competition sections remain unchanged as
-                            requested.</p>
+                            requested.</p> --}}
                     </div>
                 </div>
             </div>
@@ -75,9 +75,7 @@
                                 <div class="program-section p-4 mb-4" style="background: #f8f9fa; border-radius: 10px;">
                                     <h3 class="font-weight-600 mb-4 text-primary">Mathematics Program (Class 1–10)</h3>
                                     <p class="mb-4">Our Mathematics program builds a strong conceptual foundation through
-                                        visual learning, application-driven practice, and structured progression. The
-                                        approach remains the same, but with deeper clarity on milestones and learning
-                                        outcomes.</p>
+                                        visual learning, application-driven practice, and structured progression.</p>
 
                                     <h5 class="font-weight-600 mb-3">What Students Learn</h5>
 
@@ -348,8 +346,7 @@
                                 <div class="program-section p-4 mb-4" style="background: #f8f9fa; border-radius: 10px;">
                                     <h3 class="font-weight-600 mb-4 text-primary">Science Program (Class 1–10)</h3>
                                     <p class="mb-4">A highly visual and application-driven science curriculum built
-                                        around curiosity, experimentation and real-world relevance. The structure remains
-                                        unchanged; clarity and depth have been enhanced.</p>
+                                        around curiosity, experimentation and real-world relevance.</p>
 
                                     <h5 class="font-weight-600 mb-3">What Students Learn</h5>
 
@@ -525,8 +522,7 @@
                                 <div class="program-section p-4 mb-4" style="background: #f8f9fa; border-radius: 10px;">
                                     <h3 class="font-weight-600 mb-4 text-primary">English Program (Class 1–10)</h3>
                                     <p class="mb-4">A modern and global English program focusing on communication,
-                                        comprehension, creativity and academic readiness. The structure stays intact but
-                                        includes deeper breakdowns and clearer progression.</p>
+                                        comprehension, creativity and academic readiness.</p>
 
                                     <h5 class="font-weight-600 mb-3">What Students Learn</h5>
 
@@ -756,9 +752,7 @@
                                 <div class="program-section p-4 mb-4" style="background: #f8f9fa; border-radius: 10px;">
                                     <h3 class="font-weight-600 mb-4 text-primary">Mathematics Program (Class 1–10)</h3>
                                     <p class="mb-4">Our Mathematics program builds a strong conceptual foundation through
-                                        visual learning, application-driven practice, and structured progression. The
-                                        approach remains the same, but with deeper clarity on milestones and learning
-                                        outcomes.</p>
+                                        visual learning, application-driven practice, and structured progression. </p>
 
                                     <h5 class="font-weight-600 mb-3">What Students Learn</h5>
 
@@ -1032,8 +1026,7 @@
                                 <div class="program-section p-4 mb-4" style="background: #f8f9fa; border-radius: 10px;">
                                     <h3 class="font-weight-600 mb-4 text-primary">Science Program (Class 1–10)</h3>
                                     <p class="mb-4">A highly visual and application-driven science curriculum built
-                                        around curiosity, experimentation and real-world relevance. The structure remains
-                                        unchanged; clarity and depth have been enhanced.</p>
+                                        around curiosity, experimentation and real-world relevance.</p>
 
                                     <h5 class="font-weight-600 mb-3">What Students Learn</h5>
 
@@ -1212,8 +1205,7 @@
                                 <div class="program-section p-4 mb-4" style="background: #f8f9fa; border-radius: 10px;">
                                     <h3 class="font-weight-600 mb-4 text-primary">English Program (Class 1–10)</h3>
                                     <p class="mb-4">A modern and global English program focusing on communication,
-                                        comprehension, creativity and academic readiness. The structure stays intact but
-                                        includes deeper breakdowns and clearer progression.</p>
+                                        comprehension, creativity and academic readiness.</p>
 
                                     <h5 class="font-weight-600 mb-3">What Students Learn</h5>
 
@@ -1453,4 +1445,54 @@
 @endsection
 
 @section('js')
+<script>
+    $(document).ready(function() {
+        // Function to activate tab based on hash
+        function activateTabFromHash() {
+            var hash = window.location.hash.substring(1); // Remove the # symbol
+            
+            if (hash) {
+                // Map URL hash to tab ID
+                var tabMapping = {
+                    'competitive-exams': 'competitive',
+                    'competitive': 'competitive',
+                    'english': 'english',
+                    'mathematics': 'mathematics',
+                    'science': 'science',
+                    'olympiads': 'olympiads',
+                    'all': 'all'
+                };
+                
+                // Get the mapped tab ID or use the hash directly if it exists
+                var tabId = tabMapping[hash] || hash;
+                
+                // Check if the tab exists
+                var $tabLink = $('a[href="#' + tabId + '"]');
+                
+                if ($tabLink.length) {
+                    // Use Bootstrap's tab method to show the tab
+                    $tabLink.tab('show');
+                    
+                    // Scroll to tabs section smoothly after a short delay
+                    setTimeout(function() {
+                        var $tabsSection = $('.courses-tabs-con');
+                        if ($tabsSection.length) {
+                            $('html, body').animate({
+                                scrollTop: $tabsSection.offset().top - 100
+                            }, 500);
+                        }
+                    }, 300);
+                }
+            }
+        }
+        
+        // Activate tab on page load
+        activateTabFromHash();
+        
+        // Also handle hash changes (if user navigates with hash after page load)
+        $(window).on('hashchange', function() {
+            activateTabFromHash();
+        });
+    });
+</script>
 @endsection

@@ -191,3 +191,54 @@ $(document).ready(function () {
     }
   })
 })
+
+// Close mobile navbar when clicking outside
+$(document).ready(function() {
+  var $navbar = $('#navbarSupportedContent');
+  var $navbarToggler = $('.navbar-toggler');
+  var $navbarContainer = $('.navbar');
+  
+  // Function to check if we're on mobile
+  function isMobile() {
+    return $(window).width() <= 991; // Bootstrap lg breakpoint
+  }
+  
+  // Close navbar function
+  function closeNavbar() {
+    if ($navbar.hasClass('show')) {
+      $navbar.collapse('hide');
+      $navbarToggler.addClass('collapsed');
+      $navbarToggler.attr('aria-expanded', 'false');
+    }
+  }
+  
+  // Handle clicks outside navbar
+  $(document).on('click', function(e) {
+    // Only handle on mobile devices
+    if (!isMobile()) {
+      return;
+    }
+    
+    // Check if navbar is open
+    if ($navbar.hasClass('show')) {
+      // Check if click is outside navbar and navbar toggler
+      var isClickInsideNavbar = $(e.target).closest($navbar).length > 0;
+      var isClickOnToggler = $(e.target).closest($navbarToggler).length > 0;
+      
+      // If click is outside both navbar and toggler, close it
+      if (!isClickInsideNavbar && !isClickOnToggler) {
+        closeNavbar();
+      }
+    }
+  });
+  
+  // Also close navbar when clicking on a nav link (optional - for better UX)
+  $navbar.find('.nav-link').on('click', function() {
+    if (isMobile()) {
+      // Small delay to allow navigation to happen first
+      setTimeout(function() {
+        closeNavbar();
+      }, 100);
+    }
+  });
+})

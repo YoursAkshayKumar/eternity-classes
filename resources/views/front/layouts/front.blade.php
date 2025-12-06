@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="HTML">
 
 <head>
     @include('front.partials.head')
@@ -7,6 +7,7 @@
 
 <body class="index2-outer-wrapper">
     @include('front.partials.preloader')
+    @include('front.partials.moving-offer-banner')
     @include('front.partials.header')
     @yield('content')
     @include('front.partials.footer')
