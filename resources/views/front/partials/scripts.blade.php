@@ -4,14 +4,14 @@
   <script src="{{ asset('assets/front/js/popper.min.js') }}"></script>
   <script src="{{ asset('assets/front/js/bootstrap.min.js') }}"></script>
   <script src="{{ asset('assets/front/js/owl.carousel.js') }}"></script>
-  <script src="{{ asset('assets/front/js/contact-form.js') }}"></script>
-  <script src="{{ asset('assets/front/js/video-popup.js') }}"></script>
-  <script src="{{ asset('assets/front/js/video-section.js') }}"></script>
-  <script src="{{ asset('assets/front/js/jquery.validate.js') }}"></script>
-  <script src="{{ asset('assets/front/js/wow.js') }}"></script>
-  <script src="{{ asset('assets/front/js/counter.js') }}"></script>
-  <script src="{{ asset('assets/front/js/custom.js') }}"></script>
-  <script src="{{ asset('assets/front/js/search.js') }}"></script>
+  <script src="{{ asset('assets/front/js/contact-form.js?v='). time() }}"></script>
+  <script src="{{ asset('assets/front/js/video-popup.js?v='). time() }}"></script>
+  <script src="{{ asset('assets/front/js/video-section.js?v='). time() }}"></script>
+  <script src="{{ asset('assets/front/js/jquery.validate.js?v='). time() }}"></script>
+  <script src="{{ asset('assets/front/js/wow.js?v='). time() }}"></script>
+  <script src="{{ asset('assets/front/js/counter.js?v='). time() }}"></script>
+  <script src="{{ asset('assets/front/js/custom.js?v='). time() }}"></script>
+  <script src="{{ asset('assets/front/js/search.js?v='). time() }}"></script>
   
   <!-- Newsletter Subscription Script -->
   <script>
