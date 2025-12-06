@@ -241,4 +241,32 @@ $(document).ready(function() {
       }, 100);
     }
   });
+  
+  // Close navbar immediately when scrolling on mobile
+  var lastScrollTop = 0;
+  
+  $(window).on('scroll', function() {
+    // Only handle on mobile devices
+    if (!isMobile()) {
+      lastScrollTop = $(window).scrollTop();
+      return;
+    }
+    
+    // Check if navbar is open
+    if ($navbar.hasClass('show')) {
+      var currentScrollTop = $(window).scrollTop();
+      var scrollDifference = Math.abs(currentScrollTop - lastScrollTop);
+      
+      // Close immediately when user scrolls (with minimum 3px movement to avoid false triggers)
+      if (scrollDifference > 3) {
+        // Close immediately without any delay
+        closeNavbar();
+      }
+      
+      lastScrollTop = currentScrollTop;
+    } else {
+      // Update lastScrollTop even when menu is closed
+      lastScrollTop = $(window).scrollTop();
+    }
+  });
 })

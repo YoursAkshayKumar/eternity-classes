@@ -16,7 +16,7 @@
                 <div class="col-lg-7 col-md-6">
                     <div class="banner-content-con text-center">
                         <span class="d-block special-text">Welcome to Eternity Classes</span>
-                        <h1 class="mb-3">One to One <br>Online Tutition Platform</h1>
+                        <h1 class="mb-3">One to One <br>Online Tuition Platform</h1>
                         <h6 class="text-dark">for Grades K-10</h6>
                         <div class="banner-text-content-wrapper">
                             <p class="mb-3"
@@ -371,7 +371,7 @@
                                     <h5 class="font-weight-600 lh-sm">Complete Personality Development</h5>
                                 </div>
                                 <div class="feature-content-hover">
-                                    <p class="mb-0">Confidence and Esteem building, Critical thinking & Problem Solving
+                                    <p class="mb-0">Confidence and Esteem building, Critical thinking, Problem Solving
                                         and Self-growth.</p>
                                 </div>
                             </div>
@@ -450,7 +450,7 @@
                         <div class="feature-content">
                             <div class="feature-content-wrapper">
                                 <div class="feature-content-default">
-                                    <h5 class="font-weight-600 lh-sm">Doubt & Clearing Sessions</h5>
+                                    <h5 class="font-weight-600 lh-sm">Doubt Clearing Sessions</h5>
                                 </div>
                                 <div class="feature-content-hover">
                                     <p class="mb-0">We believe no doubt should go unanswered. Instant, personalised

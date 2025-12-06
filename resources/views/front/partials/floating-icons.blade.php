@@ -8,7 +8,7 @@
         <i class="fas fa-phone"></i>
         <span class="floating-icon-text">+91-8859993933</span>
     </a>
-    <a href="https://wa.me/918859993933" target="_blank" class="floating-icon floating-icon-whatsapp" title="WhatsApp Us">
+    <a href="https://wa.me/918859993933?text=Hi%20,%20book%20a%20free%20demo%20class" target="_blank" class="floating-icon floating-icon-whatsapp" title="WhatsApp Us">
         <i class="fab fa-whatsapp"></i>
         <span class="floating-icon-text">+91-8859993933</span>
     </a>

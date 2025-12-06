@@ -107,7 +107,6 @@ class HomeController extends WebAppBaseController
                 'email' => 'Email Address',
                 'phone' => 'Phone Number',
                 'course' => 'Course',
-                'terms' => 'Terms & Conditions',
             );
 
             $validator = Validator::make($request->all(), [
@@ -115,7 +114,6 @@ class HomeController extends WebAppBaseController
                 'email' => 'required|email|max:255',
                 'phone' => 'required|string|max:20',
                 'course' => 'required|string|max:255',
-                'terms' => 'required',
             ], [], $niceNames);
 
             if ($validator->fails()) {
@@ -129,7 +127,7 @@ class HomeController extends WebAppBaseController
                 'course' => $request->input('course'),
                 'grade' => $request->input('Grade', null),
                 'source' => $request->input('source', null),
-                'terms_accepted' => $request->has('terms') ? true : false,
+                'terms_accepted' => false,
             ];
 
             $objEnrollment = new Enrollment();
