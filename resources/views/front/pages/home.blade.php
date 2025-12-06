@@ -255,8 +255,8 @@
                                 <div class="heading-title-con mb-4">
                                     <span class="d-block special-text text-white">Why Choose Us</span>
                                     <h2 class="font-weight-600 large-font text-white">ETERNITY vs Others</h2>
-                                    <p class="text-white">See why thousands of students choose Eternity Classes over other
-                                        institutions</p>
+                                    {{-- <p class="text-white">See why thousands of students choose Eternity Classes over other
+                                        institutions</p> --}}
                                 </div>
 
                                 <div class="table-responsive">
